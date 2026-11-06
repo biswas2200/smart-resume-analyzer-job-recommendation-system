@@ -77,14 +77,14 @@ class WatchlistControllerTest {
     void browse_passesTheSearchFilterAndPageToTheService() throws Exception {
         User asha = new User();
         when(userRepository.findByEmail("asha@example.com")).thenReturn(Optional.of(asha));
-        when(watchlistService.browse(asha, "gro", "hiring", 2, 12))
+        when(watchlistService.browse(asha, "gro", "hiring", "Fintech", 2, 12))
                 .thenReturn(new com.resumeanalyser.job.dto.CompanyPageDto(List.of(), 2, 12, 0, false));
 
         mockMvc.perform(get("/watchlist/companies/browse").param("q", "gro").param("filter", "hiring")
-                        .param("page", "2").param("size", "12"))
+                        .param("sector", "Fintech").param("page", "2").param("size", "12"))
                 .andExpect(status().isOk());
 
-        verify(watchlistService).browse(asha, "gro", "hiring", 2, 12);
+        verify(watchlistService).browse(asha, "gro", "hiring", "Fintech", 2, 12);
     }
 
     @Test

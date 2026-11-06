@@ -436,7 +436,10 @@ textarea.input { resize: vertical; line-height: 1.5; }
 .section-heading { display: flex; align-items: baseline; flex-wrap: wrap; gap: 10px; font-size: 18px; margin: 0 0 12px; }
 .section-heading .count { font: 500 12.5px/1 var(--mono); color: var(--faint); }
 .company-toolbar { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 14px; margin-bottom: 12px; }
-.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.company-filters { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.sector-select { width: auto; min-width: 170px; }
+.company-facts { margin: -4px 0 0; font-size: 12.5px; color: var(--muted); overflow-wrap: anywhere; }
 .chip {
   min-height: 32px; padding: 5px 14px; border: 1px solid var(--border-strong); border-radius: 999px;
   background: var(--surface); color: var(--muted); font: 600 13px/1 var(--font); cursor: pointer;

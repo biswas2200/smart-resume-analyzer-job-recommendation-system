@@ -254,13 +254,13 @@ class WatchlistServiceTest {
         other.setCareersUrl("https://acme.com/careers");
         WatchedCompany mine = new WatchedCompany();
         mine.setCompany(company);
-        when(companies.browse(eq(""), eq(false), eq(false), eq(user), any(Pageable.class)))
+        when(companies.browse(eq(""), eq(""), eq(false), eq(false), eq(user), any(Pageable.class)))
                 .thenReturn(new PageImpl<>(List.of(company, other), org.springframework.data.domain.PageRequest.of(0, 24), 40));
         when(watched.findByUserOrderByAddedAtDesc(user)).thenReturn(List.of(mine));
         when(postings.countActiveByCompany(List.of(company, other)))
                 .thenReturn(Collections.singletonList(new Object[] {company.getId(), 7L}));
 
-        var page = service.browse(user, null, "all", 0, 24);
+        var page = service.browse(user, null, "all", "", 0, 24);
 
         assertThat(page.items()).extracting("name", "openJobs", "watched")
                 .containsExactly(tuple("Groww", 7L, true), tuple("Acme", 0L, false));
@@ -271,18 +271,18 @@ class WatchlistServiceTest {
 
     @Test
     void browse_filtersByHiringOrWatching_andClampsThePage() {
-        when(companies.browse(any(), anyBoolean(), anyBoolean(), any(), any(Pageable.class)))
+        when(companies.browse(any(), any(), anyBoolean(), anyBoolean(), any(), any(Pageable.class)))
                 .thenReturn(Page.empty());
         when(watched.findByUserOrderByAddedAtDesc(user)).thenReturn(List.of());
 
-        service.browse(user, "", "hiring", -5, 10_000);
-        service.browse(user, "", "watching", 2, 0);
+        service.browse(user, "", "hiring", "", -5, 10_000);
+        service.browse(user, "", "watching", "", 2, 0);
 
         ArgumentCaptor<Pageable> pageable = ArgumentCaptor.forClass(Pageable.class);
-        verify(companies).browse(eq(""), eq(true), eq(false), eq(user), pageable.capture());
+        verify(companies).browse(eq(""), eq(""), eq(true), eq(false), eq(user), pageable.capture());
         assertThat(pageable.getValue().getPageNumber()).isZero();
         assertThat(pageable.getValue().getPageSize()).isEqualTo(WatchlistService.MAX_PAGE_SIZE);
-        verify(companies).browse(eq(""), eq(false), eq(true), eq(user), pageable.capture());
+        verify(companies).browse(eq(""), eq(""), eq(false), eq(true), eq(user), pageable.capture());
         assertThat(pageable.getValue().getPageSize()).isEqualTo(1);
         verify(postings, never()).countActiveByCompany(any());
     }

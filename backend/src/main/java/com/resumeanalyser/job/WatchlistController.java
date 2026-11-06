@@ -61,10 +61,17 @@ public class WatchlistController {
     @GetMapping("/companies/browse")
     public CompanyPageDto browse(@RequestParam(defaultValue = "") String q,
                                  @RequestParam(defaultValue = "all") String filter,
+                                 @RequestParam(defaultValue = "") String sector,
                                  @RequestParam(defaultValue = "0") int page,
                                  @RequestParam(defaultValue = "24") int size,
                                  Authentication authentication) {
-        return watchlistService.browse(currentUser(authentication), q, filter, page, size);
+        return watchlistService.browse(currentUser(authentication), q, filter, sector, page, size);
+    }
+
+    /** The sectors in use with their company counts, for the sector filter. */
+    @GetMapping("/companies/sectors")
+    public List<WatchlistService.SectorCount> sectors() {
+        return watchlistService.sectors();
     }
 
     /**

@@ -2,6 +2,7 @@ package com.resumeanalyser.job;
 
 import com.resumeanalyser.job.dto.AddCompanyRequest;
 import com.resumeanalyser.job.dto.CompanyDto;
+import com.resumeanalyser.job.dto.CompanyFactsBatch;
 import com.resumeanalyser.job.dto.JobsStatusDto;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
@@ -95,6 +96,15 @@ public class JobAdminController {
     public CompanyDto addCompany(@Valid @RequestBody AddCompanyRequest request) {
         Company company = companyService.add(request.name(), request.website(), request.careersUrl(), CompanySource.ADMIN);
         return CompanyDto.of(company, postings.countByCompanyAndActiveTrue(company));
+    }
+
+    /**
+     * Adds a directory's facts (sector, area, funding stage, team size, founded, tags) to the companies
+     * we already have, matched on website domain. Up to 5,000 rows a call, as {@code {"companies": [...]}}.
+     */
+    @PostMapping("/companies/facts")
+    public CompanyService.FactsSummary companyFacts(@Valid @RequestBody CompanyFactsBatch batch) {
+        return companyService.applyFacts(batch.companies());
     }
 
     private ResponseEntity<JobsStatusDto> started(boolean started) {

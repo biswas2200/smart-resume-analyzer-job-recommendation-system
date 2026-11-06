@@ -27,10 +27,15 @@ export function searchCompanies(query) {
 /**
  * One page of the whole company list, for the cards: `q` searches name and website, `filter` is
  * `all`, `hiring` (an open job now) or `watching`. Resolves to
- * `{ items: [{ id, name, domain, status, source, careersUrl, openJobs, watched }], page, size, total, hasMore }`.
+ * `{ items: [{ id, name, domain, status, source, careersUrl, sector, area, fundingStage, teamSize, openJobs, watched }], page, size, total, hasMore }`; `sector` limits it to one sector.
  */
-export function browseCompanies({ q = '', filter = 'all', page = 0, size = 24 } = {}) {
-  return get(`/watchlist/companies/browse?${new URLSearchParams({ q: q.trim(), filter, page, size })}`);
+export function browseCompanies({ q = '', filter = 'all', sector = '', page = 0, size = 24 } = {}) {
+  return get(`/watchlist/companies/browse?${new URLSearchParams({ q: q.trim(), filter, sector, page, size })}`);
+}
+
+/** The sectors in use with their company counts, biggest first: `[{ sector, companies }]`. */
+export function getCompanySectors() {
+  return get('/watchlist/companies/sectors');
 }
 
 /** Adds a company to the watchlist (adding it twice is fine). Resolves to the watchlist entry. */

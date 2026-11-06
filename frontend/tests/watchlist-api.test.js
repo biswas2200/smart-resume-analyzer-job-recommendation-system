@@ -6,6 +6,7 @@ import { ApiError } from '../src/js/core/api-error.js';
 import {
   addCompany,
   browseCompanies,
+  getCompanySectors,
   getWatchlist,
   getWatchlistLimits,
   searchCompanies,
@@ -75,10 +76,19 @@ test('a 429 or 409 from the backend reaches the page with its message', async ()
 
 test('browseCompanies asks for one page with the search, filter and size', async () => {
   await browseCompanies({ q: ' gro ', filter: 'hiring', page: 2, size: 12 });
-  assert.deepEqual(calls, [['GET', '/watchlist/companies/browse?q=gro&filter=hiring&page=2&size=12', undefined]]);
+  assert.deepEqual(calls, [['GET', '/watchlist/companies/browse?q=gro&filter=hiring&sector=&page=2&size=12', undefined]]);
 });
 
 test('browseCompanies defaults to the first page of everything', async () => {
   await browseCompanies();
-  assert.deepEqual(calls, [['GET', '/watchlist/companies/browse?q=&filter=all&page=0&size=24', undefined]]);
+  assert.deepEqual(calls, [['GET', '/watchlist/companies/browse?q=&filter=all&sector=&page=0&size=24', undefined]]);
+});
+
+test('browseCompanies can limit the list to one sector, and the sectors are listed', async () => {
+  await browseCompanies({ sector: 'Fintech' });
+  await getCompanySectors();
+  assert.deepEqual(calls.map((c) => c[1]), [
+    '/watchlist/companies/browse?q=&filter=all&sector=Fintech&page=0&size=24',
+    '/watchlist/companies/sectors',
+  ]);
 });

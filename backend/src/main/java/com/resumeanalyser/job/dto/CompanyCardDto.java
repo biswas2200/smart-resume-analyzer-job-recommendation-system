@@ -19,11 +19,16 @@ public record CompanyCardDto(
         CompanyStatus status,
         CompanySource source,
         String careersUrl,
+        String sector,
+        String area,
+        String fundingStage,
+        String teamSize,
         long openJobs,
         boolean watched
 ) {
     public static CompanyCardDto of(Company company, long openJobs, boolean watched) {
         return new CompanyCardDto(company.getId(), company.getName(), company.getDomain(), company.getStatus(),
-                company.getSource(), company.getCareersUrl(), openJobs, watched);
+                company.getSource(), company.getCareersUrl(), company.getSector(), company.getArea(),
+                company.getFundingStage(), company.getTeamSize(), openJobs, watched);
     }
 }

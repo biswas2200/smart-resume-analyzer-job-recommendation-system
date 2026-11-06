@@ -1,6 +1,7 @@
 import {
   addCompany,
   browseCompanies,
+  getCompanySectors,
   getWatchlist,
   getWatchlistLimits,
   unwatchCompany,
@@ -19,6 +20,7 @@ import {
   applyAction,
   avatarTone,
   capLabel,
+  cardFacts,
   cardStatusBadge,
   companyInitials,
   companyStatusBadge,
@@ -27,6 +29,7 @@ import {
   normalizeFilter,
   openJobsLabel,
   resultsLabel,
+  sectorOptionLabel,
   websiteUrl,
 } from './watchlist-rules.js';
 
@@ -43,7 +46,7 @@ let watched = [];
 // From GET /watchlist/limits; null if that call failed (the backend still enforces the cap).
 let maxCompanies = null;
 // The browsable list as last loaded; `generation` makes an answer to an old search harmless.
-const directory = { q: '', filter: 'all', page: 0, total: 0, hasMore: false, shown: 0, loading: false, generation: 0 };
+const directory = { q: '', filter: 'all', sector: '', page: 0, total: 0, hasMore: false, shown: 0, loading: false, generation: 0 };
 // Each card on screen: company id -> { company, button }, so a change can repaint its Watch button.
 const cards = new Map();
 let searchTimer = null;
@@ -68,8 +71,13 @@ if (requireAuth()) {
     event.preventDefault();
     add();
   });
+  byId('sector-filter').addEventListener('change', (event) => {
+    directory.sector = event.target.value;
+    loadDirectory(true);
+  });
   renderFilters();
   load();
+  loadSectors();
   loadDirectory(true);
 }
 
@@ -182,6 +190,16 @@ function renderFilters() {
   );
 }
 
+/** Fills the sector filter; the page works without it if this call fails. */
+async function loadSectors() {
+  try {
+    const sectors = await getCompanySectors();
+    byId('sector-filter').append(...sectors.map((entry) => el('option', { value: entry.sector }, sectorOptionLabel(entry))));
+  } catch {
+    show(byId('sector-filter'), false);
+  }
+}
+
 function searchDirectory() {
   const query = byId('company-query').value.trim();
   if (query === directory.q && directory.page > 0) {
@@ -213,6 +231,7 @@ async function loadDirectory(reset) {
     const page = await browseCompanies({
       q: directory.q,
       filter: directory.filter,
+      sector: directory.sector,
       page: directory.page,
       size: PAGE_SIZE,
     });
@@ -280,6 +299,14 @@ function renderCard(company) {
   const status = field(card, 'status');
   setText(status, badge.label);
   status.className = `badge ${badge.tone ? `badge-${badge.tone}` : ''}`.trim();
+
+  const sector = field(card, 'sector');
+  show(sector, Boolean(company.sector));
+  setText(sector, company.sector ?? '');
+  const facts = field(card, 'facts');
+  const factsText = cardFacts(company);
+  show(facts, Boolean(factsText));
+  setText(facts, factsText);
 
   const apply = field(card, 'apply');
   const action = applyAction(company, safeLink);

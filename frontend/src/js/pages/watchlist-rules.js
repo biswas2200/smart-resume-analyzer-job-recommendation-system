@@ -120,6 +120,19 @@ export function cardStatusBadge(company) {
   }
 }
 
+/** "Indiranagar · 51-200 people · Series A": what the map says about a company, leaving out what it doesn't. */
+export function cardFacts(company) {
+  return [company.area, company.teamSize ? `${company.teamSize} people` : '', company.fundingStage]
+    .map((part) => (part ?? '').trim())
+    .filter(Boolean)
+    .join(' · ');
+}
+
+/** "SaaS (166)" for the sector filter's options. */
+export function sectorOptionLabel({ sector, companies }) {
+  return `${sector} (${companies})`;
+}
+
 /** The address of a company's website from its domain ("groww.in" -> "https://groww.in"), or null. */
 export function websiteUrl(domain) {
   const value = (domain ?? '').trim();

@@ -1,5 +1,6 @@
 package com.resumeanalyser.job;
 
+import com.resumeanalyser.job.dto.CompanyFactsRequest;
 import com.resumeanalyser.job.feed.JobFeedException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,6 +32,46 @@ public class CompanyService {
     private final Throttle throttle;
     private final JobsProperties properties;
     private final Clock clock;
+
+    /** What {@link #applyFacts} did: companies updated, and facts whose domain matched none of ours. */
+    public record FactsSummary(int updated, int unmatched) {}
+
+    /**
+     * Adds a directory's facts to the companies we already have, matched on website domain. A blank
+     * field leaves ours as it is, and a careers link is only taken for a company that has none.
+     */
+    @org.springframework.transaction.annotation.Transactional
+    public FactsSummary applyFacts(List<CompanyFactsRequest> facts) {
+        int updated = 0;
+        int unmatched = 0;
+        for (CompanyFactsRequest fact : facts) {
+            String domain = Domains.normalize(fact.domain());
+            Optional<Company> known = domain == null ? Optional.empty() : companies.findByDomain(domain);
+            if (known.isEmpty()) {
+                unmatched++;
+                continue;
+            }
+            Company company = known.get();
+            company.setSector(orKeep(fact.sector(), company.getSector()));
+            company.setArea(orKeep(fact.area(), company.getArea()));
+            company.setFundingStage(orKeep(fact.fundingStage(), company.getFundingStage()));
+            company.setTeamSize(orKeep(fact.teamSize(), company.getTeamSize()));
+            company.setTags(orKeep(fact.tags(), company.getTags()));
+            if (fact.founded() != null) {
+                company.setFounded(fact.founded());
+            }
+            if (company.getCareersUrl() == null && fact.careersUrl() != null && fact.careersUrl().startsWith("http")) {
+                company.setCareersUrl(fact.careersUrl().trim());
+            }
+            companies.save(company);
+            updated++;
+        }
+        return new FactsSummary(updated, unmatched);
+    }
+
+    private static String orKeep(String incoming, String current) {
+        return incoming == null || incoming.isBlank() ? current : incoming.trim();
+    }
 
     public CompanyService(CompanyRepository companies, WikidataCompanySource wikidata, StartupMapSource startupMap,
                           AtsDetector detector, JobPostingWriter writer, Throttle throttle,

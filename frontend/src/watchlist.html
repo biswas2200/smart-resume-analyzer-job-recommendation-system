@@ -55,7 +55,11 @@
             <input class="input" id="company-query" type="search" placeholder="Find a company by name or website, e.g. Groww" autocomplete="off" />
             <button class="btn btn-primary" type="submit"><i data-icon="search"></i>Search</button>
           </form>
-          <div class="chips" id="filters" role="group" aria-label="Show"></div>
+          <div class="company-filters">
+            <div class="chips" id="filters" role="group" aria-label="Show"></div>
+            <label class="sr-only" for="sector-filter">Sector</label>
+            <select class="input sector-select" id="sector-filter"><option value="">All sectors</option></select>
+          </div>
 
           <div class="company-grid" id="company-grid"></div>
           <div class="card empty" id="directory-empty" hidden>
@@ -135,7 +139,8 @@
             <a class="company-site" data-field="site" target="_blank" rel="noopener noreferrer"></a>
           </div>
         </div>
-        <p class="company-badges"><span class="badge" data-field="status"></span></p>
+        <p class="company-badges"><span class="badge" data-field="status"></span> <span class="badge badge-blue" data-field="sector" hidden></span></p>
+        <p class="company-facts" data-field="facts" hidden></p>
         <div class="company-actions">
           <a class="btn btn-primary btn-sm" data-field="apply" hidden></a>
           <button class="btn btn-secondary btn-sm" type="button" data-field="watch"></button>

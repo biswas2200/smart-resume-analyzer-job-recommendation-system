@@ -168,10 +168,10 @@ public class WatchlistService {
      * {@code watching}). Read-only: it does not count against the watchlist's change limits.
      */
     @Transactional(readOnly = true)
-    public CompanyPageDto browse(User user, String query, String filter, int page, int size) {
+    public CompanyPageDto browse(User user, String query, String filter, String sector, int page, int size) {
         int pageSize = Math.max(1, Math.min(size, MAX_PAGE_SIZE));
         int pageNumber = Math.max(0, page);
-        Page<Company> found = companies.browse(escapeLike(query), "hiring".equals(filter), "watching".equals(filter),
+        Page<Company> found = companies.browse(escapeLike(query), sector == null ? "" : sector.trim(), "hiring".equals(filter), "watching".equals(filter),
                 user, PageRequest.of(pageNumber, pageSize));
         Set<UUID> mine = watched.findByUserOrderByAddedAtDesc(user).stream()
                 .map(entry -> entry.getCompany().getId())
@@ -188,6 +188,15 @@ public class WatchlistService {
                 .toList();
         return new CompanyPageDto(cards, pageNumber, pageSize, found.getTotalElements(), found.hasNext());
     }
+
+    /** The sectors in use, with how many companies each has (biggest first), for the cards' sector filter. */
+    @Transactional(readOnly = true)
+    public List<SectorCount> sectors() {
+        return companies.sectorCounts().stream().map(row -> new SectorCount((String) row[0], (Long) row[1])).toList();
+    }
+
+    /** One sector and its number of companies. */
+    public record SectorCount(String sector, long companies) {}
 
     /** The search text lower-cased and with LIKE's wildcards made literal ({@code \} is the escape character). */
     static String escapeLike(String query) {

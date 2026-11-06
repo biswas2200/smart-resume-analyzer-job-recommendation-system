@@ -22,6 +22,10 @@ public interface CompanyRepository extends JpaRepository<Company, UUID> {
     /** Name search for the watchlist's company picker. */
     List<Company> findTop20ByNameContainingIgnoreCaseOrderByNameAsc(String name);
 
+    /** Every sector in use with its number of companies, biggest first. Rows of (sector, count). */
+    @Query("select c.sector, count(c) from Company c where c.sector is not null and c.sector <> '' group by c.sector order by count(c) desc, c.sector")
+    List<Object[]> sectorCounts();
+
     /**
      * The browsable company list: by name or website when {@code q} is not blank (already escaped for
      * LIKE with {@code \}), optionally only companies with an open job, optionally only the ones
@@ -31,6 +35,7 @@ public interface CompanyRepository extends JpaRepository<Company, UUID> {
             select c from Company c
             where (:q = '' or lower(c.name) like concat('%', :q, '%') escape '\\'
                    or c.domain like concat('%', :q, '%') escape '\\')
+              and (:sector = '' or c.sector = :sector)
               and (:hiringOnly = false
                    or exists (select 1 from JobPosting p where p.company = c and p.active = true))
               and (:watchingOnly = false
@@ -39,6 +44,6 @@ public interface CompanyRepository extends JpaRepository<Company, UUID> {
                           then 0 else 1 end,
                      lower(c.name), c.id
             """)
-    Page<Company> browse(@Param("q") String q, @Param("hiringOnly") boolean hiringOnly,
+    Page<Company> browse(@Param("q") String q, @Param("sector") String sector, @Param("hiringOnly") boolean hiringOnly,
                          @Param("watchingOnly") boolean watchingOnly, @Param("user") User user, Pageable pageable);
 }

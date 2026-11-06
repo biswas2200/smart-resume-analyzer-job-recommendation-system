@@ -61,6 +61,24 @@ public class Company {
     @Column(name = "careers_url", columnDefinition = "TEXT")
     private String careersUrl;
 
+    /** The Bangalore Startup Map's facts about the company (see V10): all optional. */
+    @Column(length = 32)
+    private String sector;
+
+    @Column(length = 64)
+    private String area;
+
+    @Column(name = "funding_stage", length = 32)
+    private String fundingStage;
+
+    @Column(name = "team_size", length = 16)
+    private String teamSize;
+
+    private Integer founded;
+
+    @Column(length = 255)
+    private String tags;
+
     @Column(name = "last_checked_at")
     private Instant lastCheckedAt;
 

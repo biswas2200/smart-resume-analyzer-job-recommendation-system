@@ -8,6 +8,7 @@ import {
   avatarTone,
   boardLink,
   capLabel,
+  cardFacts,
   cardStatusBadge,
   companyInitials,
   companyStatusBadge,
@@ -17,6 +18,7 @@ import {
   normalizeFilter,
   openJobsLabel,
   resultsLabel,
+  sectorOptionLabel,
   websiteUrl,
 } from '../src/js/pages/watchlist-rules.js';
 
@@ -154,4 +156,11 @@ test('boardLink cuts a posting link back to the company board on the tools we kn
 test('applyAction sends a company with no open jobs to its board, not to one old posting', () => {
   const action = applyAction({ name: 'Acme', domain: 'acme.com', openJobs: 0, careersUrl: 'https://jobs.lever.co/acme/1c9f' });
   assert.equal(action.href, 'https://jobs.lever.co/acme');
+});
+
+test('cardFacts joins what the map says and leaves out what is missing', () => {
+  assert.equal(cardFacts({ area: 'Indiranagar', teamSize: '51-200', fundingStage: 'Series A' }), 'Indiranagar · 51-200 people · Series A');
+  assert.equal(cardFacts({ area: 'HSR Layout', teamSize: '', fundingStage: null }), 'HSR Layout');
+  assert.equal(cardFacts({}), '');
+  assert.equal(sectorOptionLabel({ sector: 'SaaS', companies: 166 }), 'SaaS (166)');
 });
