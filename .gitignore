@@ -66,3 +66,6 @@ supporting-docs/
 # EMA weights the backend pushes to the ML service at runtime (PUT /weights-snapshot)
 ml-service/app/data/weights_snapshot.json
 ml-service/app/data/weights_snapshot.json.tmp
+
+# demo runtime (scripts/demo.sh)
+.demo/
