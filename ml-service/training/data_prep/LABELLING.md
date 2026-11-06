@@ -201,3 +201,12 @@ the key disagree, check the resume before trusting either.
   how the model should tag skills.
 - Names and employers are anonymised in LiveCareer, so those labels come only
   from DataTurks.
+
+## Domain labels (gemini-3.8-flash, 2026-11-06)
+
+`gemini_label_domain.py` labels each resume with one of the 23 fields: 712 LiveCareer PDFs for about
+$1.65 (thinking level LOW; MINIMAL is rejected; $0.75 / $3.75 per 1M tokens, introductory until
+2026-12-31). A blind hand audit of 24 resumes agreed with Gemini exactly 20/24, and 24/24 within the
+second field. `train_domain_head.py` trained a softmax head on 597 of them on the GPU VM (cross-validated
+71.9 %); blended into `domain_classifier.py` (weight 0.35) it scores 77.4 % on 115 never-seen resumes,
+against 68.7 % without it. Rare fields (legal 2, science 3, manufacturing 4, real estate 4) are thin.

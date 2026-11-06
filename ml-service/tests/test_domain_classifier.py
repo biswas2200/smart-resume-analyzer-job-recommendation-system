@@ -58,6 +58,7 @@ def _stub_embeddings(monkeypatch):
     # collide with a resume line by chance, so the role evidence is switched off here and tested
     # separately (test_role_evidence_*) with a controlled embedder.
     monkeypatch.setattr(domain_classifier, "_role_vectors", lambda: ({}, np.zeros((0, 64)), np.zeros((0, 64))))
+    monkeypatch.setattr(domain_classifier, "_domain_head", lambda: None)
     yield
     domain_classifier._description_vectors.cache_clear()
 
@@ -272,3 +273,36 @@ def test_a_single_stray_dictionary_hit_does_not_outvote_the_headline(monkeypatch
     detection = domain_classifier.detect_domain("Software Developer Intern\nCounseling")
 
     assert detection.domain == "engineering"
+
+
+def test_the_shipped_head_matches_the_domains_and_the_embedding_size():
+    head = domain_classifier.HEAD_PATH
+    assert head.exists(), "app/data/domain_head.npz is trained by training/train_domain_head.py"
+    with np.load(head) as data:
+        ids = [str(d) for d in data["domains"]]
+        weights = data["weights"]
+    assert set(ids) <= {d["id"] for d in domain_classifier.load_domains()}
+    assert weights.shape == (768, len(ids)), "headline vector + opening vector of the 384-d MiniLM"
+
+
+def test_the_head_adds_its_probability_to_the_evidence_score(monkeypatch):
+    # A head that is sure of "legal" tips a resume whose other evidence is a dead heat.
+    ids = ["engineering", "legal"]
+    weights = np.zeros((4, 2))
+    weights[:, 1] = 5.0
+    monkeypatch.setattr(domain_classifier, "_domain_head", lambda: (ids, weights, np.zeros(2)))
+    monkeypatch.setattr(domain_classifier, "HEAD_WEIGHT", 1.0)
+    monkeypatch.setattr(embeddings, "embed", lambda texts: np.ones((len(texts), 2)))
+    monkeypatch.setattr(
+        domain_classifier, "gather_evidence",
+        lambda text: domain_classifier.DomainEvidence({"engineering": 0.30, "legal": 0.30}, 0, 0, np.ones(2), np.ones(2)),
+    )
+
+    assert domain_classifier.detect_domain("anything").domain == "legal"
+
+
+def test_a_head_for_another_embedding_size_is_ignored(monkeypatch):
+    monkeypatch.setattr(domain_classifier, "_domain_head", lambda: (["legal"], np.zeros((768, 1)), np.zeros(1)))
+    monkeypatch.setattr(embeddings, "embed", lambda texts: np.ones((len(texts), 2)))
+
+    assert domain_classifier.head_probabilities(np.ones(2), np.ones(2)) == {}

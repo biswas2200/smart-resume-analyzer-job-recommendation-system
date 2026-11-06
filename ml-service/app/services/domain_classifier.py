@@ -37,6 +37,7 @@ reported confidence is the winner's score relative to the runner-up, so
 
 import json
 import re
+from dataclasses import dataclass
 from functools import lru_cache
 
 import numpy as np
@@ -163,8 +164,56 @@ def _snippet(resume_text: str) -> str:
     return " ".join(resume_text.split()[:SNIPPET_WORDS])
 
 
-def detect_domain(resume_text: str) -> DomainDetection:
-    """Classify resume_text into one of data/domains.json's domains."""
+HEAD_PATH = DATA_DIR / "domain_head.npz"
+# How much the learned head adds to each domain's evidence score (see training/train_domain_head.py).
+# Measured on 597 Gemini-labelled resumes with out-of-fold head probabilities: 67.5 % exact agreement
+# without the head, about 76 % for weights from 0.25 to 0.5 (a flat plateau), so 0.35.
+HEAD_WEIGHT = 0.35
+
+
+@dataclass
+class DomainEvidence:
+    """What detect_domain learned about one resume before choosing: the evidence score of every domain,
+    the dictionary counts behind the engineering rule, and the two embeddings (None when empty)."""
+
+    scores: dict[str, float]
+    engineering_hits: int
+    strongest_other_hits: int
+    headline_vector: np.ndarray | None
+    snippet_vector: np.ndarray | None
+
+
+@lru_cache
+def _domain_head() -> tuple[list[str], np.ndarray, np.ndarray] | None:
+    """The learned head (domain ids, weights, bias) trained on Gemini-labelled resumes, or None when
+    the file is absent. It sits on the same two MiniLM vectors the score uses."""
+    if not HEAD_PATH.exists():
+        return None
+    with np.load(HEAD_PATH) as data:
+        return [str(d) for d in data["domains"]], data["weights"].astype(np.float64), data["bias"].astype(np.float64)
+
+
+def head_probabilities(headline_vector: np.ndarray | None, snippet_vector: np.ndarray | None) -> dict[str, float]:
+    """The head's probability for each domain, {} when there is no head or it does not fit the vectors
+    in use (a different embedding model)."""
+    head = _domain_head()
+    if head is None:
+        return {}
+    domain_ids, weights, bias = head
+    blank = embeddings.embed([" "])[0]
+    features = np.concatenate([
+        np.asarray(headline_vector if headline_vector is not None else blank, dtype=np.float64),
+        np.asarray(snippet_vector if snippet_vector is not None else blank, dtype=np.float64),
+    ])
+    if features.shape[0] != weights.shape[0]:
+        return {}
+    logits = features @ weights + bias
+    exp = np.exp(logits - logits.max())
+    return dict(zip(domain_ids, (exp / exp.sum()).tolist()))
+
+
+def gather_evidence(resume_text: str) -> DomainEvidence:
+    """Score every domain for resume_text from the dictionary, the headline and opening, and the roles."""
     domains = load_domains()
     engineering_hits = find_skills(resume_text, TAXONOMY_PATH)
     general_hits = find_skills(resume_text, GENERAL_TAXONOMY_PATH)
@@ -204,17 +253,25 @@ def detect_domain(resume_text: str) -> DomainDetection:
             + DESCRIPTION_WEIGHT * cosine,
             4,
         )
+    strongest_other = max((n for d, n in hits_per_domain.items() if d != ENGINEERING_DOMAIN), default=0)
+    return DomainEvidence(scores, len(engineering_hits), strongest_other, headline_vector, snippet_vector)
+
+
+def detect_domain(resume_text: str) -> DomainDetection:
+    """Classify resume_text into one of data/domains.json's domains."""
+    evidence = gather_evidence(resume_text)
+    scores = dict(evidence.scores)
+    for domain_id, probability in head_probabilities(evidence.headline_vector, evidence.snippet_vector).items():
+        if domain_id in scores:
+            scores[domain_id] = round(scores[domain_id] + HEAD_WEIGHT * probability, 4)
 
     ranked = sorted(scores.items(), key=lambda item: (-item[1], item[0]))
-    strongest_other = max(
-        (n for d, n in hits_per_domain.items() if d != ENGINEERING_DOMAIN), default=0
-    )
-    if len(engineering_hits) >= ENGINEERING_MIN_SKILLS and len(engineering_hits) >= strongest_other:
+    if evidence.engineering_hits >= ENGINEERING_MIN_SKILLS and evidence.engineering_hits >= evidence.strongest_other_hits:
         winner_id = ENGINEERING_DOMAIN
     else:
         winner_id = ranked[0][0]
     winner_score = scores[winner_id]
-    runner_up = max((s for d, s in scores.items() if d != winner_id), default=0.0)
+    runner_up = max((v for d, v in scores.items() if d != winner_id), default=0.0)
     denominator = winner_score + runner_up
     confidence = round(winner_score / denominator, 2) if denominator > 0 else 0.0
 
