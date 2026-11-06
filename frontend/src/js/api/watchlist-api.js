@@ -24,6 +24,15 @@ export function searchCompanies(query) {
   return get(`/watchlist/companies?${new URLSearchParams({ q: (query ?? '').trim() })}`);
 }
 
+/**
+ * One page of the whole company list, for the cards: `q` searches name and website, `filter` is
+ * `all`, `hiring` (an open job now) or `watching`. Resolves to
+ * `{ items: [{ id, name, domain, status, source, careersUrl, openJobs, watched }], page, size, total, hasMore }`.
+ */
+export function browseCompanies({ q = '', filter = 'all', page = 0, size = 24 } = {}) {
+  return get(`/watchlist/companies/browse?${new URLSearchParams({ q: q.trim(), filter, page, size })}`);
+}
+
 /** Adds a company to the watchlist (adding it twice is fine). Resolves to the watchlist entry. */
 export function watchCompany(companyId) {
   return put(`/watchlist/${encodeURIComponent(companyId)}`);

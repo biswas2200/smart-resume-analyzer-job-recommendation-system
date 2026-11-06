@@ -5,6 +5,7 @@ import com.resumeanalyser.account.UserRepository;
 import com.resumeanalyser.common.ResourceNotFoundException;
 import com.resumeanalyser.job.dto.AddCompanyRequest;
 import com.resumeanalyser.job.dto.CompanyOptionDto;
+import com.resumeanalyser.job.dto.CompanyPageDto;
 import com.resumeanalyser.job.dto.WatchedCompanyDto;
 import com.resumeanalyser.job.dto.WatchlistLimitsDto;
 import jakarta.validation.Valid;
@@ -51,6 +52,19 @@ public class WatchlistController {
     @GetMapping("/companies")
     public List<CompanyOptionDto> search(@RequestParam(defaultValue = "") String q, Authentication authentication) {
         return watchlistService.search(currentUser(authentication), q);
+    }
+
+    /**
+     * The whole company list a page at a time, for the watchlist page's cards: {@code q} searches
+     * name and website, {@code filter} is {@code all}, {@code hiring} or {@code watching}.
+     */
+    @GetMapping("/companies/browse")
+    public CompanyPageDto browse(@RequestParam(defaultValue = "") String q,
+                                 @RequestParam(defaultValue = "all") String filter,
+                                 @RequestParam(defaultValue = "0") int page,
+                                 @RequestParam(defaultValue = "24") int size,
+                                 Authentication authentication) {
+        return watchlistService.browse(currentUser(authentication), q, filter, page, size);
     }
 
     /**

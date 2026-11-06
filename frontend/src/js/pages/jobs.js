@@ -33,6 +33,8 @@ if (requireAuth()) {
   });
   byId('job-workplace').addEventListener('change', load);
   byId('retry-button').addEventListener('click', load);
+  // A link from a company card (jobs.html?q=Groww) opens the list already searched for that company.
+  byId('job-query').value = (new URLSearchParams(location.search).get('q') ?? '').slice(0, 200);
   load();
 }
 

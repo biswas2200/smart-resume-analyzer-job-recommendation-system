@@ -31,6 +31,11 @@ public interface JobPostingRepository extends JpaRepository<JobPosting, UUID> {
 
     long countByCompanyAndActiveTrue(Company company);
 
+    /** Open postings per company, for the companies on one page of the browsable list: rows of (company id, count). */
+    @Query("select p.company.id, count(p) from JobPosting p where p.active = true and p.company in :companies "
+            + "group by p.company.id")
+    List<Object[]> countActiveByCompany(@org.springframework.data.repository.query.Param("companies") List<Company> companies);
+
     /** Open postings of a company first seen after {@code since} (the watchlist's "new" count). */
     long countByCompanyAndActiveTrueAndFirstSeenAtAfter(Company company, Instant since);
 

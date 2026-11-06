@@ -5,15 +5,21 @@ import com.resumeanalyser.common.BadRequestException;
 import com.resumeanalyser.common.LimitReachedException;
 import com.resumeanalyser.common.ResourceNotFoundException;
 import com.resumeanalyser.common.TooManyRequestsException;
+import com.resumeanalyser.job.dto.CompanyCardDto;
 import com.resumeanalyser.job.dto.CompanyOptionDto;
+import com.resumeanalyser.job.dto.CompanyPageDto;
 import com.resumeanalyser.job.dto.WatchedCompanyDto;
 import com.resumeanalyser.job.dto.WatchlistLimitsDto;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.time.Clock;
 import java.time.Duration;
 import java.time.Instant;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 import java.util.stream.Collectors;
@@ -151,6 +157,42 @@ public class WatchlistService {
         return companies.findTop20ByNameContainingIgnoreCaseOrderByNameAsc(q).stream()
                 .map(company -> CompanyOptionDto.of(company, mine.contains(company.getId())))
                 .toList();
+    }
+
+    /** Largest page the browsable list returns, whatever the caller asks for. */
+    static final int MAX_PAGE_SIZE = 60;
+
+    /**
+     * One page of the browsable company list (the cards): optionally filtered by a name or website
+     * search and by {@code filter} ({@code all}, {@code hiring} for companies with an open job, or
+     * {@code watching}). Read-only: it does not count against the watchlist's change limits.
+     */
+    @Transactional(readOnly = true)
+    public CompanyPageDto browse(User user, String query, String filter, int page, int size) {
+        int pageSize = Math.max(1, Math.min(size, MAX_PAGE_SIZE));
+        int pageNumber = Math.max(0, page);
+        Page<Company> found = companies.browse(escapeLike(query), "hiring".equals(filter), "watching".equals(filter),
+                user, PageRequest.of(pageNumber, pageSize));
+        Set<UUID> mine = watched.findByUserOrderByAddedAtDesc(user).stream()
+                .map(entry -> entry.getCompany().getId())
+                .collect(Collectors.toSet());
+        Map<UUID, Long> open = new HashMap<>();
+        if (!found.isEmpty()) {
+            for (Object[] row : postings.countActiveByCompany(found.getContent())) {
+                open.put((UUID) row[0], (Long) row[1]);
+            }
+        }
+        List<CompanyCardDto> cards = found.getContent().stream()
+                .map(company -> CompanyCardDto.of(company, open.getOrDefault(company.getId(), 0L),
+                        mine.contains(company.getId())))
+                .toList();
+        return new CompanyPageDto(cards, pageNumber, pageSize, found.getTotalElements(), found.hasNext());
+    }
+
+    /** The search text lower-cased and with LIKE's wildcards made literal ({@code \} is the escape character). */
+    static String escapeLike(String query) {
+        String q = query == null ? "" : query.trim().toLowerCase();
+        return q.replace("\\", "\\\\").replace("%", "\\%").replace("_", "\\_");
     }
 
     private WatchedCompanyDto toDto(WatchedCompany entry, Instant newSince) {

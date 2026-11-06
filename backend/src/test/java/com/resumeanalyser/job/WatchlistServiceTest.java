@@ -15,6 +15,7 @@ import java.time.Clock;
 import java.time.Duration;
 import java.time.Instant;
 import java.time.ZoneOffset;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -23,6 +24,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.assertj.core.api.Assertions.tuple;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyBoolean;
+import static org.mockito.ArgumentMatchers.eq;
+import org.mockito.ArgumentCaptor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
@@ -233,5 +240,57 @@ class WatchlistServiceTest {
         entry.setCompany(company);
         entry.setAddedAt(addedAt);
         return entry;
+    }
+
+    // --- the browsable company list ---------------------------------------------------------
+
+    @Test
+    void browse_marksWatchedCompaniesAndCountsOpenJobsForTheWholePage() {
+        Company other = new Company();
+        other.setId(UUID.randomUUID());
+        other.setName("Acme");
+        other.setDomain("acme.com");
+        other.setStatus(CompanyStatus.UNSUPPORTED);
+        other.setCareersUrl("https://acme.com/careers");
+        WatchedCompany mine = new WatchedCompany();
+        mine.setCompany(company);
+        when(companies.browse(eq(""), eq(false), eq(false), eq(user), any(Pageable.class)))
+                .thenReturn(new PageImpl<>(List.of(company, other), org.springframework.data.domain.PageRequest.of(0, 24), 40));
+        when(watched.findByUserOrderByAddedAtDesc(user)).thenReturn(List.of(mine));
+        when(postings.countActiveByCompany(List.of(company, other)))
+                .thenReturn(Collections.singletonList(new Object[] {company.getId(), 7L}));
+
+        var page = service.browse(user, null, "all", 0, 24);
+
+        assertThat(page.items()).extracting("name", "openJobs", "watched")
+                .containsExactly(tuple("Groww", 7L, true), tuple("Acme", 0L, false));
+        assertThat(page.items().get(1).careersUrl()).isEqualTo("https://acme.com/careers");
+        assertThat(page.total()).isEqualTo(40);
+        assertThat(page.hasMore()).isTrue();
+    }
+
+    @Test
+    void browse_filtersByHiringOrWatching_andClampsThePage() {
+        when(companies.browse(any(), anyBoolean(), anyBoolean(), any(), any(Pageable.class)))
+                .thenReturn(Page.empty());
+        when(watched.findByUserOrderByAddedAtDesc(user)).thenReturn(List.of());
+
+        service.browse(user, "", "hiring", -5, 10_000);
+        service.browse(user, "", "watching", 2, 0);
+
+        ArgumentCaptor<Pageable> pageable = ArgumentCaptor.forClass(Pageable.class);
+        verify(companies).browse(eq(""), eq(true), eq(false), eq(user), pageable.capture());
+        assertThat(pageable.getValue().getPageNumber()).isZero();
+        assertThat(pageable.getValue().getPageSize()).isEqualTo(WatchlistService.MAX_PAGE_SIZE);
+        verify(companies).browse(eq(""), eq(false), eq(true), eq(user), pageable.capture());
+        assertThat(pageable.getValue().getPageSize()).isEqualTo(1);
+        verify(postings, never()).countActiveByCompany(any());
+    }
+
+    @Test
+    void escapeLike_makesWildcardsLiteralAndLowerCases() {
+        assertThat(WatchlistService.escapeLike("  Gro_ww% ")).isEqualTo("gro\\_ww\\%");
+        assertThat(WatchlistService.escapeLike("a\\b")).isEqualTo("a\\\\b");
+        assertThat(WatchlistService.escapeLike(null)).isEmpty();
     }
 }

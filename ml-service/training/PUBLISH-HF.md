@@ -60,3 +60,31 @@ says "research and non-commercial use" and lists the training sources.
 - Public or private (recommended: public).
 - Model name (suggestion: `resume-ner-bert-careeros`).
 - Teacher only, or teacher and student.
+
+## Re-publishing after retraining (checked 2026-11-06)
+
+The Hugging Face repos are **snapshots**. Nothing updates them when the model is retrained, and the
+app does not read them: it loads `models/ner/teacher-run1`, pinned by the SHA-256 of its weights.
+On 2026-11-06 both repos were verified against the project's pins:
+
+| Repo | `model.safetensors` SHA-256 | Matches |
+|---|---|---|
+| `biswas2200/resume-ner-bert-careeros` (teacher) | `ab0fd6ea92dd...` | `NER_MODEL_REVISION` and the local weights |
+| `biswas2200/resume-ner-distilbert-careeros` (student) | `d51d3ca32c21...` | the student pin in `.env.example` |
+
+So **yes, new training data means publishing again**, and the two models go together: the student
+is distilled from the teacher, so a new teacher makes the old student out of date.
+
+1. Retrain the teacher on the GPU VM (`gcp-setup.md` section 8), then re-distil the student from it.
+   Never train on a laptop.
+2. Evaluate both with `training/evaluate_model.py`. Do not publish a model that scores below the
+   numbers in `RESULTS.md` (teacher 84 % DataTurks / 90 % unseen LiveCareer, student 81 % / 90 %)
+   without saying so in the card.
+3. Put the new weights in the bucket under a new name (`runs/teacher-v2`), never over `runs/teacher`:
+   the old files are what the current pin and the repos describe.
+4. Repin the app: the new weights' SHA-256 in `NER_MODEL_REVISION` (`app/config.py`,
+   `.env.example`), `NER_MODEL_GCS_URI`, the engine version, and the tests that name the pin.
+5. Upload to both Hugging Face repos (model files only, never resumes), update the model cards'
+   scores, training data and date, and note the new `model.safetensors` SHA-256 in this file.
+6. The domain classifier's small head (`app/data/domain_head.npz`, trained on Gemini labels, built
+   on MiniLM) is **not** part of these models: it ships in git and needs no Hugging Face upload.

@@ -27,15 +27,59 @@
       </header>
 
       <div class="content">
-        <form class="card job-filters watch-search" id="search-form" role="search">
-          <label class="sr-only" for="company-query">Find a company to watch</label>
-          <input class="input" id="company-query" type="search" placeholder="Find a company to watch, e.g. Groww" autocomplete="off" />
-          <button class="btn btn-primary" type="submit"><i data-icon="search"></i>Search</button>
-        </form>
         <p class="muted" id="watch-cap" role="status" hidden></p>
-        <div class="card watch-results" id="search-results" hidden>
-          <ul class="watch-options" id="search-list"></ul>
-          <p class="muted" id="search-note" hidden></p>
+
+        <section class="watch-section" aria-labelledby="watching-title">
+          <h2 class="section-heading" id="watching-title">Watching <span class="count" id="watching-count"></span></h2>
+          <div class="skeleton" id="status-loading" aria-label="Loading your watchlist">
+            <div class="card tall"></div>
+          </div>
+          <div class="card empty" id="status-error" hidden>
+            <i data-icon="alert"></i>
+            <h3>Could not load your watchlist</h3>
+            <p id="load-error"></p>
+            <button class="btn btn-secondary" id="retry-button" type="button"><i data-icon="refresh"></i>Try again</button>
+          </div>
+          <div class="card empty" id="status-empty" hidden>
+            <i data-icon="eye"></i>
+            <h3>You're not watching any companies yet</h3>
+            <p>Browse the companies below and press Watch to follow one. Its new jobs show up here with a New badge.</p>
+          </div>
+          <div class="saved-items" id="watchlist" hidden></div>
+        </section>
+
+        <section class="watch-section" aria-labelledby="browse-title">
+          <h2 class="section-heading" id="browse-title">Browse companies <span class="count" id="results-label" role="status"></span></h2>
+          <form class="card company-toolbar" id="search-form" role="search">
+            <label class="sr-only" for="company-query">Find a company by name or website</label>
+            <input class="input" id="company-query" type="search" placeholder="Find a company by name or website, e.g. Groww" autocomplete="off" />
+            <button class="btn btn-primary" type="submit"><i data-icon="search"></i>Search</button>
+          </form>
+          <div class="chips" id="filters" role="group" aria-label="Show"></div>
+
+          <div class="company-grid" id="company-grid"></div>
+          <div class="card empty" id="directory-empty" hidden>
+            <i data-icon="search"></i>
+            <h3 id="directory-empty-title">No companies match</h3>
+            <p id="directory-empty-text">Try a shorter name, or add the company below.</p>
+          </div>
+          <div class="card empty" id="directory-error" hidden>
+            <i data-icon="alert"></i>
+            <h3>Could not load the companies</h3>
+            <p id="directory-error-text"></p>
+            <button class="btn btn-secondary" id="directory-retry" type="button"><i data-icon="refresh"></i>Try again</button>
+          </div>
+          <div class="load-more" id="load-more-row" hidden>
+            <button class="btn btn-secondary" id="load-more" type="button">Load more companies</button>
+          </div>
+          <p class="credit muted">
+            Company list from the
+            <a href="https://www.bangalorestartupmap.com" target="_blank" rel="noopener noreferrer">Bangalore Startup Map</a>
+            (used with its creator's permission) and Wikidata.
+          </p>
+        </section>
+
+        <section class="card watch-results" aria-label="Add a company">
           <details class="watch-add" id="add-company">
             <summary>Can't find it? Add it by its website</summary>
             <form class="watch-add-form" id="add-form" novalidate>
@@ -59,24 +103,7 @@
               <p class="alert alert-success" id="add-note" role="status" hidden></p>
             </form>
           </details>
-        </div>
-
-        <div class="skeleton" id="status-loading" aria-label="Loading your watchlist">
-          <div class="card tall"></div>
-        </div>
-        <div class="card empty" id="status-error" hidden>
-          <i data-icon="alert"></i>
-          <h3>Could not load your watchlist</h3>
-          <p id="load-error"></p>
-          <button class="btn btn-secondary" id="retry-button" type="button"><i data-icon="refresh"></i>Try again</button>
-        </div>
-        <div class="card empty" id="status-empty" hidden>
-          <i data-icon="eye"></i>
-          <h3>You're not watching any companies yet</h3>
-          <p>Search for a company above to follow it. Its new jobs show up here with a New badge.</p>
-        </div>
-
-        <div class="saved-items" id="watchlist" hidden></div>
+        </section>
       </div>
     </div>
 
@@ -94,6 +121,24 @@
         <div class="saved-actions">
           <a class="btn btn-ghost btn-sm" data-field="careers" target="_blank" rel="noopener noreferrer" hidden><i data-icon="external"></i>Careers page</a>
           <button class="btn btn-ghost btn-sm" type="button" data-field="remove">Stop watching</button>
+        </div>
+        <p class="alert alert-error" data-field="error" role="alert" hidden></p>
+      </article>
+    </template>
+
+    <template id="company-card-template">
+      <article class="company-card">
+        <div class="company-head">
+          <span class="company-avatar" data-field="avatar" aria-hidden="true"></span>
+          <div class="company-id">
+            <h3 data-field="name"></h3>
+            <a class="company-site" data-field="site" target="_blank" rel="noopener noreferrer"></a>
+          </div>
+        </div>
+        <p class="company-badges"><span class="badge" data-field="status"></span></p>
+        <div class="company-actions">
+          <a class="btn btn-primary btn-sm" data-field="apply" hidden></a>
+          <button class="btn btn-secondary btn-sm" type="button" data-field="watch"></button>
         </div>
         <p class="alert alert-error" data-field="error" role="alert" hidden></p>
       </article>

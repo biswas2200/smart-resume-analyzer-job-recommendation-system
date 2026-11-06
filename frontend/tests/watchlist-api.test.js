@@ -5,6 +5,7 @@ import { API_BASE_URL } from '../src/js/config.js';
 import { ApiError } from '../src/js/core/api-error.js';
 import {
   addCompany,
+  browseCompanies,
   getWatchlist,
   getWatchlistLimits,
   searchCompanies,
@@ -70,4 +71,14 @@ test('a 429 or 409 from the backend reaches the page with its message', async ()
       return true;
     });
   }
+});
+
+test('browseCompanies asks for one page with the search, filter and size', async () => {
+  await browseCompanies({ q: ' gro ', filter: 'hiring', page: 2, size: 12 });
+  assert.deepEqual(calls, [['GET', '/watchlist/companies/browse?q=gro&filter=hiring&page=2&size=12', undefined]]);
+});
+
+test('browseCompanies defaults to the first page of everything', async () => {
+  await browseCompanies();
+  assert.deepEqual(calls, [['GET', '/watchlist/companies/browse?q=&filter=all&page=0&size=24', undefined]]);
 });
