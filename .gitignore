@@ -1,0 +1,68 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Env / secrets
+.env
+*.env.local
+
+# MkDocs build output
+site/
+
+# Java / Spring Boot
+target/
+*.class
+*.jar
+!.mvn/wrapper/maven-wrapper.jar
+.mvn/
+hs_err_pid*
+
+# Node / frontend
+node_modules/
+dist/
+build/
+.next/
+.turbo/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+.DS_Store
+
+# Logs
+*.log
+
+# SonarQube scanner local cache/report dir
+.scannerwork/
+
+# Internal working docs (SRS draft, notes) -- not meant for the public repo
+documents/
+
+# Trained NER models -- fetched from the bucket by
+# ml-service/scripts/fetch_ner_models.sh, too large for git
+ml-service/models/
+
+# Downloaded evaluation/training datasets -- large, not meant for the repo
+datasets/
+
+# Personal manual-download tracking note -- not part of the shipped docs set
+# (not in mkdocs.yml's nav; see docs/datasets.md for the dataset catalogue itself)
+docs/manual-downloads-backlog.md
+
+# Personal supporting notes (not for the repo)
+supporting-docs/
+
+# Personal Claude Code settings and hooks
+.claude/settings.local.json
+.claude/hooks/
+
+# EMA weights the backend pushes to the ML service at runtime (PUT /weights-snapshot)
+ml-service/app/data/weights_snapshot.json
+ml-service/app/data/weights_snapshot.json.tmp

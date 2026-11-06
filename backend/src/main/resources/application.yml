@@ -1,0 +1,89 @@
+spring:
+  application:
+    name: resume-analyser-backend
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/resume_analyser}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+  jpa:
+    hibernate:
+      # Schema is owned by Flyway (db/migration); Hibernate only checks the
+      # entities agree with what Flyway already created, never generates DDL itself.
+      ddl-auto: validate
+    open-in-view: false
+  flyway:
+    enabled: true
+
+server:
+  port: ${PORT:8080}
+
+logging:
+  # Every line carries the request id (common.logging.RequestIdFilter), which
+  # is also sent to the ML service, so one request can be followed across both.
+  pattern:
+    level: "%5p [%X{requestId:-}]"
+  level:
+    root: ${LOG_LEVEL_ROOT:INFO}
+    com.resumeanalyser: ${LOG_LEVEL:INFO}
+  # Set LOG_FILE (e.g. logs/backend.log) to also write a rolling file.
+  file:
+    name: ${LOG_FILE:}
+
+app:
+  jwt:
+    # NFR-2.4: production must set JWT_SECRET; this default is dev-only.
+    secret: ${JWT_SECRET:dev-only-secret-change-me-32-bytes-minimum-please}
+    # NFR-2.1: JWT sessions <= 24h.
+    expiration-ms: ${JWT_EXPIRATION_MS:86400000}
+  # Object storage (MinIO locally, S3-compatible anywhere else) for uploaded
+  # resume files; Resume.fileRef stores the object key, never the bytes.
+  storage:
+    endpoint: ${OBJECT_STORAGE_ENDPOINT:http://localhost:9010}
+    access-key: ${OBJECT_STORAGE_ACCESS_KEY:minioadmin}
+    secret-key: ${OBJECT_STORAGE_SECRET_KEY:minioadmin}
+    bucket: ${OBJECT_STORAGE_BUCKET:resumes}
+  ml-service:
+    # Base URL of the FastAPI ML service (see ml-service/app/main.py) this backend
+    # calls for parsing, matching, ATS scoring, and analysis.
+    base-url: ${ML_SERVICE_BASE_URL:http://localhost:8000}
+  cors:
+    # Origins allowed to call this API from a browser (the frontend's static dev server by
+    # default). Comma-separated for multiple origins in other environments.
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:4200}
+  jobs:
+    # Job recommendations, step 1: Bengaluru companies' public job feeds
+    # (Lever, Greenhouse, Ashby). See backend/README.md "Jobs".
+    city: Bengaluru
+    city-names: [bengaluru, bangalore]
+    country-names: [india]
+    # Sent to every feed and to Wikidata. Wikidata asks bots to name a contact:
+    # set JOBS_USER_AGENT to include one before running this in production.
+    user-agent: ${JOBS_USER_AGENT:SmartResumeAnalyser/0.6 (student project; job feed reader)}
+    request-delay: ${JOBS_REQUEST_DELAY:150ms}
+    # Between page reads on a website (the startup map's company pages).
+    page-delay: ${JOBS_PAGE_DELAY:1s}
+    timeout: 15s
+    # Daily refresh, India time (Spring cron: s m h dom mon dow); "-" turns it off.
+    refresh-cron: ${JOBS_REFRESH_CRON:0 30 6 * * *}
+  watchlist:
+    # The same for every user (WatchlistProperties). Over the cap ->
+    # 409; watching / stop watching faster than this -> 429 with Retry-After.
+    max-companies: ${WATCHLIST_MAX_COMPANIES:25}
+    changes-per-minute: ${WATCHLIST_CHANGES_PER_MINUTE:10}
+    changes-per-hour: ${WATCHLIST_CHANGES_PER_HOUR:60}
+  admin:
+    # Bootstrap administrators: accounts with these emails (comma-separated)
+    # become ADMIN when they register or log in, so the first admin never
+    # needs a manual database edit. Admins change other accounts roles via
+    # PATCH /admin/users/{id}/role.
+    emails: ${APP_ADMIN_EMAILS:}
+  skill-vector:
+    # FR-7.2's smoothing factor: new_weight = alpha*new_signal + (1-alpha)*old_weight.
+    # Not specified by the SRS -- 0.3 is a standard, moderate EMA smoothing choice
+    # (recent signal matters, but one feedback burst can't swing a weight wildly).
+    alpha: ${SKILL_VECTOR_ALPHA:0.3}
+    # How much feedback on a role triggers an automatic weight recompute (the
+    # "enough feedback accumulated" branch in docs/process-flow.md §4). Also not
+    # specified by the SRS -- 5 is a placeholder balancing responsiveness against
+    # recomputing on every single feedback event.
+    feedback-threshold: ${SKILL_VECTOR_FEEDBACK_THRESHOLD:5}

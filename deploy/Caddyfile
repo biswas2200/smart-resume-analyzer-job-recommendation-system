@@ -1,0 +1,6 @@
+# HTTPS in front of the whole app. Caddy gets and renews a Let's Encrypt
+# certificate for SITE_ADDRESS by itself (port 80 must be open for that).
+{$SITE_ADDRESS} {
+	encode gzip
+	reverse_proxy frontend:80
+}

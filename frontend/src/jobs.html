@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Jobs for you · Smart Resume Analyser</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Sidebar"></aside>
+    <div class="scrim" id="scrim" hidden></div>
+
+    <div class="main">
+      <header class="topbar">
+        <button class="icon-btn" id="menu-button" type="button" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false"><i data-icon="menu"></i></button>
+        <div>
+          <p class="crumb">Jobs</p>
+          <h1 class="page-title">Jobs for you</h1>
+        </div>
+        <div class="topbar-actions">
+          <a class="btn btn-secondary" href="saved.html"><i data-icon="bookmark"></i>Saved jobs</a>
+        </div>
+      </header>
+
+      <div class="content">
+        <form class="card job-filters" id="filters" role="search">
+          <label class="sr-only" for="job-query">Search jobs</label>
+          <input class="input" id="job-query" type="search" placeholder="Search by title or company, e.g. data engineer" autocomplete="off" />
+          <label class="sr-only" for="job-workplace">Workplace</label>
+          <select class="select" id="job-workplace">
+            <option value="">Any workplace</option>
+            <option value="onsite">On-site</option>
+            <option value="hybrid">Hybrid</option>
+            <option value="remote">Remote</option>
+          </select>
+          <button class="btn btn-primary" type="submit"><i data-icon="search"></i>Search</button>
+        </form>
+
+        <p class="alert alert-info" id="no-resume-note" role="status" hidden>
+          <i data-icon="upload"></i>
+          <span>These are the newest open jobs. <a href="upload.html">Upload a resume</a> to see how well each one fits you.</span>
+        </p>
+
+        <div class="job-summary" id="summary" hidden>
+          <p class="muted" id="summary-text"></p>
+          <ul class="chips" id="summary-roles" aria-label="Your matched roles"></ul>
+        </div>
+
+        <div class="skeleton" id="status-loading" aria-label="Loading jobs">
+          <div class="card tall"></div>
+          <div class="card tall"></div>
+        </div>
+        <div class="card empty" id="status-error" hidden>
+          <i data-icon="alert"></i>
+          <h3>Could not load jobs</h3>
+          <p id="load-error"></p>
+          <button class="btn btn-secondary" id="retry-button" type="button"><i data-icon="refresh"></i>Try again</button>
+        </div>
+        <div class="card empty" id="status-no-open-jobs" hidden>
+          <i data-icon="briefcase"></i>
+          <h3>No open jobs right now</h3>
+          <p>We read jobs from each company's own careers feed every morning. Check back tomorrow.</p>
+        </div>
+        <div class="card empty" id="status-no-results" hidden>
+          <i data-icon="search"></i>
+          <h3>No jobs match these filters</h3>
+          <p>Try fewer words, or any workplace.</p>
+        </div>
+
+        <div class="job-list" id="jobs" aria-live="polite"></div>
+
+        <p class="muted job-credit">
+          Jobs come from each company's own careers page (Lever, Greenhouse, Ashby). Company list partly from
+          <a href="https://www.bangalorestartupmap.com" target="_blank" rel="noopener noreferrer">Bangalore Startup Map</a>.
+        </p>
+      </div>
+    </div>
+
+    <template id="job-template">
+      <article class="card job-card">
+        <div class="job-head">
+          <div>
+            <h3><span data-field="title"></span> <span class="badge badge-violet" data-field="new" hidden>New</span></h3>
+            <p class="job-company" data-field="company"></p>
+            <p class="job-meta muted" data-field="meta"></p>
+          </div>
+          <div class="match-score" data-field="score-group">
+            <span class="match-pct" data-field="match"></span>
+            <span class="badge" data-field="band"></span>
+          </div>
+        </div>
+        <p class="job-why" data-field="why"></p>
+        <div class="match-skills" data-field="skills">
+          <div data-field="matched-group">
+            <p class="section-label">You have</p>
+            <ul class="chips chips-green" data-field="matched"></ul>
+          </div>
+          <div data-field="missing-group">
+            <p class="section-label">Skills to add</p>
+            <ul class="chips chips-amber" data-field="missing"></ul>
+          </div>
+        </div>
+        <p class="muted job-excerpt" data-field="excerpt"></p>
+        <div class="match-foot">
+          <div class="row">
+            <a class="btn btn-primary btn-sm" data-field="apply" target="_blank" rel="noopener noreferrer"><i data-icon="external"></i>Apply</a>
+            <a class="btn btn-ghost btn-sm" data-field="view" target="_blank" rel="noopener noreferrer">View posting</a>
+          </div>
+          <button class="btn btn-secondary btn-sm" type="button" data-field="save" aria-pressed="false"><i data-icon="bookmark"></i><span data-field="save-label">Save</span></button>
+        </div>
+      </article>
+    </template>
+
+    <script type="module" src="js/pages/jobs.js"></script>
+  </body>
+</html>

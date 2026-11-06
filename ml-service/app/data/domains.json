@@ -1,0 +1,207 @@
+[
+  {
+    "id": "engineering",
+    "name": "Engineering & Technology",
+    "engine": "local",
+    "description": "Software development, data engineering and analytics, machine learning and AI, DevOps, cloud and infrastructure, cybersecurity, embedded and hardware engineering, QA, technical product and design roles",
+    "subdomains": [
+      "Software Engineering",
+      "Data Analytics & Engineering",
+      "Machine Learning & AI",
+      "DevOps & Infrastructure",
+      "Cybersecurity Engineering",
+      "Hardware & Embedded Engineering",
+      "Product & Specialized Engineering"
+    ]
+  },
+  {
+    "id": "healthcare",
+    "name": "Healthcare & Life Sciences",
+    "engine": "local",
+    "description": "Nursing, physicians, allied health, pharmacy, therapy, medical assisting, medical and clinical laboratory technologists, dental, caregiving and clinical support roles in hospitals, clinics and care facilities"
+  },
+  {
+    "id": "finance_accounting",
+    "name": "Finance & Accounting",
+    "engine": "local",
+    "description": "Accounting, bookkeeping, audit, tax, payroll, financial reporting, financial analysis and planning (FP&A), controllership, accounts payable and receivable, billing and revenue cycle"
+  },
+  {
+    "id": "sales",
+    "name": "Sales & Business Development",
+    "engine": "local",
+    "description": "Account executives and managers, business development, inside and outside sales, territory and channel sales, sales development, customer success, brand ambassadors and sales associates"
+  },
+  {
+    "id": "marketing",
+    "name": "Marketing & Communications",
+    "engine": "local",
+    "description": "Digital and product marketing, brand, content and copywriting, SEO and social media, public relations, communications, advertising and campaign management roles"
+  },
+  {
+    "id": "human_resources",
+    "name": "Human Resources & Recruiting",
+    "engine": "local",
+    "description": "HR generalists and business partners, recruiting and talent acquisition, compensation and benefits, people operations, learning and development, employee relations roles"
+  },
+  {
+    "id": "operations_supply_chain",
+    "name": "Operations, Logistics & Supply Chain",
+    "engine": "local",
+    "description": "Supply chain, procurement and purchasing, logistics, warehouse and inventory, shipping and receiving, transport and fleet, dispatch, distribution and freight operations"
+  },
+  {
+    "id": "education",
+    "name": "Education & Training",
+    "engine": "local",
+    "description": "Teachers, tutors, professors and lecturers, instructors and trainers, curriculum and instructional design, school administration, early childhood and special education roles"
+  },
+  {
+    "id": "legal",
+    "name": "Legal & Compliance",
+    "engine": "local",
+    "description": "Attorneys, paralegals and legal assistants, contracts, legal and corporate compliance, litigation support, notaries and law clerks"
+  },
+  {
+    "id": "design_creative",
+    "name": "Design & Creative",
+    "engine": "local",
+    "description": "Graphic and visual design, art and creative direction, illustration, photography, video editing and motion graphics, writing and editing, journalism and media production roles"
+  },
+  {
+    "id": "customer_service_hospitality",
+    "name": "Customer Service & Hospitality",
+    "engine": "local",
+    "description": "Customer service and support, call centre, front desk and guest services, hotel, restaurant, food service, culinary, bar and housekeeping roles"
+  },
+  {
+    "id": "construction_trades",
+    "name": "Construction & Skilled Trades",
+    "engine": "local",
+    "description": "Construction, electricians, plumbers, HVAC, carpentry, welding, maintenance and repair technicians, site supervision and estimating, installers, landscaping and building services"
+  },
+  {
+    "id": "administration",
+    "name": "Administration & Office Support",
+    "engine": "local",
+    "description": "Administrative and executive assistants, office managers and coordinators, receptionists, data entry, clerical, scheduling and general office support roles"
+  },
+  {
+    "id": "core_engineering",
+    "name": "Core Engineering (Mechanical, Electrical, Civil, Chemical)",
+    "engine": "local",
+    "description": "Mechanical, electrical and electronics, civil and structural, chemical and process, industrial and manufacturing engineering: CAD and product design, FEA and simulation, power systems and controls, site and structural design, process safety, plant, reliability and maintenance engineering",
+    "subdomains": [
+      "mechanical",
+      "electrical_electronics",
+      "civil_structural",
+      "chemical_process",
+      "industrial_manufacturing",
+      "automotive_aerospace"
+    ]
+  },
+  {
+    "id": "science_research",
+    "name": "Science, Research & Laboratory",
+    "engine": "local",
+    "description": "Laboratory and research science: chemists, biologists, microbiologists, research scientists and associates, lab technicians and analysts, clinical research and trials, biostatistics, regulatory affairs, R&D in pharma, biotech and materials",
+    "subdomains": [
+      "laboratory",
+      "research",
+      "clinical_research",
+      "regulatory_affairs"
+    ]
+  },
+  {
+    "id": "consulting_project_management",
+    "name": "Consulting, Project & Programme Management",
+    "engine": "local",
+    "description": "Project, programme and portfolio management, PMO, business analysis, management and strategy consulting, change and transformation delivery across industries",
+    "subdomains": [
+      "project_management",
+      "business_analysis",
+      "consulting",
+      "change_management"
+    ]
+  },
+  {
+    "id": "retail_ecommerce",
+    "name": "Retail & E-commerce Operations",
+    "engine": "local",
+    "description": "Retail store management and operations, merchandising and buying, category management, e-commerce operations, visual merchandising, inventory and shift supervision",
+    "subdomains": [
+      "store_operations",
+      "merchandising_buying",
+      "ecommerce"
+    ]
+  },
+  {
+    "id": "social_services",
+    "name": "Social Services, Counselling & Public Sector",
+    "engine": "local",
+    "description": "Social work, case management, counselling and mental health support, community outreach, nonprofit and public-sector programmes, youth and family services, advocacy and public health",
+    "subdomains": [
+      "social_work",
+      "counselling",
+      "community_outreach",
+      "nonprofit_public_sector"
+    ]
+  },
+  {
+    "id": "banking_insurance",
+    "name": "Banking, Insurance & Risk",
+    "engine": "local",
+    "description": "Banking, lending and insurance: underwriting, claims, loan and mortgage origination, branch and relationship management, wealth and investment advice, credit and risk analysis, actuarial work",
+    "subdomains": [
+      "banking",
+      "lending",
+      "insurance",
+      "wealth_investment",
+      "risk_actuarial"
+    ]
+  },
+  {
+    "id": "quality_safety",
+    "name": "Quality, Safety & EHS",
+    "engine": "local",
+    "description": "Quality assurance and control in manufacturing and operations, inspection and audits, ISO and Six Sigma, environmental health and safety (EHS/HSE), safety management and on-site regulatory compliance",
+    "subdomains": [
+      "quality_assurance_control",
+      "inspection_audit",
+      "ehs_safety"
+    ]
+  },
+  {
+    "id": "real_estate_property",
+    "name": "Real Estate, Property & Facilities",
+    "engine": "local",
+    "description": "Real estate sales and brokerage, property and leasing management, facilities management, appraisal, escrow and title, residential and commercial property operations",
+    "subdomains": [
+      "real_estate_sales",
+      "property_leasing",
+      "facilities_management"
+    ]
+  },
+  {
+    "id": "veterinary_agriculture",
+    "name": "Veterinary, Agriculture & Environment",
+    "engine": "local",
+    "description": "Veterinary medicine and animal care, agriculture and agronomy, horticulture, forestry, ecology and conservation, environmental science and field work",
+    "subdomains": [
+      "veterinary_animal_care",
+      "agriculture_horticulture",
+      "environment_conservation"
+    ]
+  },
+  {
+    "id": "manufacturing_production",
+    "name": "Manufacturing & Production Operations",
+    "engine": "local",
+    "description": "Production and plant operations on the shop floor: production supervision and planning, machine and CNC operation, assembly and fabrication, material handling, lean manufacturing and shift management",
+    "subdomains": [
+      "production_supervision",
+      "machine_operation",
+      "assembly_fabrication"
+    ]
+  }
+]

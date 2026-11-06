@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Smart Resume Analyser</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Upload your resume to get an ATS score with fixes, the roles you fit best, the skills to add, and a match against any job description." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <header class="site-nav">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#3b5bdb"/><path d="M11 7.5h7.2l4.3 4.3V24a1 1 0 0 1-1 1H11a1 1 0 0 1-1-1V8.5a1 1 0 0 1 1-1z" fill="#fff"/><path d="M18.2 7.5v4.3h4.3z" fill="#c7d2fe"/><path d="M13 15.5h6.5M13 19h4.5" stroke="#3b5bdb" stroke-width="1.7" stroke-linecap="round"/></svg>
+        Smart Resume Analyser
+      </a>
+      <nav class="site-links" aria-label="Sections">
+        <a href="#features">Features</a>
+        <a href="#included">What you get</a>
+      </nav>
+      <div class="site-actions">
+        <div id="signed-out-actions" class="site-actions">
+          <a class="btn btn-ghost" href="login.html">Sign in</a>
+          <a class="btn btn-primary" href="register.html">Get started</a>
+        </div>
+        <a id="signed-in-action" class="btn btn-primary" href="dashboard.html" hidden>Open dashboard</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Resume analysis · Role matching</p>
+          <h1>See your resume the way hiring software reads it.</h1>
+          <p class="lead">
+            Upload a PDF or DOCX. Get an ATS score with the exact fixes, the roles you fit best, the
+            skills to add, and how close you are to any job description you paste.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="register.html">Analyse my resume <i data-icon="arrow"></i></a>
+            <a class="btn btn-secondary" href="login.html">I have an account</a>
+          </div>
+          <ul class="hero-points">
+            <li><i data-icon="check"></i>Engineering &amp; Technology resumes analysed in full, free</li>
+            <li><i data-icon="check"></i>PDF or DOCX, up to 5 MB</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="card">
+            <div class="row" style="justify-content: space-between">
+              <p class="section-label">ATS score</p>
+              <span class="badge badge-blue">Good</span>
+            </div>
+            <p class="mock-score"><b>78</b><span class="muted mono">/100</span></p>
+            <div class="bar tone-ok"><span style="width: 78%"></span></div>
+            <div style="margin-top: 14px">
+              <p class="mock-row"><span>Email address</span><span class="badge badge-green">Pass</span></p>
+              <p class="mock-row"><span>Experience section</span><span class="badge badge-green">Pass</span></p>
+              <p class="mock-row"><span>Skills section</span><span class="badge badge-red">Fix</span></p>
+            </div>
+          </div>
+          <div class="card mock-offset">
+            <div class="row" style="justify-content: space-between">
+              <div>
+                <p class="section-label">Best role match</p>
+                <p class="stat-title" style="margin-top: 4px">Data Analyst</p>
+              </div>
+              <span class="match-pct">86%</span>
+            </div>
+            <p class="section-label" style="margin: 14px 0 8px">Skills to add</p>
+            <ul class="chips chips-amber"><li>Power BI</li><li>dbt</li></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="features" id="features">
+        <h2 class="section-title">Everything about your resume, in one dashboard</h2>
+        <p class="section-sub">Every result says what it found and what to do about it.</p>
+        <div class="feature-grid">
+          <article class="card feature">
+            <span class="feature-icon"><i data-icon="check"></i></span>
+            <h3>ATS check with fixes</h3>
+            <p>A score out of 100, every check explained, and the points each fix is worth.</p>
+          </article>
+          <article class="card feature">
+            <span class="feature-icon"><i data-icon="target"></i></span>
+            <h3>Role matches</h3>
+            <p>The roles your skills fit best, with the skills you have and the ones to add.</p>
+          </article>
+          <article class="card feature">
+            <span class="feature-icon"><i data-icon="briefcase"></i></span>
+            <h3>Job description match</h3>
+            <p>Paste any job ad and see your coverage, the gaps and the closest role.</p>
+          </article>
+          <article class="card feature">
+            <span class="feature-icon"><i data-icon="clock"></i></span>
+            <h3>Version history</h3>
+            <p>Every upload is kept, so you can compare versions and watch the score move.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="included" id="included">
+        <h2 class="section-title">Everything included</h2>
+        <p class="section-sub">Every account gets the whole product, with no plans to choose between.</p>
+        <article class="card included-card">
+          <ul class="tick-list">
+            <li><i data-icon="check"></i><span>ATS score with every check explained</span></li>
+            <li><i data-icon="check"></i><span>Resumes in every field analysed, with no monthly limit</span></li>
+            <li><i data-icon="check"></i><span>Your top 5 role matches with the skills you are missing</span></li>
+            <li><i data-icon="check"></i><span>Suggestions written for you by AI</span></li>
+            <li><i data-icon="check"></i><span>Match your resume to any job description</span></li>
+            <li><i data-icon="check"></i><span>Every upload kept as a version, with no history limit</span></li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">Smart Resume Analyser · your resume stays in your account.</footer>
+
+    <script type="module" src="js/pages/landing.js"></script>
+  </body>
+</html>

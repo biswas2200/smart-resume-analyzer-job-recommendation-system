@@ -1,0 +1,376 @@
+[
+  {
+    "role": "Backend Software Engineer",
+    "domain": "engineering",
+    "sub": "Software Engineering",
+    "description": "Designs and builds server-side services, APIs and data access layers",
+    "skills": [
+      "Java",
+      "Python",
+      "SQL",
+      "REST APIs",
+      "Spring Boot",
+      "Microservices",
+      "Git",
+      "Docker"
+    ]
+  },
+  {
+    "role": "Frontend Software Engineer",
+    "domain": "engineering",
+    "sub": "Software Engineering",
+    "description": "Builds the browser-side of web applications with modern JavaScript frameworks",
+    "skills": [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "HTML",
+      "CSS",
+      "REST APIs",
+      "Git",
+      "Webpack"
+    ]
+  },
+  {
+    "role": "Full Stack Developer",
+    "domain": "engineering",
+    "sub": "Software Engineering",
+    "description": "Works across the frontend and backend of web applications end to end",
+    "skills": [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Node.js",
+      "SQL",
+      "REST APIs",
+      "Git",
+      "Docker"
+    ]
+  },
+  {
+    "role": "Data Scientist",
+    "domain": "engineering",
+    "sub": "Machine Learning & AI",
+    "description": "Extracts insight from data with statistics, machine learning and visualisation",
+    "skills": [
+      "Python",
+      "SQL",
+      "Machine Learning",
+      "Statistics",
+      "Pandas",
+      "Scikit-learn",
+      "Data Visualization"
+    ]
+  },
+  {
+    "role": "Data Analyst",
+    "domain": "engineering",
+    "sub": "Data Analytics & Engineering",
+    "description": "Answers business questions with SQL, spreadsheets and BI dashboards",
+    "skills": [
+      "SQL",
+      "Excel",
+      "Data Visualization",
+      "Python",
+      "Statistics",
+      "Power BI",
+      "Tableau"
+    ]
+  },
+  {
+    "role": "Data Engineer",
+    "domain": "engineering",
+    "sub": "Data Analytics & Engineering",
+    "description": "Builds and operates data pipelines, warehouses and ETL/ELT workflows",
+    "skills": [
+      "Python",
+      "SQL",
+      "ETL",
+      "Apache Spark",
+      "Airflow",
+      "Data Warehousing",
+      "AWS",
+      "Docker"
+    ]
+  },
+  {
+    "role": "Machine Learning Engineer",
+    "domain": "engineering",
+    "sub": "Machine Learning & AI",
+    "description": "Trains, ships and operates machine-learning models in production",
+    "skills": [
+      "Python",
+      "Machine Learning",
+      "Deep Learning",
+      "PyTorch",
+      "TensorFlow",
+      "MLOps",
+      "Docker",
+      "SQL"
+    ]
+  },
+  {
+    "role": "DevOps Engineer",
+    "domain": "engineering",
+    "sub": "DevOps & Infrastructure",
+    "description": "Automates build, deployment and infrastructure with CI/CD and infrastructure as code",
+    "skills": [
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "AWS",
+      "Terraform",
+      "Linux",
+      "Bash",
+      "Git"
+    ]
+  },
+  {
+    "role": "Site Reliability Engineer",
+    "domain": "engineering",
+    "sub": "DevOps & Infrastructure",
+    "description": "Keeps production systems reliable through monitoring, on-call and automation",
+    "skills": [
+      "Linux",
+      "Kubernetes",
+      "Monitoring",
+      "Incident Response",
+      "Python",
+      "AWS",
+      "CI/CD",
+      "Bash"
+    ]
+  },
+  {
+    "role": "Cloud Engineer",
+    "domain": "engineering",
+    "sub": "DevOps & Infrastructure",
+    "description": "Designs and runs workloads on public-cloud platforms",
+    "skills": [
+      "AWS",
+      "Azure",
+      "GCP",
+      "Terraform",
+      "Networking",
+      "Linux",
+      "Docker",
+      "Kubernetes"
+    ]
+  },
+  {
+    "role": "Android Developer",
+    "domain": "engineering",
+    "sub": "Software Engineering",
+    "description": "Builds native Android applications",
+    "skills": [
+      "Kotlin",
+      "Java",
+      "Android SDK",
+      "REST APIs",
+      "Git",
+      "SQLite",
+      "Jetpack Compose"
+    ]
+  },
+  {
+    "role": "iOS Developer",
+    "domain": "engineering",
+    "sub": "Software Engineering",
+    "description": "Builds native iOS applications",
+    "skills": [
+      "Swift",
+      "iOS SDK",
+      "REST APIs",
+      "Git",
+      "Core Data",
+      "SwiftUI"
+    ]
+  },
+  {
+    "role": "QA / Test Engineer",
+    "domain": "engineering",
+    "sub": "Product & Specialized Engineering",
+    "description": "Plans and automates testing to verify software quality",
+    "skills": [
+      "Test Automation",
+      "Selenium",
+      "Manual Testing",
+      "SQL",
+      "API Testing",
+      "Git",
+      "CI/CD"
+    ]
+  },
+  {
+    "role": "Product Manager",
+    "domain": "engineering",
+    "sub": "Product & Specialized Engineering",
+    "description": "Owns product strategy, roadmap and delivery with engineering and stakeholders",
+    "skills": [
+      "Product Strategy",
+      "Roadmapping",
+      "Stakeholder Management",
+      "Data Analysis",
+      "Agile",
+      "User Research"
+    ]
+  },
+  {
+    "role": "UX/UI Designer",
+    "domain": "engineering",
+    "sub": "Product & Specialized Engineering",
+    "description": "Researches, designs and prototypes user experiences and interfaces",
+    "skills": [
+      "Figma",
+      "User Research",
+      "Wireframing",
+      "Prototyping",
+      "Interaction Design",
+      "Usability Testing"
+    ]
+  },
+  {
+    "role": "Business Analyst",
+    "domain": "engineering",
+    "sub": "Product & Specialized Engineering",
+    "description": "Gathers requirements and models processes between business and engineering",
+    "skills": [
+      "Requirements Gathering",
+      "SQL",
+      "Data Analysis",
+      "Excel",
+      "Stakeholder Management",
+      "Process Modeling"
+    ]
+  },
+  {
+    "role": "Cybersecurity Analyst",
+    "domain": "engineering",
+    "sub": "Cybersecurity Engineering",
+    "description": "Monitors, assesses and responds to security threats and vulnerabilities",
+    "skills": [
+      "Cybersecurity",
+      "SOC",
+      "SIEM",
+      "Incident Response",
+      "Network Security",
+      "Vulnerability Assessment",
+      "Endpoint Security",
+      "Linux",
+      "Python"
+    ]
+  },
+  {
+    "role": "Database Administrator",
+    "domain": "engineering",
+    "sub": "Data Analytics & Engineering",
+    "description": "Operates, tunes and safeguards relational databases",
+    "skills": [
+      "SQL",
+      "PostgreSQL",
+      "MySQL",
+      "Database Tuning",
+      "Backup & Recovery",
+      "Linux"
+    ]
+  },
+  {
+    "role": "Systems Administrator",
+    "domain": "engineering",
+    "sub": "DevOps & Infrastructure",
+    "description": "Administers servers, networks, directories and virtualised infrastructure",
+    "skills": [
+      "Linux",
+      "Windows Server",
+      "Networking",
+      "Bash",
+      "Active Directory",
+      "Virtualization"
+    ]
+  },
+  {
+    "role": "Technical Writer",
+    "domain": "engineering",
+    "sub": "Product & Specialized Engineering",
+    "description": "Writes developer and user documentation for software products",
+    "skills": [
+      "Technical Documentation",
+      "API Documentation",
+      "Markdown",
+      "Editing",
+      "Git",
+      "Information Architecture"
+    ]
+  },
+  {
+    "role": "IT Project Manager",
+    "domain": "engineering",
+    "sub": "Product & Specialized Engineering",
+    "description": "Plans and delivers technology projects with agile and risk management",
+    "skills": [
+      "Agile",
+      "Scrum",
+      "Risk Management",
+      "Stakeholder Management",
+      "Budgeting",
+      "Jira"
+    ]
+  },
+  {
+    "role": "AI Research Engineer",
+    "domain": "engineering",
+    "sub": "Machine Learning & AI",
+    "description": "Researches and implements new machine-learning methods and models",
+    "skills": [
+      "Python",
+      "Deep Learning",
+      "PyTorch",
+      "Research Methodology",
+      "Machine Learning",
+      "Statistics",
+      "Linear Algebra"
+    ]
+  },
+  {
+    "role": "Blockchain Developer",
+    "domain": "engineering",
+    "sub": "Software Engineering",
+    "description": "Builds smart contracts and decentralised applications",
+    "skills": [
+      "Solidity",
+      "Smart Contracts",
+      "Ethereum",
+      "JavaScript",
+      "Cryptography",
+      "Git"
+    ]
+  },
+  {
+    "role": "Embedded Systems Engineer",
+    "domain": "engineering",
+    "sub": "Hardware & Embedded Engineering",
+    "description": "Programs firmware for microcontrollers and real-time systems",
+    "skills": [
+      "C",
+      "C++",
+      "Embedded Systems",
+      "RTOS",
+      "Microcontrollers",
+      "Debugging"
+    ]
+  },
+  {
+    "role": "Solutions Architect",
+    "domain": "engineering",
+    "sub": "DevOps & Infrastructure",
+    "description": "Designs end-to-end system architectures across services and cloud",
+    "skills": [
+      "System Design",
+      "AWS",
+      "Microservices",
+      "REST APIs",
+      "Stakeholder Management",
+      "Networking"
+    ]
+  }
+]

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Watchlist · Smart Resume Analyser</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Sidebar"></aside>
+    <div class="scrim" id="scrim" hidden></div>
+
+    <div class="main">
+      <header class="topbar">
+        <button class="icon-btn" id="menu-button" type="button" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false"><i data-icon="menu"></i></button>
+        <div>
+          <p class="crumb">Jobs</p>
+          <h1 class="page-title">Watchlist</h1>
+        </div>
+        <div class="topbar-actions">
+          <a class="btn btn-secondary" href="jobs.html"><i data-icon="search"></i>Find jobs</a>
+        </div>
+      </header>
+
+      <div class="content">
+        <form class="card job-filters watch-search" id="search-form" role="search">
+          <label class="sr-only" for="company-query">Find a company to watch</label>
+          <input class="input" id="company-query" type="search" placeholder="Find a company to watch, e.g. Groww" autocomplete="off" />
+          <button class="btn btn-primary" type="submit"><i data-icon="search"></i>Search</button>
+        </form>
+        <p class="muted" id="watch-cap" role="status" hidden></p>
+        <div class="card watch-results" id="search-results" hidden>
+          <ul class="watch-options" id="search-list"></ul>
+          <p class="muted" id="search-note" hidden></p>
+          <details class="watch-add" id="add-company">
+            <summary>Can't find it? Add it by its website</summary>
+            <form class="watch-add-form" id="add-form" novalidate>
+              <div class="field">
+                <label for="add-name">Company name</label>
+                <input class="input" id="add-name" maxlength="255" autocomplete="organization" />
+              </div>
+              <div class="field">
+                <label for="add-website">Website</label>
+                <input class="input" id="add-website" maxlength="512" placeholder="acme.com" inputmode="url" />
+              </div>
+              <div class="field">
+                <label for="add-careers">Careers page link <span class="muted">(optional)</span></label>
+                <input class="input" id="add-careers" maxlength="1024" placeholder="https://jobs.lever.co/acme" inputmode="url" />
+              </div>
+              <p class="muted">We look for its jobs on Lever, Greenhouse and Ashby. This takes a few seconds.</p>
+              <div class="row">
+                <button class="btn btn-primary btn-sm" id="add-submit" type="submit">Add and watch</button>
+              </div>
+              <p class="alert alert-error" id="add-error" role="alert" hidden></p>
+              <p class="alert alert-success" id="add-note" role="status" hidden></p>
+            </form>
+          </details>
+        </div>
+
+        <div class="skeleton" id="status-loading" aria-label="Loading your watchlist">
+          <div class="card tall"></div>
+        </div>
+        <div class="card empty" id="status-error" hidden>
+          <i data-icon="alert"></i>
+          <h3>Could not load your watchlist</h3>
+          <p id="load-error"></p>
+          <button class="btn btn-secondary" id="retry-button" type="button"><i data-icon="refresh"></i>Try again</button>
+        </div>
+        <div class="card empty" id="status-empty" hidden>
+          <i data-icon="eye"></i>
+          <h3>You're not watching any companies yet</h3>
+          <p>Search for a company above to follow it. Its new jobs show up here with a New badge.</p>
+        </div>
+
+        <div class="saved-items" id="watchlist" hidden></div>
+      </div>
+    </div>
+
+    <template id="watched-template">
+      <article class="card saved-card">
+        <div>
+          <h3 data-field="name"></h3>
+          <p class="job-meta muted" data-field="domain"></p>
+          <p class="watch-badges">
+            <span class="badge" data-field="status"></span>
+            <span class="badge" data-field="open" hidden></span>
+            <span class="badge badge-blue" data-field="new" hidden></span>
+          </p>
+        </div>
+        <div class="saved-actions">
+          <a class="btn btn-ghost btn-sm" data-field="careers" target="_blank" rel="noopener noreferrer" hidden><i data-icon="external"></i>Careers page</a>
+          <button class="btn btn-ghost btn-sm" type="button" data-field="remove">Stop watching</button>
+        </div>
+        <p class="alert alert-error" data-field="error" role="alert" hidden></p>
+      </article>
+    </template>
+
+    <script type="module" src="js/pages/watchlist.js"></script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sign in · Smart Resume Analyser</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <main class="auth-wrap">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#3b5bdb"/><path d="M11 7.5h7.2l4.3 4.3V24a1 1 0 0 1-1 1H11a1 1 0 0 1-1-1V8.5a1 1 0 0 1 1-1z" fill="#fff"/><path d="M18.2 7.5v4.3h4.3z" fill="#c7d2fe"/><path d="M13 15.5h6.5M13 19h4.5" stroke="#3b5bdb" stroke-width="1.7" stroke-linecap="round"/></svg>
+        Smart Resume Analyser
+      </a>
+
+      <div class="card auth-card">
+        <h1>Welcome back</h1>
+        <p class="sub">Sign in to see your resume analysis.</p>
+
+        <div id="signed-in" class="notice" hidden>
+          <p>You're already signed in as <b id="signed-in-email"></b>.</p>
+          <div class="row">
+            <a class="btn btn-primary" href="dashboard.html">Go to dashboard</a>
+            <button id="switch-account" class="btn btn-ghost" type="button">Use another account</button>
+          </div>
+        </div>
+
+        <form id="login-form" novalidate>
+          <div id="login-error" class="alert alert-error" role="alert" hidden></div>
+
+          <div class="field">
+            <label for="login-email">Email</label>
+            <input id="login-email" class="input" type="email" autocomplete="email" aria-describedby="login-email-error" />
+            <p id="login-email-error" class="field-error"></p>
+          </div>
+
+          <div class="field">
+            <label for="login-password">Password</label>
+            <input id="login-password" class="input" type="password" autocomplete="current-password" aria-describedby="login-password-error" />
+            <p id="login-password-error" class="field-error"></p>
+          </div>
+
+          <button id="login-submit" class="btn btn-primary btn-block" type="submit">Sign in</button>
+        </form>
+      </div>
+
+      <p class="auth-switch">New here? <a href="register.html">Create an account</a></p>
+    </main>
+
+    <script type="module" src="js/pages/login.js"></script>
+  </body>
+</html>

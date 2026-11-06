@@ -1,0 +1,23 @@
+Copyright (c) 2026 Amitosh Biswas. All Rights Reserved.
+
+This repository and all of its contents (source code, documentation, models,
+data, and assets) are the exclusive property of the copyright holder.
+
+No part of this repository may be used, copied, modified, merged, published,
+distributed, sublicensed, and/or sold, in whole or in part, without the prior
+written permission of the copyright holder, except as explicitly permitted
+below.
+
+Permitted use:
+- You may run this software locally (including self-hosting the LLM-based
+  components) for personal, non-commercial resume analysis.
+- You may view the source for evaluation purposes (e.g. academic review).
+
+Not permitted without explicit written permission from the copyright holder:
+- Using this software or any derivative of it for commercial purposes or to
+  generate revenue, directly or indirectly.
+- Modifying, forking, or redistributing this software or any derivative of it.
+- Submitting modifications other than via a pull request to the original
+  repository, subject to the owner's review and acceptance.
+
+All rights not expressly granted above are reserved by the copyright holder.

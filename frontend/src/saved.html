@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Saved jobs · Smart Resume Analyser</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Sidebar"></aside>
+    <div class="scrim" id="scrim" hidden></div>
+
+    <div class="main">
+      <header class="topbar">
+        <button class="icon-btn" id="menu-button" type="button" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false"><i data-icon="menu"></i></button>
+        <div>
+          <p class="crumb">Jobs</p>
+          <h1 class="page-title">Saved jobs</h1>
+        </div>
+        <div class="topbar-actions">
+          <a class="btn btn-secondary" href="jobs.html"><i data-icon="search"></i>Find jobs</a>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="skeleton" id="status-loading" aria-label="Loading saved jobs">
+          <div class="card tall"></div>
+        </div>
+        <div class="card empty" id="status-error" hidden>
+          <i data-icon="alert"></i>
+          <h3>Could not load your saved jobs</h3>
+          <p id="load-error"></p>
+          <button class="btn btn-secondary" id="retry-button" type="button"><i data-icon="refresh"></i>Try again</button>
+        </div>
+        <div class="card empty" id="status-empty" hidden>
+          <i data-icon="bookmark"></i>
+          <h3>No saved jobs yet</h3>
+          <p>Save jobs from your recommendations, then track each application here: applied, interviewing, offer.</p>
+          <a class="btn btn-primary" href="jobs.html">See jobs for you</a>
+        </div>
+
+        <div class="saved-board" id="board" hidden></div>
+      </div>
+    </div>
+
+    <template id="saved-group-template">
+      <section class="saved-group">
+        <h2 class="saved-group-title"><span data-field="label"></span> <span class="count" data-field="count"></span></h2>
+        <div class="saved-items" data-field="items"></div>
+        <p class="muted saved-none" data-field="none">Nothing here yet.</p>
+      </section>
+    </template>
+
+    <template id="saved-job-template">
+      <article class="card saved-card">
+        <div>
+          <h3 data-field="title"></h3>
+          <p class="job-company" data-field="company"></p>
+          <p class="job-meta muted" data-field="meta"></p>
+          <span class="badge badge-red" data-field="closed" hidden>Closed by the company</span>
+        </div>
+        <div class="saved-actions">
+          <label class="sr-only" data-field="status-label">Application status</label>
+          <select class="select" data-field="status"></select>
+          <a class="btn btn-ghost btn-sm" data-field="view" target="_blank" rel="noopener noreferrer"><i data-icon="external"></i>Posting</a>
+          <button class="btn btn-ghost btn-sm" type="button" data-field="remove">Remove</button>
+        </div>
+        <p class="alert alert-error" data-field="error" role="alert" hidden></p>
+      </article>
+    </template>
+
+    <script type="module" src="js/pages/saved.js"></script>
+  </body>
+</html>

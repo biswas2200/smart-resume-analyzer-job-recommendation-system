@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dashboard · Smart Resume Analyser</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Sidebar"></aside>
+    <div class="scrim" id="scrim" hidden></div>
+
+    <div class="main">
+      <header class="topbar">
+        <button class="icon-btn" id="menu-button" type="button" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false"><i data-icon="menu"></i></button>
+        <div>
+          <p class="crumb" id="crumb">Dashboard</p>
+          <h1 class="page-title">Your analysis</h1>
+        </div>
+        <div class="topbar-actions">
+          <span class="mono muted" id="analysed-version"></span>
+          <a class="btn btn-secondary" href="upload.html"><i data-icon="upload"></i>Upload new version</a>
+        </div>
+      </header>
+
+      <nav class="tabs" aria-label="Dashboard sections">
+        <a class="tab" href="#overview" data-tab="overview">Overview</a>
+        <a class="tab" href="#matches" data-tab="matches">Role matches <span class="count" id="matches-count"></span></a>
+        <a class="tab" href="#jd" data-tab="jd">JD match</a>
+      </nav>
+
+      <div class="content">
+        <!-- Status: one of these shows until the dashboard has loaded. -->
+        <div class="skeleton" id="status-loading" aria-label="Loading your analysis">
+          <div class="stats"><div class="card"></div><div class="card"></div><div class="card"></div></div>
+          <div class="card tall"></div>
+        </div>
+        <div class="card empty" id="status-error" hidden>
+          <i data-icon="alert"></i>
+          <h3>Could not load your dashboard</h3>
+          <p id="load-error"></p>
+          <button class="btn btn-secondary" id="retry-button" type="button"><i data-icon="refresh"></i>Try again</button>
+        </div>
+        <div class="card empty" id="status-empty" hidden>
+          <i data-icon="upload"></i>
+          <h3>No resume analysed yet</h3>
+          <p>Upload a PDF or DOCX and your score, checks and role matches appear here.</p>
+          <a class="btn btn-primary" href="upload.html">Upload a resume</a>
+        </div>
+
+        <!-- Overview -->
+        <section id="panel-overview" class="content" style="padding: 0" aria-label="Overview" hidden>
+          <div class="stats">
+            <article class="card stat">
+              <div class="row" style="justify-content: space-between">
+                <p class="section-label">ATS score</p>
+                <span class="badge" id="ats-band"></span>
+              </div>
+              <p class="stat-big"><b id="ats-score"></b><span class="muted mono" id="ats-max"></span></p>
+              <div class="bar" id="ats-bar"><span></span></div>
+              <p class="muted" id="ats-change" hidden></p>
+            </article>
+
+            <article class="card stat" id="domain-card">
+              <p class="section-label">Field</p>
+              <p class="stat-title" id="domain-name"></p>
+              <div class="row">
+                <span class="badge badge-blue" id="domain-confidence"></span>
+                <span class="badge" id="domain-engine"></span>
+              </div>
+              <p class="muted" id="domain-note"></p>
+            </article>
+
+            <article class="card stat">
+              <p class="section-label">Best role match</p>
+              <div id="top-match">
+                <p class="stat-title" id="top-role"></p>
+                <p class="stat-big" style="margin-top: 8px"><b id="top-percent"></b><span class="muted mono">% match</span></p>
+              </div>
+              <p class="muted" id="top-none" hidden></p>
+              <a href="#matches" class="btn btn-ghost btn-sm" style="justify-self: start; padding-left: 0">See all matches <i data-icon="arrow"></i></a>
+            </article>
+          </div>
+
+          <div class="grid-main">
+            <article class="card">
+              <div class="card-head">
+                <h2>ATS checks</h2>
+                <span class="muted" id="checks-summary"></span>
+              </div>
+              <ul class="check-list" id="ats-checks"></ul>
+            </article>
+
+            <article class="card">
+              <div class="card-head">
+                <h2>Suggestions</h2>
+                <span class="badge" id="coaching-badge"></span>
+              </div>
+              <div class="prose" id="explanation"></div>
+              <div class="next-steps">
+                <h3>Next steps</h3>
+                <ol id="next-steps"></ol>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Role matches -->
+        <section id="panel-matches" aria-label="Role matches" hidden>
+          <article class="card locked" id="locked-card" hidden>
+            <span class="lock-icon"><i data-icon="lock"></i></span>
+            <h2>Role matches for <span data-field="domain-name"></span> are locked</h2>
+            <p id="locked-default">
+              Role matches for <span data-field="domain-name"></span> were not available on this analysis.
+              Re-analyse to try again.
+            </p>
+            <p id="locked-budget" hidden>
+              AI analyses for <span data-field="domain-name"></span> are paused until tomorrow. They are
+              back after the daily reset.
+            </p>
+            <p id="locked-community" hidden>
+              This edition runs without the AI engine, so role matches for <span data-field="domain-name"></span>
+              are not available here.
+            </p>
+            <div id="unlock-section" hidden>
+              <p id="unlock-message" style="margin-bottom: 10px"></p>
+              <button class="btn btn-primary" id="reanalyze-button" type="button"><i data-icon="refresh"></i>Re-analyse</button>
+            </div>
+            <p class="alert alert-error" id="reanalyze-error" role="alert" hidden></p>
+          </article>
+
+          <div id="recommendations-section" hidden>
+            <p class="muted" style="margin-bottom: 16px">Ranked by how well your skills fit each role. Rate a match to improve future suggestions.</p>
+            <div class="match-list" id="recommendations"></div>
+            <div class="card empty" id="recommendations-empty" hidden>
+              <i data-icon="target"></i>
+              <h3>No role matches yet</h3>
+              <p>Add your tools and technologies under a "Skills" heading and upload again.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- JD match -->
+        <section id="panel-jd" aria-label="Job description match" hidden>
+          <div class="grid-jd" id="jd-section" hidden>
+            <form class="card jd-form" id="jd-form">
+              <div class="card-head" style="margin-bottom: 0"><h2>Match a job description</h2></div>
+              <label for="jd-text" class="muted">Paste the full job ad: title, responsibilities and requirements.</label>
+              <textarea id="jd-text" class="input" rows="14" placeholder="Senior Data Analyst…"></textarea>
+              <div class="jd-actions">
+                <span class="mono muted" id="jd-count">0 characters</span>
+                <button class="btn btn-primary" id="jd-match-button" type="submit" disabled>Match my resume</button>
+              </div>
+              <p class="alert alert-error" id="jd-match-error" role="alert" hidden></p>
+            </form>
+
+            <article class="card" aria-live="polite">
+              <div class="empty" id="jd-placeholder">
+                <i data-icon="briefcase"></i>
+                <h3>No match yet</h3>
+                <p>Your result appears here: coverage, matched and missing skills, and the closest role.</p>
+              </div>
+              <div class="jd-result" id="jd-result" hidden>
+                <div class="jd-top">
+                  <div class="ring" id="jd-ring"><b id="jd-score"></b></div>
+                  <div>
+                    <span class="badge" id="jd-verdict"></span>
+                    <p class="muted" style="margin-top: 8px">How well your resume fits this job.</p>
+                  </div>
+                </div>
+                <dl class="kv">
+                  <div><dt># Coverage</dt><dd id="jd-coverage"></dd></div>
+                  <div><dt># Similarity</dt><dd id="jd-similarity"></dd></div>
+                  <div id="jd-closest-group"><dt># Closest role</dt><dd id="jd-closest"></dd></div>
+                </dl>
+                <div id="jd-matched-group">
+                  <p class="section-label">Skills you have</p>
+                  <ul class="chips chips-green" id="jd-matched"></ul>
+                </div>
+                <div id="jd-missing-group">
+                  <p class="section-label">Skills to add</p>
+                  <ul class="chips chips-amber" id="jd-missing"></ul>
+                </div>
+                <div class="prose"><p class="preserve-lines" id="jd-explanation"></p></div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <template id="ats-check-template">
+      <li class="check">
+        <span class="check-icon" data-field="icon"></span>
+        <div class="check-body">
+          <p class="check-title"><span data-field="label"></span><span class="mono muted" data-field="points"></span></p>
+          <p class="muted" data-field="detail"></p>
+          <p class="check-fix" data-field="fix"></p>
+        </div>
+      </li>
+    </template>
+
+    <template id="recommendation-template">
+      <article class="card match-card">
+        <div class="match-head">
+          <div>
+            <h3 data-field="title"></h3>
+            <p class="muted" data-field="description"></p>
+          </div>
+          <div class="match-score">
+            <span class="match-pct" data-field="match"></span>
+            <span class="badge badge-green" data-field="new" hidden>New</span>
+          </div>
+        </div>
+        <div class="bar" data-field="bar"><span></span></div>
+        <div class="match-skills">
+          <div data-field="matched-group">
+            <p class="section-label">You have</p>
+            <ul class="chips chips-green" data-field="matched"></ul>
+          </div>
+          <div data-field="missing-group">
+            <p class="section-label">Skills to add</p>
+            <ul class="chips chips-amber" data-field="missing"></ul>
+          </div>
+        </div>
+        <div class="in-demand" data-field="demand" hidden>
+          <p class="section-label" data-field="demand-heading"></p>
+          <ul class="chips chips-demand" data-field="demand-skills"></ul>
+          <p class="muted demand-note">Green: on your resume. Share of the role's open jobs that ask for it.</p>
+        </div>
+        <div class="match-foot">
+          <span class="muted">Is this match useful?</span>
+          <div class="vote" role="group" data-field="vote">
+            <button class="btn btn-ghost btn-sm" type="button" data-field="helpful" aria-pressed="false">Helpful</button>
+            <button class="btn btn-ghost btn-sm" type="button" data-field="not-helpful" aria-pressed="false">Not helpful</button>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <script type="module" src="js/pages/dashboard.js"></script>
+  </body>
+</html>

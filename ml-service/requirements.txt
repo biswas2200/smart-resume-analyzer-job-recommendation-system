@@ -1,0 +1,22 @@
+# sentence-transformers pulls in torch. Install the CPU-only build first
+# (this project doesn't need CUDA) or pip will default to the much larger
+# GPU-enabled wheel:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+# then install the rest of this file.
+
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.30,<1.0
+python-multipart>=0.0.9,<1.0
+pydantic>=2.7,<3.0
+pydantic-settings>=2.3,<3.0
+sentence-transformers>=3.0,<4.0
+transformers>=4.40,<5.0
+pdfplumber>=0.11,<1.0
+python-docx>=1.1,<2.0
+numpy>=1.26,<2.0
+groq>=0.9,<1.0
+google-genai>=1.0,<2.0
+python-dotenv>=1.0,<2.0
+
+pytest>=8.2,<9.0
+httpx>=0.27,<1.0

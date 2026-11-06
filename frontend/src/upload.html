@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Resume analyzer · Smart Resume Analyser</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Sidebar"></aside>
+    <div class="scrim" id="scrim" hidden></div>
+
+    <div class="main">
+      <header class="topbar">
+        <button class="icon-btn" id="menu-button" type="button" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false"><i data-icon="menu"></i></button>
+        <div>
+          <p class="crumb">Resume analyzer</p>
+          <h1 class="page-title">My resume</h1>
+        </div>
+        <div class="topbar-actions">
+          <a class="btn btn-primary" href="dashboard.html" id="to-dashboard" hidden>View analysis <i data-icon="arrow"></i></a>
+        </div>
+      </header>
+
+      <div class="content">
+        <div id="upload-error" class="alert alert-error" role="alert" hidden></div>
+        <div id="upload-success" class="alert alert-success" role="status" hidden></div>
+
+        <div class="analyzer">
+          <section class="col-preview" aria-label="Resume preview and upload">
+            <div class="card preview-card">
+              <div class="preview-toolbar">
+                <div class="seg" role="tablist" aria-label="Preview">
+                  <button type="button" role="tab" id="view-parsed" aria-selected="true">Parsed view</button>
+                  <button type="button" role="tab" id="view-original" aria-selected="false" disabled
+                          title="Available for a PDF chosen in this browser">Original file</button>
+                </div>
+                <span class="mono muted" id="preview-version"></span>
+              </div>
+
+              <article class="paper" id="paper" aria-label="Resume as we read it">
+                <div id="paper-content" hidden>
+                  <p class="paper-tag">Resume</p>
+                  <h2 id="paper-name"></h2>
+                  <p class="paper-contact" id="paper-contact"></p>
+                  <div id="paper-skills-block"><h3>Skills</h3><p id="paper-skills"></p></div>
+                  <div id="paper-experience-block"><h3>Experience</h3><ul id="paper-experience"></ul></div>
+                  <div id="paper-education-block"><h3>Education</h3><ul id="paper-education"></ul></div>
+                </div>
+                <p class="paper-empty" id="paper-empty">Your resume appears here once it is uploaded.</p>
+              </article>
+              <iframe id="original-frame" class="original-frame" title="Original resume file" hidden></iframe>
+            </div>
+
+            <div class="card file-card" id="dropzone">
+              <div class="file-icon"><i data-icon="file"></i></div>
+              <div>
+                <p class="file-name" id="file-name">Upload a resume</p>
+                <p class="file-detail mono muted" id="file-detail">PDF or DOCX · up to 5 MB</p>
+              </div>
+              <div class="file-actions">
+                <label class="btn btn-secondary" for="resume-file"><i data-icon="plus"></i>Choose file</label>
+                <button class="btn btn-primary" id="upload-submit" type="button" disabled>Upload &amp; analyse</button>
+              </div>
+              <input id="resume-file" class="sr-only" type="file"
+                     accept=".pdf,.docx,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+              <p class="drop-hint">Or drop a file on this card. Each upload is kept as a new version.</p>
+              <div class="progress-line" id="upload-loader" hidden></div>
+            </div>
+          </section>
+
+          <section class="card" aria-labelledby="result-title">
+            <div class="card-head">
+              <h2 id="result-title">Parsing result</h2>
+              <div class="card-head-actions">
+                <label class="sr-only" for="version-select">Resume version</label>
+                <select id="version-select" class="select" hidden></select>
+              </div>
+            </div>
+
+            <div class="empty" id="profile-empty">
+              <i data-icon="upload"></i>
+              <h3>No resume yet</h3>
+              <p>Choose a PDF or DOCX on the left. We read it in a few seconds and keep every version.</p>
+            </div>
+            <p class="muted" id="profile-loading" hidden>Loading…</p>
+
+            <div id="profile-body" hidden>
+              <p class="section-label" style="margin-bottom: 8px">Profile</p>
+              <dl class="kv">
+                <div><dt># Name</dt><dd id="kv-name"></dd></div>
+                <div><dt># Email</dt><dd id="kv-email"></dd></div>
+                <div><dt># Phone</dt><dd id="kv-phone"></dd></div>
+                <div><dt># Version</dt><dd id="kv-version"></dd></div>
+                <div><dt># Uploaded</dt><dd id="kv-uploaded"></dd></div>
+              </dl>
+
+              <div class="block-head"><h3>Skills</h3><span class="badge badge-blue" id="skills-count"></span></div>
+              <ul class="chips" id="profile-skills"></ul>
+              <p class="muted" id="skills-empty" hidden>No skills found. Add a "Skills" section that lists your tools and technologies.</p>
+
+              <div class="block-head"><h3>Experience</h3></div>
+              <ul class="timeline" id="profile-experience"></ul>
+              <p class="muted" id="experience-empty" hidden>No jobs or internships found. If you have some, list them under an "Experience" or "Internships" heading. Projects aren't shown here yet.</p>
+
+              <div class="block-head"><h3>Education</h3></div>
+              <ul class="timeline" id="profile-education"></ul>
+              <p class="muted" id="education-empty" hidden>No education found. Put it under an "Education" heading.</p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <template id="timeline-template">
+      <li><p class="tl-what"><span data-field="what"></span><span class="muted" data-field="where"></span></p><p class="tl-when mono" data-field="when"></p></li>
+    </template>
+
+    <script type="module" src="js/pages/upload.js"></script>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+# Full local stack: `docker compose up --build` serves the frontend on
+# http://localhost:4200, the backend on :8080 and the ML service on :8000.
+#
+# Google credentials for the AI-engine (Gemini) paths are Application Default
+# Credentials only -- the file `gcloud auth application-default login` writes
+# is mounted read-only into the ML service; there is no API key anywhere.
+# Engineering analyses never need it.
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: resume_analyser
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  minio:
+    image: minio/minio:latest
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    ports:
+      # Host ports shifted off 9000/9001 -- those are commonly already taken
+      # locally (e.g. by SonarQube on 9000); the container's own ports are
+      # still the MinIO defaults.
+      - "9010:9000" # S3 API -- backend's app.storage.endpoint
+      - "9011:9001" # Web console
+    volumes:
+      - minio-data:/data
+
+  ml-service:
+    build: ./ml-service
+    environment:
+      # gemini (default) or none for a Community Edition build.
+      LLM_PROVIDER: ${LLM_PROVIDER:-gemini}
+      # Set in your shell (or a root .env file) to enable the AI-engine paths.
+      GOOGLE_CLOUD_PROJECT: ${GOOGLE_CLOUD_PROJECT:-}
+      GOOGLE_CLOUD_LOCATION: ${GOOGLE_CLOUD_LOCATION:-global}
+      GOOGLE_APPLICATION_CREDENTIALS: /gcloud/application_default_credentials.json
+      # Cost controls -- defaults match ml-service/.env.example; override
+      # GEMINI_MODEL and both prices together (see ml-service/README.md).
+      GEMINI_MODEL: ${GEMINI_MODEL:-gemini-2.5-flash-lite}
+      GEMINI_THINKING_BUDGET: ${GEMINI_THINKING_BUDGET:-0}
+      LLM_INPUT_USD_PER_1M: ${LLM_INPUT_USD_PER_1M:-0.10}
+      LLM_OUTPUT_USD_PER_1M: ${LLM_OUTPUT_USD_PER_1M:-0.40}
+      LLM_DAILY_BUDGET_USD: ${LLM_DAILY_BUDGET_USD:-0}
+      # The trained NER model is downloaded from this bucket folder on the
+      # first start (ADC below) into the ner-models volume, then reused.
+      NER_MODEL_GCS_URI: ${NER_MODEL_GCS_URI:-gs://smart-resume-analyzer-a7x2-data/runs/teacher}
+    ports:
+      - "8000:8000"
+    volumes:
+      - hf-models:/models
+      - ner-models:/srv/models
+      - ${GCLOUD_ADC_PATH:-~/.config/gcloud/application_default_credentials.json}:/gcloud/application_default_credentials.json:ro
+
+  backend:
+    build: ./backend
+    depends_on:
+      - postgres
+      - minio
+      - ml-service
+    environment:
+      DB_URL: jdbc:postgresql://postgres:5432/resume_analyser
+      DB_USERNAME: postgres
+      DB_PASSWORD: postgres
+      OBJECT_STORAGE_ENDPOINT: http://minio:9000
+      ML_SERVICE_BASE_URL: http://ml-service:8000
+      CORS_ALLOWED_ORIGINS: http://localhost:4200
+      JWT_SECRET: ${JWT_SECRET:-dev-only-secret-change-me-32-bytes-minimum-please}
+      # Comma-separated emails that become ADMIN on register/login.
+      APP_ADMIN_EMAILS: ${APP_ADMIN_EMAILS:-}
+    ports:
+      - "8080:8080"
+
+  frontend:
+    build: ./frontend
+    depends_on:
+      - backend
+    ports:
+      - "4200:80"
+
+volumes:
+  postgres-data:
+  minio-data:
+  hf-models:
+  ner-models:

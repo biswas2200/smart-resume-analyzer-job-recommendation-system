@@ -1,0 +1,104 @@
+# Beta deployment: the whole stack on one VM (deploy/README.md).
+#
+#   cd deploy && docker compose up -d --build
+#
+# Only Caddy is reachable from outside (80/443, with an automatic HTTPS
+# certificate for SITE_ADDRESS); everything else talks on the compose network.
+# The pages call the backend at /api on the same address (frontend/nginx.conf),
+# so no CORS is involved. Secrets come from deploy/.env (see .env.example),
+# never from git. Google access (Gemini, the NER model in the bucket) is the
+# VM's service account through the metadata server: no key file.
+services:
+  postgres:
+    image: postgres:15
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: resume_analyser
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set in deploy/.env}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  minio:
+    # Docker Hub no longer serves MinIO's images, so this is the local stack's
+    # minio/minio:latest (RELEASE.2025-09-07T16-13-09Z) copied to the VM with
+    # docker save / docker load (deploy/README.md) and never pulled.
+    image: smart-resume-analyser-job-recommendation-system/minio:RELEASE.2025-09-07T16-13-09Z
+    pull_policy: never
+    restart: unless-stopped
+    command: server /data
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER:?set in deploy/.env}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:?set in deploy/.env}
+    volumes:
+      - minio-data:/data
+
+  ml-service:
+    build: ../ml-service
+    restart: unless-stopped
+    environment:
+      LLM_PROVIDER: gemini
+      GOOGLE_CLOUD_PROJECT: ${GOOGLE_CLOUD_PROJECT:?set in deploy/.env}
+      GOOGLE_CLOUD_LOCATION: global
+      GEMINI_MODEL: gemini-2.5-flash-lite
+      GEMINI_THINKING_BUDGET: 0
+      LLM_INPUT_USD_PER_1M: 0.10
+      LLM_OUTPUT_USD_PER_1M: 0.40
+      # Downloaded into the ner-models volume on the first start, then reused.
+      NER_MODEL_GCS_URI: ${NER_MODEL_GCS_URI:-gs://smart-resume-analyzer-a7x2-data/runs/teacher}
+      LOG_LEVEL: INFO
+    volumes:
+      - hf-models:/models
+      - ner-models:/srv/models
+
+  backend:
+    build: ../backend
+    restart: unless-stopped
+    depends_on:
+      - postgres
+      - minio
+      - ml-service
+    environment:
+      DB_URL: jdbc:postgresql://postgres:5432/resume_analyser
+      DB_USERNAME: postgres
+      DB_PASSWORD: ${POSTGRES_PASSWORD}
+      OBJECT_STORAGE_ENDPOINT: http://minio:9000
+      OBJECT_STORAGE_ACCESS_KEY: ${MINIO_ROOT_USER}
+      OBJECT_STORAGE_SECRET_KEY: ${MINIO_ROOT_PASSWORD}
+      ML_SERVICE_BASE_URL: http://ml-service:8000
+      CORS_ALLOWED_ORIGINS: https://${SITE_ADDRESS:?set in deploy/.env}
+      JWT_SECRET: ${JWT_SECRET:?set in deploy/.env}
+      APP_ADMIN_EMAILS: ${APP_ADMIN_EMAILS:-}
+      JOBS_USER_AGENT: ${JOBS_USER_AGENT:-SmartResumeAnalyser/0.6 (student project; job feed reader)}
+
+  frontend:
+    build: ../frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    environment:
+      API_BASE_URL: /api
+      BACKEND_URL: http://backend:8080
+
+  caddy:
+    image: caddy:2.8.4-alpine
+    restart: unless-stopped
+    depends_on:
+      - frontend
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      SITE_ADDRESS: ${SITE_ADDRESS}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+
+volumes:
+  postgres-data:
+  minio-data:
+  hf-models:
+  ner-models:
+  caddy-data:
+  caddy-config:

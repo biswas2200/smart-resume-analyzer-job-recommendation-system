@@ -1,0 +1,24 @@
+Arjun Mehta
+Pune | arjun.mehta@example.com | +91 98200 11223
+
+SUMMARY
+Mechanical Design Engineer with 5 years in automotive component design and validation. Own parts from concept
+through DFMEA, tolerance analysis and supplier handover; reduced a bracket assembly's cost by 18% through DFM.
+
+SKILLS
+SolidWorks | CATIA V5 | AutoCAD | GD&T (ASME Y14.5) | FEA (ANSYS Mechanical) | DFMEA / PFMEA | Tolerance Stack-up
+Injection Moulding | Sheet Metal Design | Casting and Machining | PLM (Windchill) | Design for Manufacturing
+Prototype Testing | Root Cause Analysis | Project Management | MS Excel
+
+EXPERIENCE
+Design Engineer, Tata Motors, Pune | June 2019 - Present
+- Design and release brackets, housings and sheet-metal parts for the powertrain group in SolidWorks and CATIA.
+- Run static and modal FEA in ANSYS; correlate with rig tests and update designs to meet fatigue targets.
+- Lead DFMEA sessions with quality and manufacturing; maintain tolerance stack-ups for 40+ assemblies.
+- Cut the cost of a mounting-bracket assembly by 18% by redesigning for progressive-die stamping.
+
+Graduate Engineer Trainee, Bharat Forge, Pune | July 2018 - May 2019
+- Supported forging-die design and machining fixture drawings; performed first-article inspections.
+
+EDUCATION
+B.E. Mechanical Engineering, College of Engineering Pune (COEP), 2018 - First class with distinction

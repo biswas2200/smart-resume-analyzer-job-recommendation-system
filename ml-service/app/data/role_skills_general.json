@@ -1,0 +1,4680 @@
+[
+  {
+    "role": "Registered Nurse",
+    "domain": "healthcare",
+    "description": "Registered Nurse roles in Healthcare & Life Sciences",
+    "skills": [
+      "Nursing",
+      "Registered Nurse",
+      "Patient Care",
+      "RN",
+      "ACLS",
+      "BLS",
+      "Travel Nursing",
+      "Medication Administration",
+      "Critical Thinking",
+      "Registered Nurse (RN)"
+    ],
+    "source_postings": 58621
+  },
+  {
+    "role": "Allied Health Professional",
+    "domain": "healthcare",
+    "description": "Allied Health Professional roles in Healthcare & Life Sciences",
+    "skills": [
+      "Allied Health Professional",
+      "CT Technologist",
+      "Cath Lab Technologist",
+      "Allied Health",
+      "Radiology",
+      "Travel Nursing",
+      "Surgical Technologist",
+      "Medical Imaging",
+      "Healthcare",
+      "Patient Care"
+    ],
+    "source_postings": 8457
+  },
+  {
+    "role": "Physician",
+    "domain": "healthcare",
+    "description": "Physician roles in Healthcare & Life Sciences",
+    "skills": [
+      "Internal Medicine",
+      "Residency Training",
+      "Family Medicine",
+      "Medicine",
+      "Patient Care",
+      "Medical License",
+      "Physician",
+      "Research"
+    ],
+    "source_postings": 5935
+  },
+  {
+    "role": "Nurse",
+    "domain": "healthcare",
+    "description": "Nurse roles in Healthcare & Life Sciences",
+    "skills": [
+      "Nursing",
+      "Travel Nursing",
+      "Registered Nurse",
+      "Rehab Therapy",
+      "Healthcare Staffing",
+      "Patient Care",
+      "Transparency",
+      "Teamwork",
+      "Professionalism",
+      "Adaptability"
+    ],
+    "source_postings": 5567
+  },
+  {
+    "role": "Nurse Practitioner",
+    "domain": "healthcare",
+    "description": "Nurse Practitioner roles in Healthcare & Life Sciences",
+    "skills": [
+      "Nurse Practitioner",
+      "Primary Care",
+      "Physician Assistant",
+      "Physical Examination",
+      "Nursing",
+      "Patient Care",
+      "Patient Education",
+      "Documentation",
+      "Collaboration",
+      "Time Management"
+    ],
+    "source_postings": 5031
+  },
+  {
+    "role": "Dentist",
+    "domain": "healthcare",
+    "description": "Dentist roles in Healthcare & Life Sciences",
+    "skills": [
+      "Dentistry",
+      "Oral Surgery",
+      "Endodontics",
+      "General Dentistry",
+      "Restorative Dentistry",
+      "Mobile Dentistry",
+      "Treatment Planning",
+      "Patient Care",
+      "CPR/BLS Certification",
+      "Networking"
+    ],
+    "source_postings": 3303
+  },
+  {
+    "role": "Ct Technologist",
+    "domain": "healthcare",
+    "description": "Ct Technologist roles in Healthcare & Life Sciences",
+    "skills": [
+      "CT Technologist",
+      "Medical Imaging",
+      "Radiology",
+      "ARRT Certification",
+      "Radiologic Technology",
+      "Radiography",
+      "CT",
+      "Computed Tomography",
+      "Patient Care",
+      "Radiation Safety"
+    ],
+    "source_postings": 2903
+  },
+  {
+    "role": "Radiologic Technologist",
+    "domain": "healthcare",
+    "description": "Radiologic Technologist roles in Healthcare & Life Sciences",
+    "skills": [
+      "Radiologic Technology",
+      "Radiology",
+      "Radiography",
+      "ARRT Certification",
+      "Xray",
+      "Medical Imaging",
+      "Patient Care",
+      "Radiologic Technologist",
+      "Radiation Protection",
+      "Fluoroscopy"
+    ],
+    "source_postings": 2518
+  },
+  {
+    "role": "Medical Technologist",
+    "domain": "healthcare",
+    "description": "Medical Technologist roles in Healthcare & Life Sciences",
+    "skills": [
+      "Medical Technology",
+      "Microbiology",
+      "Hematology",
+      "Medical Technologist",
+      "Chemistry",
+      "Quality Control",
+      "Blood Bank",
+      "ASCP certification",
+      "Proficiency Testing",
+      "Laboratory Testing"
+    ],
+    "source_postings": 2059
+  },
+  {
+    "role": "Physical Therapist",
+    "domain": "healthcare",
+    "description": "Physical Therapist roles in Healthcare & Life Sciences",
+    "skills": [
+      "Physical Therapy",
+      "Physical Therapist",
+      "Therapy",
+      "Rehabilitation",
+      "Treatment Planning",
+      "Patient Care",
+      "Joint Commission Certified",
+      "Documentation",
+      "Patient Education",
+      "Communication"
+    ],
+    "source_postings": 2036
+  },
+  {
+    "role": "Surgical Technologist",
+    "domain": "healthcare",
+    "description": "Surgical Technologist roles in Healthcare & Life Sciences",
+    "skills": [
+      "Surgical Technologist",
+      "Surgical Technology",
+      "Surgical Procedures",
+      "Aseptic technique",
+      "Surgical Instruments",
+      "Patient Care",
+      "Operating Room",
+      "Surgical Technician",
+      "Sterilization",
+      "BLS certification"
+    ],
+    "source_postings": 2036
+  },
+  {
+    "role": "Licensed Marriage and Family Therapist",
+    "domain": "healthcare",
+    "description": "Licensed Marriage and Family Therapist roles in Healthcare & Life Sciences",
+    "skills": [
+      "Marriage and Family Therapy",
+      "LMFT License",
+      "Counseling",
+      "Mental Health Counseling",
+      "Nonjudgmental attitude",
+      "Teletherapy",
+      "Sympathy",
+      "Empathy",
+      "Group Therapy",
+      "Professional Development"
+    ],
+    "source_postings": 1893
+  },
+  {
+    "role": "Accountant",
+    "domain": "finance_accounting",
+    "description": "Accountant roles in Finance & Accounting",
+    "skills": [
+      "Accounting",
+      "Financial Reporting",
+      "Journal Entries",
+      "GAAP",
+      "General Ledger",
+      "Financial Statements",
+      "Financial Analysis",
+      "Budgeting",
+      "Excel",
+      "Accounts Payable"
+    ],
+    "source_postings": 7241
+  },
+  {
+    "role": "Accounting Manager",
+    "domain": "finance_accounting",
+    "description": "Accounting Manager roles in Finance & Accounting",
+    "skills": [
+      "Accounting",
+      "Financial Reporting",
+      "GAAP",
+      "Budgeting",
+      "General Ledger",
+      "Financial Analysis",
+      "Financial Statements",
+      "Accounts Payable",
+      "Internal Controls",
+      "Accounts Receivable"
+    ],
+    "source_postings": 1963
+  },
+  {
+    "role": "Financial Analyst",
+    "domain": "finance_accounting",
+    "description": "Financial Analyst roles in Finance & Accounting",
+    "skills": [
+      "Financial Analysis",
+      "Financial Modeling",
+      "Forecasting",
+      "Budgeting",
+      "Accounting",
+      "Financial Reporting",
+      "Finance",
+      "Variance Analysis",
+      "Excel",
+      "Data Analysis"
+    ],
+    "source_postings": 1883
+  },
+  {
+    "role": "Tax Manager",
+    "domain": "finance_accounting",
+    "description": "Tax Manager roles in Finance & Accounting",
+    "skills": [
+      "Tax compliance",
+      "Tax Planning",
+      "Accounting",
+      "Public Accounting",
+      "Tax research",
+      "Tax Management",
+      "CPA",
+      "Tax Accounting",
+      "CPA license",
+      "CPA certification"
+    ],
+    "source_postings": 1549
+  },
+  {
+    "role": "Audit Manager",
+    "domain": "finance_accounting",
+    "description": "Audit Manager roles in Finance & Accounting",
+    "skills": [
+      "Audit",
+      "Accounting",
+      "Auditing",
+      "Public Accounting",
+      "CPA",
+      "Audit Management",
+      "Risk Management",
+      "CPA license",
+      "Financial Reporting",
+      "Risk Assessment"
+    ],
+    "source_postings": 736
+  },
+  {
+    "role": "Tax Accountant",
+    "domain": "finance_accounting",
+    "description": "Tax Accountant roles in Finance & Accounting",
+    "skills": [
+      "Tax Accounting",
+      "Tax Planning",
+      "Tax Preparation",
+      "Accounting",
+      "Tax research",
+      "Tax compliance",
+      "CPA",
+      "Public Accounting",
+      "QuickBooks",
+      "Analytical Skills"
+    ],
+    "source_postings": 717
+  },
+  {
+    "role": "Finance Manager",
+    "domain": "finance_accounting",
+    "description": "Finance Manager roles in Finance & Accounting",
+    "skills": [
+      "Budgeting",
+      "Accounting",
+      "Financial Reporting",
+      "Forecasting",
+      "Financial Analysis",
+      "Finance",
+      "Finance Management",
+      "Variance Analysis",
+      "Financial Modeling",
+      "CIMA"
+    ],
+    "source_postings": 709
+  },
+  {
+    "role": "Auditor",
+    "domain": "finance_accounting",
+    "description": "Auditor roles in Finance & Accounting",
+    "skills": [
+      "Auditing",
+      "Accounting",
+      "Internal Audit",
+      "Risk Assessment",
+      "CPA",
+      "Audit",
+      "Risk Management",
+      "Internal Controls",
+      "Analytical Skills",
+      "CIA"
+    ],
+    "source_postings": 682
+  },
+  {
+    "role": "Internal Auditor",
+    "domain": "finance_accounting",
+    "description": "Internal Auditor roles in Finance & Accounting",
+    "skills": [
+      "Internal Audit",
+      "Accounting",
+      "CIA",
+      "Risk Assessment",
+      "Internal Auditing",
+      "CPA",
+      "Finance",
+      "Risk Management",
+      "Auditing",
+      "Internal Controls"
+    ],
+    "source_postings": 646
+  },
+  {
+    "role": "Assistant Controller",
+    "domain": "finance_accounting",
+    "description": "Assistant Controller roles in Finance & Accounting",
+    "skills": [
+      "Accounting",
+      "Financial Reporting",
+      "GAAP",
+      "Financial Analysis",
+      "Budgeting",
+      "Forecasting",
+      "Financial Statements",
+      "General Ledger",
+      "CPA",
+      "Accounts Payable"
+    ],
+    "source_postings": 577
+  },
+  {
+    "role": "Controller",
+    "domain": "finance_accounting",
+    "description": "Controller roles in Finance & Accounting",
+    "skills": [
+      "Accounting",
+      "Financial Reporting",
+      "Budgeting",
+      "Financial Analysis",
+      "Forecasting",
+      "CPA",
+      "GAAP",
+      "Accounts Payable",
+      "Financial Statements",
+      "Payroll"
+    ],
+    "source_postings": 516
+  },
+  {
+    "role": "Tax Associate",
+    "domain": "finance_accounting",
+    "description": "Tax Associate roles in Finance & Accounting",
+    "skills": [
+      "Tax compliance",
+      "Accounting",
+      "Tax Planning",
+      "Tax research",
+      "Public Accounting",
+      "Tax Preparation",
+      "CPA license",
+      "Member of the Bar",
+      "ASC740",
+      "CPA"
+    ],
+    "source_postings": 407
+  },
+  {
+    "role": "Sales Associate",
+    "domain": "sales",
+    "description": "Sales Associate roles in Sales & Business Development",
+    "skills": [
+      "Mathematical calculations",
+      "Supervisory",
+      "Planogram implementation",
+      "Cash handling",
+      "Cash register operation",
+      "Cash handling procedures",
+      "Customer service",
+      "Cashier",
+      "Stocker",
+      "Safety policies and practices"
+    ],
+    "source_postings": 13871
+  },
+  {
+    "role": "Account Executive",
+    "domain": "sales",
+    "description": "Account Executive roles in Sales & Business Development",
+    "skills": [
+      "Sales",
+      "Account Management",
+      "Prospecting",
+      "Account Executive",
+      "Business Development",
+      "Negotiation",
+      "Relationship Building",
+      "Salesforce",
+      "Presentation Skills",
+      "Cold Calling"
+    ],
+    "source_postings": 5733
+  },
+  {
+    "role": "Account Manager",
+    "domain": "sales",
+    "description": "Account Manager roles in Sales & Business Development",
+    "skills": [
+      "Account Management",
+      "Sales",
+      "Business Development",
+      "Negotiation",
+      "Customer Relationship Management",
+      "Relationship Building",
+      "Problem Solving",
+      "Time Management",
+      "Communication",
+      "Microsoft Office Suite"
+    ],
+    "source_postings": 2478
+  },
+  {
+    "role": "Sales Consultant",
+    "domain": "sales",
+    "description": "Sales Consultant roles in Sales & Business Development",
+    "skills": [
+      "Sales",
+      "Customer service",
+      "Product knowledge",
+      "Communication",
+      "Retail",
+      "Negotiation",
+      "Time Management",
+      "Teamwork",
+      "Communication skills",
+      "Selfmotivation"
+    ],
+    "source_postings": 2048
+  },
+  {
+    "role": "Business Development Manager",
+    "domain": "sales",
+    "description": "Business Development Manager roles in Sales & Business Development",
+    "skills": [
+      "Business Development",
+      "Sales",
+      "Negotiation",
+      "Account Management",
+      "Networking",
+      "Relationship Building",
+      "CRM",
+      "Customer Relationship Management",
+      "Market Research",
+      "Lead Generation"
+    ],
+    "source_postings": 1605
+  },
+  {
+    "role": "Sales Executive",
+    "domain": "sales",
+    "description": "Sales Executive roles in Sales & Business Development",
+    "skills": [
+      "Sales",
+      "Business Development",
+      "Negotiation",
+      "Account Management",
+      "Prospecting",
+      "Relationship Building",
+      "CRM",
+      "Presentation Skills",
+      "Customer Relationship Management",
+      "Communication"
+    ],
+    "source_postings": 1114
+  },
+  {
+    "role": "Territory Manager",
+    "domain": "sales",
+    "description": "Territory Manager roles in Sales & Business Development",
+    "skills": [
+      "Sales",
+      "Territory Management",
+      "Prospecting",
+      "Customer Relationship Management",
+      "Account Management",
+      "Relationship Building",
+      "Product knowledge",
+      "Marketing",
+      "Microsoft Office Suite",
+      "Negotiation"
+    ],
+    "source_postings": 803
+  },
+  {
+    "role": "Territory Sales Manager",
+    "domain": "sales",
+    "description": "Territory Sales Manager roles in Sales & Business Development",
+    "skills": [
+      "Sales Management",
+      "Google Meet",
+      "Metric Analysis",
+      "Presentation Skills",
+      "WebEx",
+      "Customer Relationship Management",
+      "Zoom",
+      "Microsoft Teams",
+      "Sales",
+      "Customer Relationship Building"
+    ],
+    "source_postings": 786
+  },
+  {
+    "role": "Sales Manager",
+    "domain": "sales",
+    "description": "Sales Manager roles in Sales & Business Development",
+    "skills": [
+      "Sales Management",
+      "Negotiation",
+      "Business Development",
+      "Sales",
+      "Communication",
+      "Leadership",
+      "Marketing",
+      "Customer Relationship Management",
+      "Customer service",
+      "Coaching"
+    ],
+    "source_postings": 697
+  },
+  {
+    "role": "Key Account Manager",
+    "domain": "sales",
+    "description": "Key Account Manager roles in Sales & Business Development",
+    "skills": [
+      "Key Account Management",
+      "Account Management",
+      "Sales",
+      "Business Development",
+      "Negotiation",
+      "Customer Relationship Management",
+      "Relationship Building",
+      "Presentation Skills",
+      "Strategic Planning",
+      "Communication"
+    ],
+    "source_postings": 691
+  },
+  {
+    "role": "Commercial Lines Account Manager",
+    "domain": "sales",
+    "description": "Commercial Lines Account Manager roles in Sales & Business Development",
+    "skills": [
+      "Account Management",
+      "AMS360",
+      "Commercial Lines",
+      "Underwriting",
+      "Endorsements",
+      "EPIC",
+      "Commercial Lines Account Management",
+      "Property & Casualty License",
+      "Customer service",
+      "P&C License"
+    ],
+    "source_postings": 641
+  },
+  {
+    "role": "Regional Sales Manager",
+    "domain": "sales",
+    "description": "Regional Sales Manager roles in Sales & Business Development",
+    "skills": [
+      "Sales Management",
+      "Sales",
+      "Customer Relationship Management",
+      "Business Development",
+      "CRM",
+      "Account Management",
+      "Sales Forecasting",
+      "Negotiation",
+      "Presentation Skills",
+      "Strategic Planning"
+    ],
+    "source_postings": 639
+  },
+  {
+    "role": "Marketing Manager",
+    "domain": "marketing",
+    "description": "Marketing Manager roles in Marketing & Communications",
+    "skills": [
+      "Digital Marketing",
+      "Marketing",
+      "Email Marketing",
+      "Social Media Marketing",
+      "Marketing Strategy",
+      "Project Management",
+      "Marketing Management",
+      "Market Research",
+      "Content Creation",
+      "Brand Management"
+    ],
+    "source_postings": 711
+  },
+  {
+    "role": "Digital Marketing Manager",
+    "domain": "marketing",
+    "description": "Digital Marketing Manager roles in Marketing & Communications",
+    "skills": [
+      "Digital Marketing",
+      "Email Marketing",
+      "Google Analytics",
+      "SEO",
+      "Social Media Marketing",
+      "Google Ads",
+      "PPC",
+      "SEM",
+      "Campaign Management",
+      "Social Media Management"
+    ],
+    "source_postings": 214
+  },
+  {
+    "role": "Communications Manager",
+    "domain": "marketing",
+    "description": "Communications Manager roles in Marketing & Communications",
+    "skills": [
+      "Media relations",
+      "Public Relations",
+      "Communications",
+      "Editing",
+      "Writing",
+      "Social Media Management",
+      "Project Management",
+      "Storytelling",
+      "Journalism",
+      "Social Media"
+    ],
+    "source_postings": 212
+  },
+  {
+    "role": "Social Media Manager",
+    "domain": "marketing",
+    "description": "Social Media Manager roles in Marketing & Communications",
+    "skills": [
+      "Content Creation",
+      "Social Media Management",
+      "Social Media Analytics",
+      "Social Media Strategy",
+      "Social Media Marketing",
+      "Instagram",
+      "Content Strategy",
+      "TikTok",
+      "Community Management",
+      "Digital Marketing"
+    ],
+    "source_postings": 209
+  },
+  {
+    "role": "Marketing Executive",
+    "domain": "marketing",
+    "description": "Marketing Executive roles in Marketing & Communications",
+    "skills": [
+      "Marketing",
+      "Digital Marketing",
+      "Email Marketing",
+      "Content Creation",
+      "Social Media Marketing",
+      "Social Media Management",
+      "Copywriting",
+      "SEO",
+      "Marketing Strategy",
+      "Website Management"
+    ],
+    "source_postings": 178
+  },
+  {
+    "role": "Marketing Coordinator",
+    "domain": "marketing",
+    "description": "Marketing Coordinator roles in Marketing & Communications",
+    "skills": [
+      "Marketing",
+      "Project Management",
+      "Adobe InDesign",
+      "Graphic Design",
+      "Social Media Marketing",
+      "Communications",
+      "Content Creation",
+      "Digital Marketing",
+      "Editing",
+      "Proofreading"
+    ],
+    "source_postings": 158
+  },
+  {
+    "role": "Brand Manager",
+    "domain": "marketing",
+    "description": "Brand Manager roles in Marketing & Communications",
+    "skills": [
+      "Brand Management",
+      "Marketing",
+      "Market Research",
+      "Project Management",
+      "Digital Marketing",
+      "Data Analysis",
+      "Strategic Thinking",
+      "Consumer Insights",
+      "CrossFunctional Collaboration",
+      "Budget Management"
+    ],
+    "source_postings": 135
+  },
+  {
+    "role": "Marketing Specialist",
+    "domain": "marketing",
+    "description": "Marketing Specialist roles in Marketing & Communications",
+    "skills": [
+      "Marketing",
+      "Digital Marketing",
+      "Adobe Creative Suite",
+      "Project Management",
+      "Social Media Marketing",
+      "Communications",
+      "Content Creation",
+      "Graphic Design",
+      "Social Media Management",
+      "Public Relations"
+    ],
+    "source_postings": 125
+  },
+  {
+    "role": "Brand Ambassador",
+    "domain": "marketing",
+    "description": "Brand Ambassador roles in Marketing & Communications",
+    "skills": [
+      "Sales",
+      "Customer service",
+      "Liquor certification",
+      "Customer Engagement",
+      "Brand Ambassador",
+      "Public Speaking",
+      "Animal nutrition",
+      "Product knowledge",
+      "Communication",
+      "Food safety certification"
+    ],
+    "source_postings": 121
+  },
+  {
+    "role": "Product Marketing Manager",
+    "domain": "marketing",
+    "description": "Product Marketing Manager roles in Marketing & Communications",
+    "skills": [
+      "Product Marketing",
+      "Sales Enablement",
+      "GotoMarket Strategy",
+      "Market Research",
+      "Product Positioning",
+      "Messaging",
+      "Product Launches",
+      "Product Management",
+      "SaaS",
+      "Demand Generation"
+    ],
+    "source_postings": 106
+  },
+  {
+    "role": "Copywriter",
+    "domain": "marketing",
+    "description": "Copywriter roles in Marketing & Communications",
+    "skills": [
+      "Copywriting",
+      "Editing",
+      "Proofreading",
+      "SEO",
+      "Creative Writing",
+      "Storytelling",
+      "Content Writing",
+      "Journalism",
+      "Brand voice",
+      "Content Creation"
+    ],
+    "source_postings": 104
+  },
+  {
+    "role": "Communications Specialist",
+    "domain": "marketing",
+    "description": "Communications Specialist roles in Marketing & Communications",
+    "skills": [
+      "Communications",
+      "Editing",
+      "Public Relations",
+      "Writing",
+      "Journalism",
+      "Project Management",
+      "Media relations",
+      "Marketing",
+      "Proofreading",
+      "Social Media"
+    ],
+    "source_postings": 85
+  },
+  {
+    "role": "Human Resources Generalist",
+    "domain": "human_resources",
+    "description": "Human Resources Generalist roles in Human Resources & Recruiting",
+    "skills": [
+      "Employee Relations",
+      "Human Resources",
+      "Performance Management",
+      "Recruitment",
+      "Onboarding",
+      "HRIS",
+      "Payroll",
+      "HR Generalist",
+      "Recruiting",
+      "Talent Acquisition"
+    ],
+    "source_postings": 933
+  },
+  {
+    "role": "Human Resources Manager",
+    "domain": "human_resources",
+    "description": "Human Resources Manager roles in Human Resources & Recruiting",
+    "skills": [
+      "Employee Relations",
+      "Human Resources Management",
+      "Performance Management",
+      "Human Resources",
+      "Talent Acquisition",
+      "Recruitment",
+      "Talent Management",
+      "Compensation",
+      "Payroll",
+      "HRIS"
+    ],
+    "source_postings": 891
+  },
+  {
+    "role": "Recruiter",
+    "domain": "human_resources",
+    "description": "Recruiter roles in Human Resources & Recruiting",
+    "skills": [
+      "Recruiting",
+      "Interviewing",
+      "Sourcing",
+      "Talent Acquisition",
+      "Recruitment",
+      "Human Resources",
+      "Screening",
+      "Applicant Tracking Systems",
+      "Networking",
+      "Social Media"
+    ],
+    "source_postings": 729
+  },
+  {
+    "role": "HR Business Partner",
+    "domain": "human_resources",
+    "description": "HR Business Partner roles in Human Resources & Recruiting",
+    "skills": [
+      "Employee Relations",
+      "Performance Management",
+      "Talent Management",
+      "Human Resources",
+      "HR Business Partner",
+      "Employee Engagement",
+      "Workforce Planning",
+      "Talent Acquisition",
+      "Succession Planning",
+      "Change Management"
+    ],
+    "source_postings": 715
+  },
+  {
+    "role": "HR Generalist",
+    "domain": "human_resources",
+    "description": "HR Generalist roles in Human Resources & Recruiting",
+    "skills": [
+      "Employee Relations",
+      "Human Resources",
+      "Performance Management",
+      "Recruitment",
+      "HR Generalist",
+      "Onboarding",
+      "HRIS",
+      "Payroll",
+      "Employee Engagement",
+      "Recruiting"
+    ],
+    "source_postings": 708
+  },
+  {
+    "role": "Recruitment Consultant",
+    "domain": "human_resources",
+    "description": "Recruitment Consultant roles in Human Resources & Recruiting",
+    "skills": [
+      "Recruitment",
+      "Sales",
+      "Business Development",
+      "Networking",
+      "Interviewing",
+      "Candidate Sourcing",
+      "Client Relationship Management",
+      "Talent Acquisition",
+      "Negotiation",
+      "Relationship Building"
+    ],
+    "source_postings": 586
+  },
+  {
+    "role": "Human Resources Business Partner",
+    "domain": "human_resources",
+    "description": "Human Resources Business Partner roles in Human Resources & Recruiting",
+    "skills": [
+      "Employee Relations",
+      "Performance Management",
+      "Human Resources",
+      "Talent Management",
+      "Employee Engagement",
+      "Workforce Planning",
+      "Talent Acquisition",
+      "Organizational Development",
+      "Change Management",
+      "Succession Planning"
+    ],
+    "source_postings": 579
+  },
+  {
+    "role": "HR Manager",
+    "domain": "human_resources",
+    "description": "HR Manager roles in Human Resources & Recruiting",
+    "skills": [
+      "Employee Relations",
+      "HR Management",
+      "Performance Management",
+      "Recruitment",
+      "Human Resources",
+      "Human Resources Management",
+      "Talent Management",
+      "Succession Planning",
+      "Payroll",
+      "Employee Engagement"
+    ],
+    "source_postings": 378
+  },
+  {
+    "role": "HR Advisor",
+    "domain": "human_resources",
+    "description": "HR Advisor roles in Human Resources & Recruiting",
+    "skills": [
+      "Employee Relations",
+      "Performance Management",
+      "Employment Law",
+      "HR",
+      "Recruitment",
+      "CIPD",
+      "HR Advisor",
+      "CIPD Level 5",
+      "Absence management",
+      "HR Generalist"
+    ],
+    "source_postings": 327
+  },
+  {
+    "role": "Compensation Analyst",
+    "domain": "human_resources",
+    "description": "Compensation Analyst roles in Human Resources & Recruiting",
+    "skills": [
+      "Compensation Analysis",
+      "Job Evaluation",
+      "Job descriptions",
+      "Human Resources",
+      "Job Analysis",
+      "Compensation Surveys",
+      "Data Analysis",
+      "Compensation",
+      "Workday",
+      "Excel"
+    ],
+    "source_postings": 158
+  },
+  {
+    "role": "Human Resource Generalist",
+    "domain": "human_resources",
+    "description": "Human Resource Generalist roles in Human Resources & Recruiting",
+    "skills": [
+      "Employee Relations",
+      "Human Resources",
+      "Onboarding",
+      "Performance Management",
+      "Payroll",
+      "Recruitment",
+      "HRIS",
+      "Labor Laws",
+      "Talent Acquisition",
+      "Confidentiality"
+    ],
+    "source_postings": 113
+  },
+  {
+    "role": "Benefits Manager",
+    "domain": "human_resources",
+    "description": "Benefits Manager roles in Human Resources & Recruiting",
+    "skills": [
+      "COBRA",
+      "Vendor Management",
+      "ERISA",
+      "Workday",
+      "FMLA",
+      "Open Enrollment",
+      "Data Analysis",
+      "HRIS",
+      "Human Resources",
+      "PlanSource"
+    ],
+    "source_postings": 108
+  },
+  {
+    "role": "Operations Manager",
+    "domain": "operations_supply_chain",
+    "description": "Operations Manager roles in Operations, Logistics & Supply Chain",
+    "skills": [
+      "Operations Management",
+      "Leadership",
+      "Inventory Management",
+      "Project Management",
+      "Customer service",
+      "Problem Solving",
+      "Communication",
+      "Continuous Improvement",
+      "Budgeting",
+      "Performance Management"
+    ],
+    "source_postings": 2173
+  },
+  {
+    "role": "Buyer",
+    "domain": "operations_supply_chain",
+    "description": "Buyer roles in Operations, Logistics & Supply Chain",
+    "skills": [
+      "Purchasing",
+      "Product procurement",
+      "Procurement",
+      "Supply Chain Management",
+      "Negotiation",
+      "Culinary/food and beverage industry",
+      "Excel",
+      "Team education",
+      "Inventory Management",
+      "Supplier Management"
+    ],
+    "source_postings": 1912
+  },
+  {
+    "role": "Warehouse Supervisor",
+    "domain": "operations_supply_chain",
+    "description": "Warehouse Supervisor roles in Operations, Logistics & Supply Chain",
+    "skills": [
+      "Warehouse Management",
+      "Warehouse Operations",
+      "Inventory Management",
+      "Warehouse Supervision",
+      "Logistics",
+      "Forklift operation",
+      "Inventory control",
+      "Warehousing",
+      "Shipping",
+      "Leadership"
+    ],
+    "source_postings": 1053
+  },
+  {
+    "role": "Warehouse Manager",
+    "domain": "operations_supply_chain",
+    "description": "Warehouse Manager roles in Operations, Logistics & Supply Chain",
+    "skills": [
+      "Warehouse Management",
+      "Inventory Management",
+      "Inventory control",
+      "Logistics",
+      "Forklift operation",
+      "Warehouse Operations",
+      "Shipping",
+      "Leadership",
+      "Shipping and Receiving",
+      "Warehousing"
+    ],
+    "source_postings": 583
+  },
+  {
+    "role": "Procurement Manager",
+    "domain": "operations_supply_chain",
+    "description": "Procurement Manager roles in Operations, Logistics & Supply Chain",
+    "skills": [
+      "Procurement Management",
+      "Procurement",
+      "Supply Chain Management",
+      "Supplier Relationship Management",
+      "Strategic Sourcing",
+      "Negotiation",
+      "Contract Management",
+      "Supplier Management",
+      "Contract Negotiation",
+      "Vendor Management"
+    ],
+    "source_postings": 433
+  },
+  {
+    "role": "Warehouse Associate",
+    "domain": "operations_supply_chain",
+    "description": "Warehouse Associate roles in Operations, Logistics & Supply Chain",
+    "skills": [
+      "Forklift operation",
+      "Warehouse Operations",
+      "Inventory Management",
+      "Warehouse",
+      "Shipping and Receiving",
+      "Shipping",
+      "Receiving",
+      "Forklift Certification",
+      "Pallet jack operation",
+      "Cycle Counting"
+    ],
+    "source_postings": 390
+  },
+  {
+    "role": "Purchasing Manager",
+    "domain": "operations_supply_chain",
+    "description": "Purchasing Manager roles in Operations, Logistics & Supply Chain",
+    "skills": [
+      "Supply Chain Management",
+      "Purchasing",
+      "Purchasing Management",
+      "Negotiation",
+      "Supplier Relationship Management",
+      "Procurement",
+      "Inventory Management",
+      "Contract Management",
+      "Vendor Management",
+      "Contract Negotiation"
+    ],
+    "source_postings": 349
+  },
+  {
+    "role": "Supply Chain Manager",
+    "domain": "operations_supply_chain",
+    "description": "Supply Chain Manager roles in Operations, Logistics & Supply Chain",
+    "skills": [
+      "Supply Chain Management",
+      "Procurement",
+      "Logistics",
+      "Inventory Management",
+      "Data Analysis",
+      "Negotiation",
+      "Project Management",
+      "Purchasing",
+      "Analytical Skills",
+      "Supplier Management"
+    ],
+    "source_postings": 336
+  },
+  {
+    "role": "Material Handler",
+    "domain": "operations_supply_chain",
+    "description": "Material Handler roles in Operations, Logistics & Supply Chain",
+    "skills": [
+      "Material Handling",
+      "Forklift operation",
+      "Inventory Management",
+      "Shipping",
+      "Forklift Certification",
+      "Warehousing",
+      "SAP",
+      "Receiving",
+      "Warehouse Operations",
+      "Inventory control"
+    ],
+    "source_postings": 280
+  },
+  {
+    "role": "Logistics Manager",
+    "domain": "operations_supply_chain",
+    "description": "Logistics Manager roles in Operations, Logistics & Supply Chain",
+    "skills": [
+      "Logistics Management",
+      "Logistics",
+      "Supply Chain Management",
+      "Analytical Skills",
+      "Warehouse Management",
+      "Inventory Management",
+      "Transportation",
+      "Operations",
+      "Microsoft Office Suite",
+      "Leadership"
+    ],
+    "source_postings": 229
+  },
+  {
+    "role": "Procurement Specialist",
+    "domain": "operations_supply_chain",
+    "description": "Procurement Specialist roles in Operations, Logistics & Supply Chain",
+    "skills": [
+      "Procurement",
+      "Negotiation",
+      "Contract Management",
+      "Supply Chain Management",
+      "Purchasing",
+      "Vendor Management",
+      "Supplier Management",
+      "SAP",
+      "Strategic Sourcing",
+      "Sourcing"
+    ],
+    "source_postings": 166
+  },
+  {
+    "role": "Driver",
+    "domain": "operations_supply_chain",
+    "description": "Driver roles in Operations, Logistics & Supply Chain",
+    "skills": [
+      "Driving",
+      "Solid waste collection",
+      "Vehicle maintenance",
+      "Route Planning",
+      "Waste removal",
+      "Commercial driving",
+      "Truck Driving",
+      "CDL",
+      "GPS",
+      "Lifting"
+    ],
+    "source_postings": 136
+  },
+  {
+    "role": "Assistant Professor",
+    "domain": "education",
+    "description": "Assistant Professor roles in Education & Training",
+    "skills": [
+      "Teaching",
+      "Research",
+      "Curriculum Development",
+      "Mentoring",
+      "Grant Writing",
+      "Inclusion",
+      "Equity",
+      "Collaboration",
+      "Critical Thinking",
+      "Leadership"
+    ],
+    "source_postings": 1387
+  },
+  {
+    "role": "Teacher",
+    "domain": "education",
+    "description": "Teacher roles in Education & Training",
+    "skills": [
+      "Early Childhood Education",
+      "Classroom Management",
+      "Lesson Planning",
+      "Curriculum Development",
+      "Child Development",
+      "Childcare",
+      "Teaching",
+      "Creativity",
+      "Curriculum implementation",
+      "Record Keeping"
+    ],
+    "source_postings": 926
+  },
+  {
+    "role": "Adjunct Faculty",
+    "domain": "education",
+    "description": "Adjunct Faculty roles in Education & Training",
+    "skills": [
+      "Teaching",
+      "Course Development",
+      "Service learning",
+      "Blackboard",
+      "Distance learning",
+      "Grading",
+      "Curriculum Development",
+      "Collaboration",
+      "Professional Development",
+      "Interpersonal skills"
+    ],
+    "source_postings": 840
+  },
+  {
+    "role": "Instructor",
+    "domain": "education",
+    "description": "Instructor roles in Education & Training",
+    "skills": [
+      "Teaching",
+      "Curriculum Development",
+      "Lesson Planning",
+      "Research",
+      "Communication",
+      "Communication skills",
+      "Teamwork",
+      "Collaboration",
+      "Interpersonal skills",
+      "Adaptability"
+    ],
+    "source_postings": 831
+  },
+  {
+    "role": "Lecturer",
+    "domain": "education",
+    "description": "Lecturer roles in Education & Training",
+    "skills": [
+      "Teaching",
+      "Research",
+      "Curriculum Development",
+      "Online teaching",
+      "Inclusion",
+      "Diversity and Inclusion",
+      "Assessment",
+      "Critical Thinking",
+      "Collaboration",
+      "Communication"
+    ],
+    "source_postings": 535
+  },
+  {
+    "role": "Educator",
+    "domain": "education",
+    "description": "Educator roles in Education & Training",
+    "skills": [
+      "National Quality Standards",
+      "Early Years Learning Framework",
+      "Early Childhood Education",
+      "Cosmetology",
+      "First Aid certificate",
+      "Salon",
+      "Data entry",
+      "Early Years Learning Framework (EYLF)",
+      "National Quality Standards (NQS)",
+      "Teaching or Training"
+    ],
+    "source_postings": 497
+  },
+  {
+    "role": "Preschool Teacher",
+    "domain": "education",
+    "description": "Preschool Teacher roles in Education & Training",
+    "skills": [
+      "Early Childhood Education",
+      "Child Development",
+      "Classroom Management",
+      "Curriculum Development",
+      "Childcare",
+      "Preschool Lead Teacher",
+      "Child Development Associate (CDA)",
+      "Lesson Planning",
+      "Collaboration",
+      "ResearchBased Curriculum"
+    ],
+    "source_postings": 408
+  },
+  {
+    "role": "Swim Instructor",
+    "domain": "education",
+    "description": "Swim Instructor roles in Education & Training",
+    "skills": [
+      "First Aid",
+      "Swim Instructor",
+      "Swim instruction",
+      "Swimming",
+      "Lifeguard certification",
+      "Water safety",
+      "CPR",
+      "Lifeguarding",
+      "Swimming instruction",
+      "Lesson Planning"
+    ],
+    "source_postings": 381
+  },
+  {
+    "role": "Faculty",
+    "domain": "education",
+    "description": "Faculty roles in Education & Training",
+    "skills": [
+      "Teaching",
+      "Curriculum Development",
+      "Research",
+      "Professional Development",
+      "Interpersonal skills",
+      "Collaboration",
+      "Equity",
+      "Inclusion",
+      "Assessment",
+      "Critical Thinking"
+    ],
+    "source_postings": 341
+  },
+  {
+    "role": "Group Fitness Instructor",
+    "domain": "education",
+    "description": "Group Fitness Instructor roles in Education & Training",
+    "skills": [
+      "Group Fitness Instruction",
+      "CPR/AED certification",
+      "Yoga",
+      "Group Fitness Instructor",
+      "Group Fitness",
+      "Zumba",
+      "Barre",
+      "NASM",
+      "AFAA",
+      "ACE"
+    ],
+    "source_postings": 239
+  },
+  {
+    "role": "Substitute Teacher Aide",
+    "domain": "education",
+    "description": "Substitute Teacher Aide roles in Education & Training",
+    "skills": [
+      "Classroom Management",
+      "Administrative duties",
+      "IEPs/504 Plans",
+      "Special Needs Education",
+      "Substitute paraprofessional",
+      "Instructional reinforcement",
+      "Instructional aide",
+      "English proficiency",
+      "Substitute paraeducator",
+      "Student Supervision"
+    ],
+    "source_postings": 226
+  },
+  {
+    "role": "Assistant/Associate Professor",
+    "domain": "education",
+    "description": "Assistant/Associate Professor roles in Education & Training",
+    "skills": [
+      "Teaching",
+      "Research",
+      "Grant Writing",
+      "Curriculum Development",
+      "Mentoring",
+      "Clinical Research",
+      "Collaboration",
+      "Data Analysis",
+      "Leadership",
+      "Communication skills"
+    ],
+    "source_postings": 206
+  },
+  {
+    "role": "Attorney",
+    "domain": "legal",
+    "description": "Attorney roles in Legal & Compliance",
+    "skills": [
+      "Litigation",
+      "Legal Research",
+      "Legal Writing",
+      "Trial Preparation",
+      "Case Management",
+      "Legal Analysis",
+      "Law",
+      "Negotiation",
+      "Civil Litigation",
+      "Discovery"
+    ],
+    "source_postings": 1262
+  },
+  {
+    "role": "Litigation Attorney",
+    "domain": "legal",
+    "description": "Litigation Attorney roles in Legal & Compliance",
+    "skills": [
+      "Litigation",
+      "Legal Research",
+      "Depositions",
+      "Legal Writing",
+      "Discovery",
+      "Motions",
+      "Trial Preparation",
+      "Civil Litigation",
+      "Pleadings",
+      "Court Appearances"
+    ],
+    "source_postings": 649
+  },
+  {
+    "role": "Contracts Manager",
+    "domain": "legal",
+    "description": "Contracts Manager roles in Legal & Compliance",
+    "skills": [
+      "Contracts Management",
+      "Contract Management",
+      "Project Management",
+      "Risk Management",
+      "Negotiation",
+      "Contract Administration",
+      "Contract Negotiation",
+      "SMSTS",
+      "Construction",
+      "Health and Safety"
+    ],
+    "source_postings": 554
+  },
+  {
+    "role": "Paralegal",
+    "domain": "legal",
+    "description": "Paralegal roles in Legal & Compliance",
+    "skills": [
+      "Legal Research",
+      "Paralegal",
+      "Paralegal certificate",
+      "Litigation",
+      "Trial Preparation",
+      "Legal Writing",
+      "Attention to detail",
+      "Litigation Support",
+      "Case Management",
+      "Microsoft Office Suite"
+    ],
+    "source_postings": 390
+  },
+  {
+    "role": "Associate Attorney",
+    "domain": "legal",
+    "description": "Associate Attorney roles in Legal & Compliance",
+    "skills": [
+      "Legal Research",
+      "Litigation",
+      "Legal Writing",
+      "Depositions",
+      "Discovery",
+      "Civil Litigation",
+      "Motions",
+      "Trial Preparation",
+      "Case Management",
+      "Law"
+    ],
+    "source_postings": 376
+  },
+  {
+    "role": "Family Law Attorney",
+    "domain": "legal",
+    "description": "Family Law Attorney roles in Legal & Compliance",
+    "skills": [
+      "Family Law",
+      "Legal Research",
+      "Legal Writing",
+      "Litigation",
+      "Child Custody",
+      "Limited scope representation",
+      "Divorce",
+      "Mediation",
+      "Legal Ethics",
+      "Case Management"
+    ],
+    "source_postings": 366
+  },
+  {
+    "role": "Patent Attorney",
+    "domain": "legal",
+    "description": "Patent Attorney roles in Legal & Compliance",
+    "skills": [
+      "Patent prosecution",
+      "Patent law",
+      "USPTO",
+      "Patent drafting",
+      "Computer Science",
+      "Patent attorney",
+      "Patent opinions",
+      "Electrical Engineering",
+      "State Bar",
+      "Physics"
+    ],
+    "source_postings": 300
+  },
+  {
+    "role": "Counsel",
+    "domain": "legal",
+    "description": "Counsel roles in Legal & Compliance",
+    "skills": [
+      "Legal Research",
+      "Litigation",
+      "Legal Advice",
+      "Legal Writing",
+      "Negotiation",
+      "DeFi",
+      "DAOs",
+      "Legal Analysis",
+      "Contract Drafting",
+      "Legal"
+    ],
+    "source_postings": 291
+  },
+  {
+    "role": "Legal Counsel",
+    "domain": "legal",
+    "description": "Legal Counsel roles in Legal & Compliance",
+    "skills": [
+      "Legal Counsel",
+      "Legal Research",
+      "Legal Advice",
+      "Contract Drafting",
+      "Commercial Law",
+      "Contract Negotiation",
+      "Litigation",
+      "Negotiation",
+      "Commercial Contracts",
+      "Employment Law"
+    ],
+    "source_postings": 281
+  },
+  {
+    "role": "Legal Assistant",
+    "domain": "legal",
+    "description": "Legal Assistant roles in Legal & Compliance",
+    "skills": [
+      "Legal Assistant",
+      "Legal Research",
+      "Litigation",
+      "Efiling",
+      "Legal terminology",
+      "Proofreading",
+      "Attention to detail",
+      "Pleadings",
+      "Case Management",
+      "Time Management"
+    ],
+    "source_postings": 234
+  },
+  {
+    "role": "Personal Injury Attorney",
+    "domain": "legal",
+    "description": "Personal Injury Attorney roles in Legal & Compliance",
+    "skills": [
+      "Personal Injury Law",
+      "Legal Research",
+      "Litigation",
+      "Rules of Evidence",
+      "Rules of Civil Procedure",
+      "Mediation",
+      "Legal Writing",
+      "Client Communication",
+      "Depositions",
+      "Civil Litigation"
+    ],
+    "source_postings": 222
+  },
+  {
+    "role": "Assistant General Counsel",
+    "domain": "legal",
+    "description": "Assistant General Counsel roles in Legal & Compliance",
+    "skills": [
+      "Litigation",
+      "Legal Research",
+      "Legal Writing",
+      "Legal Advice",
+      "Negotiation",
+      "Legal",
+      "Legal Analysis",
+      "Contract Drafting",
+      "Analytical Skills",
+      "Corporate Governance"
+    ],
+    "source_postings": 197
+  },
+  {
+    "role": "Graphic Designer",
+    "domain": "design_creative",
+    "description": "Graphic Designer roles in Design & Creative",
+    "skills": [
+      "Graphic Design",
+      "Illustrator",
+      "Adobe Creative Suite",
+      "Photoshop",
+      "InDesign",
+      "Typography",
+      "Branding",
+      "Print Design",
+      "Adobe Illustrator",
+      "Adobe Photoshop"
+    ],
+    "source_postings": 317
+  },
+  {
+    "role": "Interior Designer",
+    "domain": "design_creative",
+    "description": "Interior Designer roles in Design & Creative",
+    "skills": [
+      "Interior Design",
+      "AutoCAD",
+      "Revit",
+      "SketchUp",
+      "Space Planning",
+      "Adobe Creative Suite",
+      "Architecture",
+      "NCIDQ Certification",
+      "Project Management",
+      "Sketching"
+    ],
+    "source_postings": 283
+  },
+  {
+    "role": "Creative Manager",
+    "domain": "design_creative",
+    "description": "Creative Manager roles in Design & Creative",
+    "skills": [
+      "Creative Management",
+      "Amazon Live",
+      "TikTok Shop",
+      "TikTok",
+      "Video editing",
+      "Media Strategy",
+      "Video Production",
+      "Scripting",
+      "Shortform Content Creation",
+      "Client Communication"
+    ],
+    "source_postings": 107
+  },
+  {
+    "role": "Editor",
+    "domain": "design_creative",
+    "description": "Editor roles in Design & Creative",
+    "skills": [
+      "Editing",
+      "Journalism",
+      "Writing",
+      "Proofreading",
+      "Collaboration",
+      "Video editing",
+      "News judgment",
+      "Factchecking",
+      "Breaking news",
+      "Copy Editing"
+    ],
+    "source_postings": 98
+  },
+  {
+    "role": "Bid Writer",
+    "domain": "design_creative",
+    "description": "Bid Writer roles in Design & Creative",
+    "skills": [
+      "Bid Writing",
+      "Proofreading",
+      "Proposal Writing",
+      "Editing",
+      "Tender Writing",
+      "PQQ",
+      "Tender Management",
+      "Attention to detail",
+      "Bid Management",
+      "Project Management"
+    ],
+    "source_postings": 91
+  },
+  {
+    "role": "Video Editor",
+    "domain": "design_creative",
+    "description": "Video Editor roles in Design & Creative",
+    "skills": [
+      "Video editing",
+      "Adobe Premiere Pro",
+      "Motion Graphics",
+      "Adobe After Effects",
+      "After Effects",
+      "Color correction",
+      "Color Grading",
+      "Video Production",
+      "DaVinci Resolve",
+      "Final Cut Pro"
+    ],
+    "source_postings": 69
+  },
+  {
+    "role": "Photographer",
+    "domain": "design_creative",
+    "description": "Photographer roles in Design & Creative",
+    "skills": [
+      "Photography",
+      "Lightroom",
+      "Photoshop",
+      "External flash",
+      "Manual mode",
+      "Adobe Lightroom",
+      "Adobe Photoshop",
+      "CaptureOne",
+      "HIPAA",
+      "Equipment Lifting"
+    ],
+    "source_postings": 65
+  },
+  {
+    "role": "Writer",
+    "domain": "design_creative",
+    "description": "Writer roles in Design & Creative",
+    "skills": [
+      "Editing",
+      "Writing",
+      "Journalism",
+      "Research",
+      "Proofreading",
+      "Copywriting",
+      "SEO",
+      "Content Writing",
+      "Collaboration",
+      "Storytelling"
+    ],
+    "source_postings": 56
+  },
+  {
+    "role": "Customer Service Representative",
+    "domain": "customer_service_hospitality",
+    "description": "Customer Service Representative roles in Customer Service & Hospitality",
+    "skills": [
+      "Retail",
+      "Customer service",
+      "Cashiering",
+      "Retail operations",
+      "Relationship management",
+      "Problem Solving",
+      "POS systems",
+      "Sales",
+      "Communication",
+      "Teamwork"
+    ],
+    "source_postings": 12497
+  },
+  {
+    "role": "Host",
+    "domain": "customer_service_hospitality",
+    "description": "Host roles in Customer Service & Hospitality",
+    "skills": [
+      "Customer service",
+      "Hospitality",
+      "Teamwork",
+      "Attention to detail",
+      "Food service",
+      "Communication",
+      "Time Management",
+      "Flexibility",
+      "Restaurant Operations",
+      "Problemsolving"
+    ],
+    "source_postings": 6280
+  },
+  {
+    "role": "Shift Manager",
+    "domain": "customer_service_hospitality",
+    "description": "Shift Manager roles in Customer Service & Hospitality",
+    "skills": [
+      "Food Safety",
+      "Quality Food Production",
+      "Internal Communication",
+      "Exceptional Customer Service",
+      "Training",
+      "Inventory Management",
+      "Safety and Security",
+      "Scheduling",
+      "Managing Crew",
+      "Daily Maintenance"
+    ],
+    "source_postings": 6019
+  },
+  {
+    "role": "Restaurant Manager",
+    "domain": "customer_service_hospitality",
+    "description": "Restaurant Manager roles in Customer Service & Hospitality",
+    "skills": [
+      "Restaurant Management",
+      "Hospitality",
+      "Food Safety",
+      "Leadership",
+      "Customer service",
+      "Hiring",
+      "Conflict Resolution",
+      "Flexibility",
+      "Scheduling",
+      "Serve Safe Certification"
+    ],
+    "source_postings": 4098
+  },
+  {
+    "role": "Cook",
+    "domain": "customer_service_hospitality",
+    "description": "Cook roles in Customer Service & Hospitality",
+    "skills": [
+      "Food preparation",
+      "Cooking",
+      "Food Safety",
+      "Sanitation",
+      "Food storage",
+      "Food handling",
+      "Food service",
+      "Teamwork",
+      "Customer service",
+      "Menu planning"
+    ],
+    "source_postings": 2384
+  },
+  {
+    "role": "Sous Chef",
+    "domain": "customer_service_hospitality",
+    "description": "Sous Chef roles in Customer Service & Hospitality",
+    "skills": [
+      "Sous Chef",
+      "Food preparation",
+      "Kitchen Management",
+      "Menu planning",
+      "Food Safety",
+      "Sanitation",
+      "Cooking",
+      "Culinary",
+      "Culinary Arts",
+      "Leadership"
+    ],
+    "source_postings": 2121
+  },
+  {
+    "role": "Line Cook",
+    "domain": "customer_service_hospitality",
+    "description": "Line Cook roles in Customer Service & Hospitality",
+    "skills": [
+      "Meat seasoning",
+      "Meat cooking",
+      "Meat searing",
+      "Sanitation guidelines",
+      "Sanitation",
+      "Teamwork",
+      "Food preparation",
+      "Prep Sheets",
+      "Recognition",
+      "Positive attitude"
+    ],
+    "source_postings": 2001
+  },
+  {
+    "role": "Shift Leader",
+    "domain": "customer_service_hospitality",
+    "description": "Shift Leader roles in Customer Service & Hospitality",
+    "skills": [
+      "Food Safety",
+      "Food Handler certification",
+      "Operations",
+      "Conflict management",
+      "Food preparation",
+      "Customer service",
+      "Kitchen equipment",
+      "Leadership",
+      "Cooking",
+      "Guest focus"
+    ],
+    "source_postings": 1750
+  },
+  {
+    "role": "Kitchen Prep",
+    "domain": "customer_service_hospitality",
+    "description": "Kitchen Prep roles in Customer Service & Hospitality",
+    "skills": [
+      "Menu knowledge",
+      "Food handling",
+      "Sanitation",
+      "Multitasking",
+      "Food preparation",
+      "Safety procedures",
+      "Dependability",
+      "Physical stamina",
+      "Personal grooming",
+      "Quality Standards"
+    ],
+    "source_postings": 1169
+  },
+  {
+    "role": "Shift Supervisor",
+    "domain": "customer_service_hospitality",
+    "description": "Shift Supervisor roles in Customer Service & Hospitality",
+    "skills": [
+      "Shift Supervisor",
+      "Customer service",
+      "Leadership",
+      "Cash handling",
+      "Retail",
+      "Communication",
+      "Restaurant",
+      "Training",
+      "Team Building",
+      "Inventory Management"
+    ],
+    "source_postings": 1165
+  },
+  {
+    "role": "Housekeeper",
+    "domain": "customer_service_hospitality",
+    "description": "Housekeeper roles in Customer Service & Hospitality",
+    "skills": [
+      "Cleaning",
+      "Housekeeping",
+      "Laundry",
+      "Vacuuming",
+      "Dusting",
+      "Mopping",
+      "Sweeping",
+      "Polishing",
+      "Maintenance",
+      "Attention to detail"
+    ],
+    "source_postings": 1103
+  },
+  {
+    "role": "Executive Chef",
+    "domain": "customer_service_hospitality",
+    "description": "Executive Chef roles in Customer Service & Hospitality",
+    "skills": [
+      "Executive Chef",
+      "Menu planning",
+      "Food preparation",
+      "Kitchen Management",
+      "Food Safety",
+      "Culinary Management",
+      "Sanitation",
+      "Inventory Management",
+      "Menu Development",
+      "Culinary Arts"
+    ],
+    "source_postings": 829
+  },
+  {
+    "role": "Maintenance Supervisor",
+    "domain": "construction_trades",
+    "description": "Maintenance Supervisor roles in Construction & Skilled Trades",
+    "skills": [
+      "Maintenance",
+      "Plumbing",
+      "Electrical",
+      "Carpentry",
+      "HVAC",
+      "Maintenance Supervision",
+      "Preventative maintenance",
+      "Painting",
+      "Troubleshooting",
+      "Preventive Maintenance"
+    ],
+    "source_postings": 2672
+  },
+  {
+    "role": "Superintendent",
+    "domain": "construction_trades",
+    "description": "Superintendent roles in Construction & Skilled Trades",
+    "skills": [
+      "Construction Management",
+      "Project Management",
+      "Scheduling",
+      "Quality Control",
+      "Construction",
+      "Subcontractor Management",
+      "Superintendent",
+      "Safety Management",
+      "Commercial Construction",
+      "Procore"
+    ],
+    "source_postings": 2598
+  },
+  {
+    "role": "Maintenance Technician",
+    "domain": "construction_trades",
+    "description": "Maintenance Technician roles in Construction & Skilled Trades",
+    "skills": [
+      "Troubleshooting",
+      "Electrical",
+      "Maintenance",
+      "Plumbing",
+      "Carpentry",
+      "Preventative maintenance",
+      "Painting",
+      "HVAC",
+      "Repair",
+      "Customer service"
+    ],
+    "source_postings": 2428
+  },
+  {
+    "role": "Construction Project Manager",
+    "domain": "construction_trades",
+    "description": "Construction Project Manager roles in Construction & Skilled Trades",
+    "skills": [
+      "Construction Management",
+      "Construction Project Management",
+      "Project Management",
+      "Scheduling",
+      "Budgeting",
+      "Procore",
+      "Construction",
+      "Project Scheduling",
+      "Project Management Software",
+      "Estimating"
+    ],
+    "source_postings": 1355
+  },
+  {
+    "role": "Maintenance Manager",
+    "domain": "construction_trades",
+    "description": "Maintenance Manager roles in Construction & Skilled Trades",
+    "skills": [
+      "Maintenance Management",
+      "Plumbing",
+      "Preventive Maintenance",
+      "Preventative maintenance",
+      "Electrical",
+      "Carpentry",
+      "Predictive Maintenance",
+      "HVAC",
+      "Troubleshooting",
+      "Maintenance"
+    ],
+    "source_postings": 1256
+  },
+  {
+    "role": "Construction Manager",
+    "domain": "construction_trades",
+    "description": "Construction Manager roles in Construction & Skilled Trades",
+    "skills": [
+      "Construction Management",
+      "Project Management",
+      "Scheduling",
+      "Quality Control",
+      "Budgeting",
+      "Building Codes",
+      "Construction",
+      "Civil Engineering",
+      "Architecture",
+      "Contract Management"
+    ],
+    "source_postings": 1225
+  },
+  {
+    "role": "Service Technician",
+    "domain": "construction_trades",
+    "description": "Service Technician roles in Construction & Skilled Trades",
+    "skills": [
+      "Customer service",
+      "Installation",
+      "Troubleshooting",
+      "Heavy lifting",
+      "Ladder climbing",
+      "Working at heights",
+      "Physical fitness",
+      "Problemsolving",
+      "Communication skills",
+      "Communication"
+    ],
+    "source_postings": 1052
+  },
+  {
+    "role": "Construction Superintendent",
+    "domain": "construction_trades",
+    "description": "Construction Superintendent roles in Construction & Skilled Trades",
+    "skills": [
+      "Construction Management",
+      "Project Management",
+      "Quality Control",
+      "Construction Superintendent",
+      "Scheduling",
+      "Procore",
+      "Subcontractor Management",
+      "Construction",
+      "Commercial Construction",
+      "Safety Management"
+    ],
+    "source_postings": 1016
+  },
+  {
+    "role": "Automotive Technician",
+    "domain": "construction_trades",
+    "description": "Automotive Technician roles in Construction & Skilled Trades",
+    "skills": [
+      "Tire installation",
+      "Suspension",
+      "Brakes",
+      "Automotive Technician",
+      "Scheduled maintenance",
+      "ASE automotive certification",
+      "Automotive repair",
+      "Career Development",
+      "Guest and team focused mindset",
+      "ASE Certification"
+    ],
+    "source_postings": 895
+  },
+  {
+    "role": "Estimator",
+    "domain": "construction_trades",
+    "description": "Estimator roles in Construction & Skilled Trades",
+    "skills": [
+      "Estimating",
+      "Construction Management",
+      "Project Management",
+      "Estimating Software",
+      "Bluebeam",
+      "Cost Analysis",
+      "Civil Engineering",
+      "Construction",
+      "Cost Estimation",
+      "Microsoft Office Suite"
+    ],
+    "source_postings": 851
+  },
+  {
+    "role": "Cable Installer",
+    "domain": "construction_trades",
+    "description": "Cable Installer roles in Construction & Skilled Trades",
+    "skills": [
+      "Customer service",
+      "Installation",
+      "Heavy lifting",
+      "Aptitude to build rapport",
+      "Ladder climbing",
+      "Ladder work",
+      "Aptitude",
+      "Working at heights",
+      "Field Technician",
+      "Rapport building"
+    ],
+    "source_postings": 674
+  },
+  {
+    "role": "Cable Technician",
+    "domain": "construction_trades",
+    "description": "Cable Technician roles in Construction & Skilled Trades",
+    "skills": [
+      "Customer service",
+      "Installation",
+      "Ladder work",
+      "Aptitude to build rapport",
+      "Troubleshooting",
+      "Working at heights",
+      "Problemsolving",
+      "Field Technician",
+      "Physical fitness",
+      "Heavy lifting"
+    ],
+    "source_postings": 612
+  },
+  {
+    "role": "Executive Assistant",
+    "domain": "administration",
+    "description": "Executive Assistant roles in Administration & Office Support",
+    "skills": [
+      "Executive Assistant",
+      "Calendar Management",
+      "Travel Arrangements",
+      "Administrative Support",
+      "Time Management",
+      "Microsoft Office Suite",
+      "Confidentiality",
+      "Discretion",
+      "Attention to detail",
+      "Multitasking"
+    ],
+    "source_postings": 2767
+  },
+  {
+    "role": "Administrative Assistant",
+    "domain": "administration",
+    "description": "Administrative Assistant roles in Administration & Office Support",
+    "skills": [
+      "Administrative Support",
+      "Administrative Assistant",
+      "Calendar Management",
+      "Data entry",
+      "Travel Arrangements",
+      "Microsoft Office Suite",
+      "Attention to detail",
+      "Time Management",
+      "Multitasking",
+      "Organizational skills"
+    ],
+    "source_postings": 1885
+  },
+  {
+    "role": "Office Manager",
+    "domain": "administration",
+    "description": "Office Manager roles in Administration & Office Support",
+    "skills": [
+      "Office Management",
+      "Microsoft Office Suite",
+      "Multitasking",
+      "Microsoft Office",
+      "Organizational skills",
+      "Customer service",
+      "Interpersonal skills",
+      "Communication skills",
+      "Attention to detail",
+      "Time Management"
+    ],
+    "source_postings": 1705
+  },
+  {
+    "role": "Project Coordinator",
+    "domain": "administration",
+    "description": "Project Coordinator roles in Administration & Office Support",
+    "skills": [
+      "Project Coordination",
+      "Project Management",
+      "Time Management",
+      "Project Planning",
+      "Microsoft Office Suite",
+      "Communication",
+      "Attention to detail",
+      "Organizational skills",
+      "Scheduling",
+      "Problem Solving"
+    ],
+    "source_postings": 326
+  },
+  {
+    "role": "Front Office Manager",
+    "domain": "administration",
+    "description": "Front Office Manager roles in Administration & Office Support",
+    "skills": [
+      "Front Office Management",
+      "Hotel Operations",
+      "Customer service",
+      "Front Desk Management",
+      "Guest Services",
+      "Front Desk Operations",
+      "Hospitality",
+      "Front Office Operations",
+      "Guest service",
+      "Revenue Management"
+    ],
+    "source_postings": 269
+  },
+  {
+    "role": "Scheduler",
+    "domain": "administration",
+    "description": "Scheduler roles in Administration & Office Support",
+    "skills": [
+      "Primavera P6",
+      "Project Scheduling",
+      "Scheduling",
+      "Construction Management",
+      "Critical Path Analysis",
+      "Primavera",
+      "Project Controls",
+      "Project Management",
+      "Scheduling Software",
+      "Construction Scheduling"
+    ],
+    "source_postings": 233
+  },
+  {
+    "role": "Receptionist",
+    "domain": "administration",
+    "description": "Receptionist roles in Administration & Office Support",
+    "skills": [
+      "Receptionist",
+      "Customer service",
+      "Filing",
+      "Microsoft Office Suite",
+      "Administrative Support",
+      "Multitasking",
+      "Data entry",
+      "Appointment scheduling",
+      "Attention to detail",
+      "Communication skills"
+    ],
+    "source_postings": 221
+  },
+  {
+    "role": "Business Office Manager",
+    "domain": "administration",
+    "description": "Business Office Manager roles in Administration & Office Support",
+    "skills": [
+      "Accounts Payable",
+      "Accounts Receivable",
+      "Business Office Management",
+      "Billing",
+      "Medicaid",
+      "Medicare",
+      "Accounting",
+      "Payroll",
+      "Census",
+      "Medicaid Applications"
+    ],
+    "source_postings": 147
+  },
+  {
+    "role": "Program Coordinator",
+    "domain": "administration",
+    "description": "Program Coordinator roles in Administration & Office Support",
+    "skills": [
+      "Program Coordination",
+      "Windows OS",
+      "Volunteer Management",
+      "Program Evaluation",
+      "Program Planning",
+      "MS Office Suite",
+      "Budget Management",
+      "Data Analysis",
+      "Attention to detail",
+      "Community Resources"
+    ],
+    "source_postings": 146
+  },
+  {
+    "role": "Front Office Supervisor",
+    "domain": "administration",
+    "description": "Front Office Supervisor roles in Administration & Office Support",
+    "skills": [
+      "Front Office Operations",
+      "Front Office Supervision",
+      "Front Desk Operations",
+      "Guest Services",
+      "Customer service",
+      "Front Office Supervisor",
+      "Hospitality",
+      "Emergency procedures",
+      "Multitasking",
+      "Cash handling"
+    ],
+    "source_postings": 137
+  },
+  {
+    "role": "Master Scheduler",
+    "domain": "administration",
+    "description": "Master Scheduler roles in Administration & Office Support",
+    "skills": [
+      "Master Scheduler",
+      "Master Scheduling",
+      "Production Planning",
+      "Scheduling",
+      "Production Scheduling",
+      "Capacity Planning",
+      "Supply Chain Management",
+      "APICS Certification",
+      "MRP",
+      "Project Management"
+    ],
+    "source_postings": 135
+  },
+  {
+    "role": "Secretary",
+    "domain": "administration",
+    "description": "Secretary roles in Administration & Office Support",
+    "skills": [
+      "Typing",
+      "Data entry",
+      "Filing",
+      "Secretarial",
+      "Office Administration",
+      "Travel Arrangements",
+      "Correspondence",
+      "Word processing",
+      "Scheduling",
+      "Spelling"
+    ],
+    "source_postings": 128
+  },
+  {
+    "role": "Electrical Engineer",
+    "domain": "core_engineering",
+    "description": "Electrical Engineer roles in Core Engineering (Mechanical, Electrical, Civil, Chemical)",
+    "skills": [
+      "Electrical Engineering",
+      "AutoCAD",
+      "Revit",
+      "Project Management",
+      "Power Distribution",
+      "Electrical Design",
+      "Troubleshooting",
+      "Communication skills",
+      "Communication",
+      "Teamwork"
+    ],
+    "source_postings": 3287
+  },
+  {
+    "role": "Mechanical Engineer",
+    "domain": "core_engineering",
+    "description": "Mechanical Engineer roles in Core Engineering (Mechanical, Electrical, Civil, Chemical)",
+    "skills": [
+      "Mechanical Engineering",
+      "SolidWorks",
+      "AutoCAD",
+      "Project Management",
+      "Revit",
+      "CAD",
+      "Design",
+      "HVAC",
+      "Plumbing",
+      "Manufacturing"
+    ],
+    "source_postings": 2277
+  },
+  {
+    "role": "Project Engineer",
+    "domain": "core_engineering",
+    "description": "Project Engineer roles in Core Engineering (Mechanical, Electrical, Civil, Chemical)",
+    "skills": [
+      "Project Management",
+      "Project Engineering",
+      "Civil Engineering",
+      "Construction Management",
+      "Mechanical Engineering",
+      "AutoCAD",
+      "Project Engineer",
+      "Scheduling",
+      "Electrical Engineering",
+      "Project Planning"
+    ],
+    "source_postings": 2048
+  },
+  {
+    "role": "Civil Engineer",
+    "domain": "core_engineering",
+    "description": "Civil Engineer roles in Core Engineering (Mechanical, Electrical, Civil, Chemical)",
+    "skills": [
+      "Civil Engineering",
+      "AutoCAD",
+      "AutoCAD Civil 3D",
+      "Project Management",
+      "Civil 3D",
+      "Land Development",
+      "Grading",
+      "Stormwater Management",
+      "Drainage",
+      "Civil3D"
+    ],
+    "source_postings": 1432
+  },
+  {
+    "role": "Manufacturing Engineer",
+    "domain": "core_engineering",
+    "description": "Manufacturing Engineer roles in Core Engineering (Mechanical, Electrical, Civil, Chemical)",
+    "skills": [
+      "Manufacturing Engineering",
+      "Lean Manufacturing",
+      "Mechanical Engineering",
+      "SolidWorks",
+      "Six Sigma",
+      "Project Management",
+      "Root Cause Analysis",
+      "Manufacturing Processes",
+      "CAD",
+      "Continuous Improvement"
+    ],
+    "source_postings": 1314
+  },
+  {
+    "role": "Structural Engineer",
+    "domain": "core_engineering",
+    "description": "Structural Engineer roles in Core Engineering (Mechanical, Electrical, Civil, Chemical)",
+    "skills": [
+      "Structural Engineering",
+      "Civil Engineering",
+      "AutoCAD",
+      "Revit",
+      "Structural Analysis",
+      "Structural Design",
+      "Project Management",
+      "SAP2000",
+      "ETABS",
+      "Steel"
+    ],
+    "source_postings": 1231
+  },
+  {
+    "role": "Process Engineer",
+    "domain": "core_engineering",
+    "description": "Process Engineer roles in Core Engineering (Mechanical, Electrical, Civil, Chemical)",
+    "skills": [
+      "Process Engineering",
+      "Chemical Engineering",
+      "Mechanical Engineering",
+      "Process Optimization",
+      "Process Design",
+      "Project Management",
+      "Troubleshooting",
+      "Manufacturing",
+      "Continuous Improvement",
+      "Lean Manufacturing"
+    ],
+    "source_postings": 1112
+  },
+  {
+    "role": "Mechanical Design Engineer",
+    "domain": "core_engineering",
+    "description": "Mechanical Design Engineer roles in Core Engineering (Mechanical, Electrical, Civil, Chemical)",
+    "skills": [
+      "Mechanical Design",
+      "Mechanical Engineering",
+      "SolidWorks",
+      "CAD",
+      "GD&T",
+      "Project Management",
+      "AutoCAD",
+      "FEA",
+      "3D Modeling",
+      "Prototyping"
+    ],
+    "source_postings": 708
+  },
+  {
+    "role": "Controls Engineer",
+    "domain": "core_engineering",
+    "description": "Controls Engineer roles in Core Engineering (Mechanical, Electrical, Civil, Chemical)",
+    "skills": [
+      "PLC Programming",
+      "Controls Engineering",
+      "HMI",
+      "Electrical Engineering",
+      "PLC",
+      "Troubleshooting",
+      "HMI Programming",
+      "Automation",
+      "Siemens",
+      "Allen Bradley"
+    ],
+    "source_postings": 673
+  },
+  {
+    "role": "Design Engineer",
+    "domain": "core_engineering",
+    "description": "Design Engineer roles in Core Engineering (Mechanical, Electrical, Civil, Chemical)",
+    "skills": [
+      "Mechanical Engineering",
+      "SolidWorks",
+      "Design Engineering",
+      "AutoCAD",
+      "Project Management",
+      "CAD",
+      "Mechanical Design",
+      "Civil Engineering",
+      "Design",
+      "Product Development"
+    ],
+    "source_postings": 614
+  },
+  {
+    "role": "Geotechnical Engineer",
+    "domain": "core_engineering",
+    "description": "Geotechnical Engineer roles in Core Engineering (Mechanical, Electrical, Civil, Chemical)",
+    "skills": [
+      "Geotechnical Engineering",
+      "Civil Engineering",
+      "Slope Stability",
+      "Project Management",
+      "Soil Mechanics",
+      "Plaxis",
+      "gINT",
+      "Foundation Design",
+      "Report Writing",
+      "LPile"
+    ],
+    "source_postings": 455
+  },
+  {
+    "role": "Electrical Design Engineer",
+    "domain": "core_engineering",
+    "description": "Electrical Design Engineer roles in Core Engineering (Mechanical, Electrical, Civil, Chemical)",
+    "skills": [
+      "Electrical Design",
+      "Electrical Engineering",
+      "AutoCAD",
+      "PCB Design",
+      "Project Management",
+      "Schematic Capture",
+      "Circuit Design",
+      "Revit",
+      "Testing",
+      "Troubleshooting"
+    ],
+    "source_postings": 443
+  },
+  {
+    "role": "Medical Laboratory Scientist",
+    "domain": "science_research",
+    "description": "Medical Laboratory Scientist roles in Science, Research & Laboratory",
+    "skills": [
+      "Medical Technology",
+      "Chemistry",
+      "Quality Control",
+      "Proficiency Testing",
+      "Clinical Laboratory Science",
+      "Clinical Laboratory Scientist",
+      "Hematology",
+      "Urinalysis",
+      "Medical Laboratory Scientist",
+      "ASCP certification"
+    ],
+    "source_postings": 2014
+  },
+  {
+    "role": "Scientist",
+    "domain": "science_research",
+    "description": "Scientist roles in Science, Research & Laboratory",
+    "skills": [
+      "Molecular biology",
+      "Biochemistry",
+      "Data Analysis",
+      "Chemistry",
+      "Flow cytometry",
+      "HPLC",
+      "Immunology",
+      "ELISA",
+      "Cell culture",
+      "Troubleshooting"
+    ],
+    "source_postings": 1745
+  },
+  {
+    "role": "Research Associate",
+    "domain": "science_research",
+    "description": "Research Associate roles in Science, Research & Laboratory",
+    "skills": [
+      "Data Analysis",
+      "Molecular biology",
+      "Biochemistry",
+      "Research",
+      "Flow cytometry",
+      "Cell culture",
+      "Data Collection",
+      "ELISA",
+      "PCR",
+      "Data Interpretation"
+    ],
+    "source_postings": 630
+  },
+  {
+    "role": "Medical Laboratory Technologist",
+    "domain": "science_research",
+    "description": "Medical Laboratory Technologist roles in Science, Research & Laboratory",
+    "skills": [
+      "Chemistry",
+      "Medical Technology",
+      "Laboratory Information Systems",
+      "Hematology",
+      "Medical Laboratory Technologist",
+      "Medical Laboratory Technology",
+      "Clinical Laboratory Science",
+      "Quality Control",
+      "Microbiology",
+      "Biology"
+    ],
+    "source_postings": 562
+  },
+  {
+    "role": "Research Scientist",
+    "domain": "science_research",
+    "description": "Research Scientist roles in Science, Research & Laboratory",
+    "skills": [
+      "Data Analysis",
+      "Python",
+      "Molecular biology",
+      "Machine Learning",
+      "Research",
+      "Biochemistry",
+      "Immunology",
+      "Chemistry",
+      "Collaboration",
+      "Project Management"
+    ],
+    "source_postings": 481
+  },
+  {
+    "role": "Chemist",
+    "domain": "science_research",
+    "description": "Chemist roles in Science, Research & Laboratory",
+    "skills": [
+      "Chemistry",
+      "HPLC",
+      "Analytical Chemistry",
+      "GC",
+      "FTIR",
+      "GMP",
+      "Data Analysis",
+      "Quality Control",
+      "Troubleshooting",
+      "Data Interpretation"
+    ],
+    "source_postings": 388
+  },
+  {
+    "role": "Associate Scientist",
+    "domain": "science_research",
+    "description": "Associate Scientist roles in Science, Research & Laboratory",
+    "skills": [
+      "Biochemistry",
+      "Molecular biology",
+      "HPLC",
+      "Data Analysis",
+      "ELISA",
+      "Cell culture",
+      "Flow cytometry",
+      "Biology",
+      "GMP",
+      "SOPs"
+    ],
+    "source_postings": 300
+  },
+  {
+    "role": "Research Analyst",
+    "domain": "science_research",
+    "description": "Research Analyst roles in Science, Research & Laboratory",
+    "skills": [
+      "Data Analysis",
+      "Research",
+      "Data Visualization",
+      "Statistics",
+      "Survey design",
+      "Data Collection",
+      "SPSS",
+      "Economics",
+      "Statistical Analysis",
+      "Market Research"
+    ],
+    "source_postings": 197
+  },
+  {
+    "role": "Research Fellow",
+    "domain": "science_research",
+    "description": "Research Fellow roles in Science, Research & Laboratory",
+    "skills": [
+      "Data Analysis",
+      "Research",
+      "Molecular biology",
+      "Python",
+      "Statistics",
+      "Machine Learning",
+      "Scientific Writing",
+      "Grant Writing",
+      "Data Collection",
+      "English proficiency"
+    ],
+    "source_postings": 193
+  },
+  {
+    "role": "Medical Physicist",
+    "domain": "science_research",
+    "description": "Medical Physicist roles in Science, Research & Laboratory",
+    "skills": [
+      "Medical Physics",
+      "Radiation Oncology",
+      "Dosimetry",
+      "HDR",
+      "Radiation Safety",
+      "Radiation Therapy",
+      "Treatment Planning",
+      "SRS",
+      "Brachytherapy",
+      "Quality Assurance"
+    ],
+    "source_postings": 180
+  },
+  {
+    "role": "Microbiologist",
+    "domain": "science_research",
+    "description": "Microbiologist roles in Science, Research & Laboratory",
+    "skills": [
+      "Microbiology",
+      "Sterility testing",
+      "Microbiologist",
+      "cGMP",
+      "Microbiological testing",
+      "Bioburden testing",
+      "SOPs",
+      "LIMS",
+      "Bioburden",
+      "Laboratory"
+    ],
+    "source_postings": 178
+  },
+  {
+    "role": "Research Specialist",
+    "domain": "science_research",
+    "description": "Research Specialist roles in Science, Research & Laboratory",
+    "skills": [
+      "Data Analysis",
+      "Molecular biology",
+      "Research",
+      "Data Collection",
+      "Biology",
+      "Research Methods",
+      "Cell culture",
+      "Literature review",
+      "Data Management",
+      "Biochemistry"
+    ],
+    "source_postings": 174
+  },
+  {
+    "role": "Project Manager",
+    "domain": "consulting_project_management",
+    "description": "Project Manager roles in Consulting, Project & Programme Management",
+    "skills": [
+      "Project Management",
+      "Construction Management",
+      "Risk Management",
+      "Budgeting",
+      "Scheduling",
+      "Civil Engineering",
+      "PMP Certification",
+      "Project Planning",
+      "Leadership",
+      "Budget Management"
+    ],
+    "source_postings": 5846
+  },
+  {
+    "role": "Business Analyst",
+    "domain": "consulting_project_management",
+    "description": "Business Analyst roles in Consulting, Project & Programme Management",
+    "skills": [
+      "Business Analysis",
+      "Requirements Gathering",
+      "SQL",
+      "Business Analyst",
+      "Data Analysis",
+      "Project Management",
+      "User Stories",
+      "Agile",
+      "Jira",
+      "Stakeholder Management"
+    ],
+    "source_postings": 2318
+  },
+  {
+    "role": "Assistant Project Manager",
+    "domain": "consulting_project_management",
+    "description": "Assistant Project Manager roles in Consulting, Project & Programme Management",
+    "skills": [
+      "Construction Management",
+      "Project Management",
+      "Scheduling",
+      "Estimating",
+      "Architecture",
+      "Construction",
+      "Change Orders",
+      "Procore",
+      "Civil Engineering",
+      "Budgeting"
+    ],
+    "source_postings": 1055
+  },
+  {
+    "role": "Program Manager",
+    "domain": "consulting_project_management",
+    "description": "Program Manager roles in Consulting, Project & Programme Management",
+    "skills": [
+      "Program Management",
+      "Project Management",
+      "Risk Management",
+      "PMP Certification",
+      "Stakeholder Management",
+      "Data Analysis",
+      "Leadership",
+      "Communication",
+      "Process Improvement",
+      "Problem Solving"
+    ],
+    "source_postings": 1036
+  },
+  {
+    "role": "Consultant",
+    "domain": "consulting_project_management",
+    "description": "Consultant roles in Consulting, Project & Programme Management",
+    "skills": [
+      "Project Management",
+      "Consulting",
+      "Business Development",
+      "Data Analysis",
+      "Sustainability",
+      "Contract Management",
+      "Problem Solving",
+      "Teamwork",
+      "Communication skills",
+      "Analytical Skills"
+    ],
+    "source_postings": 845
+  },
+  {
+    "role": "Electrical Project Manager",
+    "domain": "consulting_project_management",
+    "description": "Electrical Project Manager roles in Consulting, Project & Programme Management",
+    "skills": [
+      "Electrical Project Management",
+      "Project Management",
+      "Electrical Construction",
+      "Estimating",
+      "Electrical Engineering",
+      "Budgeting",
+      "Scheduling",
+      "Project Planning",
+      "NEC",
+      "Construction Management"
+    ],
+    "source_postings": 295
+  },
+  {
+    "role": "Environmental Project Manager",
+    "domain": "consulting_project_management",
+    "description": "Environmental Project Manager roles in Consulting, Project & Programme Management",
+    "skills": [
+      "Geology",
+      "Project Management",
+      "Remediation",
+      "Hydrogeology",
+      "Technical Writing",
+      "RCRA",
+      "CERCLA",
+      "Field Work",
+      "Technical Report Writing",
+      "Client Management"
+    ],
+    "source_postings": 148
+  },
+  {
+    "role": "Mechanical Project Manager",
+    "domain": "consulting_project_management",
+    "description": "Mechanical Project Manager roles in Consulting, Project & Programme Management",
+    "skills": [
+      "Mechanical Project Management",
+      "Mechanical Engineering",
+      "Project Management",
+      "Primavera P6",
+      "HVAC",
+      "Construction Estimating",
+      "Risk Management",
+      "Microsoft Project",
+      "Plumbing",
+      "Earned Value Management (EVM)"
+    ],
+    "source_postings": 134
+  },
+  {
+    "role": "Portfolio Manager",
+    "domain": "consulting_project_management",
+    "description": "Portfolio Manager roles in Consulting, Project & Programme Management",
+    "skills": [
+      "Portfolio Management",
+      "Credit Analysis",
+      "Financial Analysis",
+      "Risk Management",
+      "Loan Portfolio Management",
+      "Loan Documentation",
+      "Loan Underwriting",
+      "Financial Statement Analysis",
+      "Microsoft Office Suite",
+      "Project Management"
+    ],
+    "source_postings": 132
+  },
+  {
+    "role": "Commercial Project Manager",
+    "domain": "consulting_project_management",
+    "description": "Commercial Project Manager roles in Consulting, Project & Programme Management",
+    "skills": [
+      "Construction Management",
+      "Project Management",
+      "Procore",
+      "Construction Project Management",
+      "Commercial Construction",
+      "Budgeting",
+      "Quality Control",
+      "Scheduling",
+      "Estimating",
+      "Commercial Project Management"
+    ],
+    "source_postings": 113
+  },
+  {
+    "role": "Associate Project Manager",
+    "domain": "consulting_project_management",
+    "description": "Associate Project Manager roles in Consulting, Project & Programme Management",
+    "skills": [
+      "Project Management",
+      "Construction Management",
+      "Scheduling",
+      "Risk Management",
+      "Microsoft Office Suite",
+      "Communication",
+      "Budgeting",
+      "Multitasking",
+      "Construction",
+      "Analytical Skills"
+    ],
+    "source_postings": 104
+  },
+  {
+    "role": "Managing Consultant",
+    "domain": "consulting_project_management",
+    "description": "Managing Consultant roles in Consulting, Project & Programme Management",
+    "skills": [
+      "Business Development",
+      "Permitting",
+      "Project Management",
+      "Sustainability",
+      "Consulting",
+      "Tier II reporting",
+      "Impact Assessment",
+      "Water quality studies",
+      "Managing Consultant",
+      "Water resource management"
+    ],
+    "source_postings": 103
+  },
+  {
+    "role": "Store Manager",
+    "domain": "retail_ecommerce",
+    "description": "Store Manager roles in Retail & E-commerce Operations",
+    "skills": [
+      "Retail management",
+      "Merchandising",
+      "Customer service",
+      "Store management",
+      "Inventory Management",
+      "Leadership",
+      "Sales",
+      "Hiring",
+      "Loss prevention",
+      "Training"
+    ],
+    "source_postings": 8422
+  },
+  {
+    "role": "Assistant Store Manager",
+    "domain": "retail_ecommerce",
+    "description": "Assistant Store Manager roles in Retail & E-commerce Operations",
+    "skills": [
+      "Merchandising",
+      "Inventory control",
+      "Retail",
+      "Management",
+      "Sales",
+      "Customer service",
+      "Unit rentals",
+      "Shrinkage control",
+      "Expense control",
+      "Climbing ladders"
+    ],
+    "source_postings": 2348
+  },
+  {
+    "role": "Department Manager",
+    "domain": "retail_ecommerce",
+    "description": "Department Manager roles in Retail & E-commerce Operations",
+    "skills": [
+      "Food Safety",
+      "Inventory Management",
+      "Hiring",
+      "Training",
+      "Production Procedures",
+      "Scheduling",
+      "Motivation",
+      "Food Cost Control",
+      "Customer service",
+      "Service Procedures"
+    ],
+    "source_postings": 1930
+  },
+  {
+    "role": "Retail Associate",
+    "domain": "retail_ecommerce",
+    "description": "Retail Associate roles in Retail & E-commerce Operations",
+    "skills": [
+      "Loss prevention",
+      "Cash handling",
+      "Merchandising",
+      "Cleaning",
+      "Customer service",
+      "Teamwork",
+      "Retail sales",
+      "Retail",
+      "Janitorial equipment",
+      "Retail operations"
+    ],
+    "source_postings": 1483
+  },
+  {
+    "role": "Store Associate",
+    "domain": "retail_ecommerce",
+    "description": "Store Associate roles in Retail & E-commerce Operations",
+    "skills": [
+      "Retail",
+      "Fulfillment",
+      "Asset protection",
+      "Customer service",
+      "Store receiver",
+      "AP/LP",
+      "Merchandising",
+      "Retail floor generalist",
+      "Store operations",
+      "Operations"
+    ],
+    "source_postings": 1431
+  },
+  {
+    "role": "Key Holder",
+    "domain": "retail_ecommerce",
+    "description": "Key Holder roles in Retail & E-commerce Operations",
+    "skills": [
+      "Retail",
+      "Sales",
+      "Product knowledge",
+      "Customer service",
+      "Planogram changes",
+      "Visual merchandising",
+      "Leadership",
+      "Collaboration",
+      "Merchandising",
+      "Communication"
+    ],
+    "source_postings": 928
+  },
+  {
+    "role": "Retail Stocking Team Supervisor",
+    "domain": "retail_ecommerce",
+    "description": "Retail Stocking Team Supervisor roles in Retail & E-commerce Operations",
+    "skills": [
+      "Asset protection",
+      "Community Relations",
+      "Merchandise Progression",
+      "Onboarding",
+      "Workload Planning",
+      "Stocking",
+      "Interpersonal skills",
+      "Retail",
+      "Supervisory",
+      "Safety"
+    ],
+    "source_postings": 842
+  },
+  {
+    "role": "Merchandise Assistant Manager",
+    "domain": "retail_ecommerce",
+    "description": "Merchandise Assistant Manager roles in Retail & E-commerce Operations",
+    "skills": [
+      "Written skills",
+      "Freight processing",
+      "Management",
+      "Retail",
+      "Stockroom organization",
+      "Merchandising",
+      "Clip Strips",
+      "Hiring",
+      "Safety guidelines",
+      "Interpersonal skills"
+    ],
+    "source_postings": 685
+  },
+  {
+    "role": "Retail Supervisor",
+    "domain": "retail_ecommerce",
+    "description": "Retail Supervisor roles in Retail & E-commerce Operations",
+    "skills": [
+      "Coaching",
+      "Customer service",
+      "Leadership",
+      "Mentoring",
+      "Inventory Management",
+      "Time Management",
+      "Retail",
+      "Communication",
+      "Retail operations",
+      "Conflict Resolution"
+    ],
+    "source_postings": 610
+  },
+  {
+    "role": "Store Manager in Training",
+    "domain": "retail_ecommerce",
+    "description": "Store Manager in Training roles in Retail & E-commerce Operations",
+    "skills": [
+      "Cash control",
+      "Management",
+      "Financial Analysis",
+      "Retail sales",
+      "Organizing",
+      "Inventory control",
+      "Leadership",
+      "Customer service",
+      "Training",
+      "Hiring"
+    ],
+    "source_postings": 471
+  },
+  {
+    "role": "Retail Front End Supervisor",
+    "domain": "retail_ecommerce",
+    "description": "Retail Front End Supervisor roles in Retail & E-commerce Operations",
+    "skills": [
+      "Asset protection",
+      "Community Relations",
+      "Onboarding",
+      "Operations",
+      "Interviewing",
+      "Human Resources",
+      "Recruiting",
+      "Workload Planning",
+      "Merchandising",
+      "Positive attitude"
+    ],
+    "source_postings": 457
+  },
+  {
+    "role": "Retail Store Manager",
+    "domain": "retail_ecommerce",
+    "description": "Retail Store Manager roles in Retail & E-commerce Operations",
+    "skills": [
+      "Retail management",
+      "Customer service",
+      "Inventory Management",
+      "Hiring",
+      "Sales",
+      "Leadership",
+      "Store operations",
+      "Store management",
+      "Training",
+      "Coaching"
+    ],
+    "source_postings": 455
+  },
+  {
+    "role": "Mental Health Counselor",
+    "domain": "social_services",
+    "description": "Mental Health Counselor roles in Social Services, Counselling & Public Sector",
+    "skills": [
+      "Mental Health Counseling",
+      "Psychology",
+      "Social Work",
+      "Marriage and Family Therapy",
+      "LMFT",
+      "Treatment Planning",
+      "LCSW",
+      "Teletherapy",
+      "Psychotherapy",
+      "Professional Development"
+    ],
+    "source_postings": 2265
+  },
+  {
+    "role": "Case Manager",
+    "domain": "social_services",
+    "description": "Case Manager roles in Social Services, Counselling & Public Sector",
+    "skills": [
+      "Case Management",
+      "Social Work",
+      "Human Services",
+      "Crisis Intervention",
+      "Advocacy",
+      "Counseling",
+      "Community Resources",
+      "Psychology",
+      "Discharge Planning",
+      "Mental Health"
+    ],
+    "source_postings": 2035
+  },
+  {
+    "role": "Licensed Mental Health Counselor",
+    "domain": "social_services",
+    "description": "Licensed Mental Health Counselor roles in Social Services, Counselling & Public Sector",
+    "skills": [
+      "Mental Health Counseling",
+      "Psychology",
+      "Social Work",
+      "Psychotherapy",
+      "Marriage and Family Therapy",
+      "Treatment Planning",
+      "LMFT",
+      "Counseling",
+      "Interpersonal skills",
+      "LCSW"
+    ],
+    "source_postings": 1689
+  },
+  {
+    "role": "Social Worker",
+    "domain": "social_services",
+    "description": "Social Worker roles in Social Services, Counselling & Public Sector",
+    "skills": [
+      "Social Work",
+      "Understanding of relevant legislation",
+      "Continual professional development",
+      "Case Management",
+      "Child Protection",
+      "Crisis Intervention",
+      "Safeguarding",
+      "Psychosocial assessment",
+      "Community Resources",
+      "Supervision"
+    ],
+    "source_postings": 1176
+  },
+  {
+    "role": "Counselor",
+    "domain": "social_services",
+    "description": "Counselor roles in Social Services, Counselling & Public Sector",
+    "skills": [
+      "Counseling",
+      "Crisis Intervention",
+      "Social Work",
+      "Treatment Planning",
+      "Case Management",
+      "Psychology",
+      "Group Counseling",
+      "Mental Health",
+      "Human Services",
+      "Substance Abuse Counseling"
+    ],
+    "source_postings": 1023
+  },
+  {
+    "role": "Residential Counselor",
+    "domain": "social_services",
+    "description": "Residential Counselor roles in Social Services, Counselling & Public Sector",
+    "skills": [
+      "Social Services",
+      "Documentation",
+      "Residential Counselor",
+      "Human Services",
+      "Mental Health",
+      "Medication Administration Program (MAP)",
+      "Positive Behavior Supports (PBS)",
+      "Medication Administration",
+      "First Aid",
+      "Medication Management"
+    ],
+    "source_postings": 575
+  },
+  {
+    "role": "Licensed Professional Counselor",
+    "domain": "social_services",
+    "description": "Licensed Professional Counselor roles in Social Services, Counselling & Public Sector",
+    "skills": [
+      "Counseling",
+      "Licensed Professional Counselor (LPC)",
+      "Psychodynamic therapy",
+      "Solutionfocused short therapy",
+      "DBT",
+      "Psychotherapy",
+      "EMR software",
+      "Mental Health Counseling",
+      "CBT",
+      "Legal and ethical standards"
+    ],
+    "source_postings": 423
+  },
+  {
+    "role": "School Counselor",
+    "domain": "social_services",
+    "description": "School Counselor roles in Social Services, Counselling & Public Sector",
+    "skills": [
+      "School Counseling",
+      "Counseling",
+      "Crisis Intervention",
+      "Educational Planning",
+      "Standardized Testing",
+      "Collaboration",
+      "Group Counseling",
+      "Individual Counseling",
+      "Data Analysis",
+      "Conflict Resolution"
+    ],
+    "source_postings": 319
+  },
+  {
+    "role": "Personal Financial Counselor",
+    "domain": "social_services",
+    "description": "Personal Financial Counselor roles in Social Services, Counselling & Public Sector",
+    "skills": [
+      "Accredited Financial Counselor (AFC)",
+      "Chartered Financial Consultant (ChFC)",
+      "Financial Counseling",
+      "Certified Financial Planner (CFP)",
+      "Virtual Counseling",
+      "Fluent English",
+      "Financial Education",
+      "Personal Financial Counseling",
+      "Financial Management",
+      "Videobased communications"
+    ],
+    "source_postings": 250
+  },
+  {
+    "role": "Substance Abuse Counselor",
+    "domain": "social_services",
+    "description": "Substance Abuse Counselor roles in Social Services, Counselling & Public Sector",
+    "skills": [
+      "Substance Abuse Counseling",
+      "Group Counseling",
+      "Case Management",
+      "Individual Counseling",
+      "Crisis Intervention",
+      "Treatment Planning",
+      "Counseling",
+      "Individual and Group Counseling",
+      "Crisis Management",
+      "Aftercare Planning"
+    ],
+    "source_postings": 246
+  },
+  {
+    "role": "Mental Health Therapist",
+    "domain": "social_services",
+    "description": "Mental Health Therapist roles in Social Services, Counselling & Public Sector",
+    "skills": [
+      "Social Work",
+      "Counseling",
+      "Psychotherapy",
+      "Crisis Intervention",
+      "Treatment Planning",
+      "Psychology",
+      "Case Management",
+      "Group Therapy",
+      "Mental Health Therapy",
+      "Mental Health Therapist"
+    ],
+    "source_postings": 181
+  },
+  {
+    "role": "Admissions Counselor",
+    "domain": "social_services",
+    "description": "Admissions Counselor roles in Social Services, Counselling & Public Sector",
+    "skills": [
+      "Admissions Counseling",
+      "Public Speaking",
+      "Telephone skills",
+      "Admissions",
+      "Recruitment",
+      "Social Science",
+      "Counseling",
+      "Human Services",
+      "Microsoft Office Suite",
+      "Education"
+    ],
+    "source_postings": 147
+  },
+  {
+    "role": "Financial Advisor",
+    "domain": "banking_insurance",
+    "description": "Financial Advisor roles in Banking, Insurance & Risk",
+    "skills": [
+      "Financial Planning",
+      "Investments",
+      "Financial Services",
+      "FINRA SIE",
+      "Financial advising",
+      "Investment Sales",
+      "Wealth Management",
+      "Client Solutions",
+      "Securities registration",
+      "Series 7"
+    ],
+    "source_postings": 1233
+  },
+  {
+    "role": "Branch Manager",
+    "domain": "banking_insurance",
+    "description": "Branch Manager roles in Banking, Insurance & Risk",
+    "skills": [
+      "Branch Management",
+      "Sales",
+      "Leadership",
+      "Customer service",
+      "Coaching",
+      "Business Development",
+      "Management",
+      "Sales Management",
+      "Team Management",
+      "Communication"
+    ],
+    "source_postings": 1064
+  },
+  {
+    "role": "Relationship Banker",
+    "domain": "banking_insurance",
+    "description": "Relationship Banker roles in Banking, Insurance & Risk",
+    "skills": [
+      "Teller transactions",
+      "Sales",
+      "Overcoming Objections",
+      "Demonstrating Technology",
+      "Customer service",
+      "Risk Management",
+      "Learning Agility",
+      "Banking",
+      "Relationship management",
+      "Cash Management"
+    ],
+    "source_postings": 494
+  },
+  {
+    "role": "Universal Banker",
+    "domain": "banking_insurance",
+    "description": "Universal Banker roles in Banking, Insurance & Risk",
+    "skills": [
+      "Banking",
+      "Teller",
+      "Cash handling",
+      "Customer service",
+      "Retail banking",
+      "Sales",
+      "Teller operations",
+      "Crossselling",
+      "Account opening",
+      "Microsoft Office"
+    ],
+    "source_postings": 462
+  },
+  {
+    "role": "Mortgage Loan Officer",
+    "domain": "banking_insurance",
+    "description": "Mortgage Loan Officer roles in Banking, Insurance & Risk",
+    "skills": [
+      "NMLS License",
+      "Purchase Loans",
+      "Mortgage Origination",
+      "Video Conferencing Tools",
+      "Loan Application",
+      "Loan Documentation",
+      "CRM Systems",
+      "Loan Programs",
+      "Microsoft/Google Suite",
+      "Lead Generation"
+    ],
+    "source_postings": 458
+  },
+  {
+    "role": "Insurance Agent",
+    "domain": "banking_insurance",
+    "description": "Insurance Agent roles in Banking, Insurance & Risk",
+    "skills": [
+      "Quoting tools",
+      "Sales",
+      "Lead Generation",
+      "Datadriven analytics",
+      "Business processing technology",
+      "Lead generation system",
+      "CRM",
+      "Wealth Management",
+      "Customer service",
+      "Automation"
+    ],
+    "source_postings": 435
+  },
+  {
+    "role": "Underwriter",
+    "domain": "banking_insurance",
+    "description": "Underwriter roles in Banking, Insurance & Risk",
+    "skills": [
+      "Underwriting",
+      "Risk Assessment",
+      "Negotiation",
+      "Pricing",
+      "Negotiation skills",
+      "Analytical Skills",
+      "Attention to detail",
+      "Risk Management",
+      "Analytical Thinking",
+      "Excel"
+    ],
+    "source_postings": 406
+  },
+  {
+    "role": "Assistant Branch Manager",
+    "domain": "banking_insurance",
+    "description": "Assistant Branch Manager roles in Banking, Insurance & Risk",
+    "skills": [
+      "Sales",
+      "Customer service",
+      "Branch Management",
+      "Retail banking",
+      "Leadership",
+      "Microsoft Office Suite",
+      "Banking",
+      "Coaching",
+      "Windows",
+      "Management"
+    ],
+    "source_postings": 388
+  },
+  {
+    "role": "Teller",
+    "domain": "banking_insurance",
+    "description": "Teller roles in Banking, Insurance & Risk",
+    "skills": [
+      "Cash handling",
+      "Fraud detection",
+      "Banking procedures",
+      "Teller",
+      "Teller transactions",
+      "Bank products",
+      "Risk Management",
+      "Customer service",
+      "Banking",
+      "Military"
+    ],
+    "source_postings": 249
+  },
+  {
+    "role": "Commercial Insurance Account Manager",
+    "domain": "banking_insurance",
+    "description": "Commercial Insurance Account Manager roles in Banking, Insurance & Risk",
+    "skills": [
+      "P&C License",
+      "Account Management",
+      "Endorsements",
+      "Underwriting",
+      "Claims",
+      "Commercial Lines Account Management",
+      "Policy Management",
+      "Account Retention",
+      "Policy Summaries",
+      "Receivables"
+    ],
+    "source_postings": 233
+  },
+  {
+    "role": "Claims Examiner",
+    "domain": "banking_insurance",
+    "description": "Claims Examiner roles in Banking, Insurance & Risk",
+    "skills": [
+      "Claims Management",
+      "Claims Processing",
+      "Claims Adjudication",
+      "Subrogation",
+      "Negotiation",
+      "Investigation",
+      "Active Adjusters License",
+      "Career Development",
+      "Workers Compensation",
+      "Claims Analysis"
+    ],
+    "source_postings": 227
+  },
+  {
+    "role": "Financial Advisor Associate",
+    "domain": "banking_insurance",
+    "description": "Financial Advisor Associate roles in Banking, Insurance & Risk",
+    "skills": [
+      "Investment strategies",
+      "Securities Industry Essential (SIE) Exam",
+      "Wealth Management",
+      "Wealth planning",
+      "Client Acquisition",
+      "Networking",
+      "Finance",
+      "Military",
+      "Presentation",
+      "Legal"
+    ],
+    "source_postings": 215
+  },
+  {
+    "role": "Quality Inspector",
+    "domain": "quality_safety",
+    "description": "Quality Inspector roles in Quality, Safety & EHS",
+    "skills": [
+      "Quality Inspection",
+      "Calipers",
+      "Inspection",
+      "Micrometers",
+      "Visual Inspection",
+      "Blueprint Reading",
+      "Manufacturing",
+      "Quality Control",
+      "Micrometer",
+      "Quality Inspector"
+    ],
+    "source_postings": 1316
+  },
+  {
+    "role": "Quality Engineer",
+    "domain": "quality_safety",
+    "description": "Quality Engineer roles in Quality, Safety & EHS",
+    "skills": [
+      "Quality Engineering",
+      "Root Cause Analysis",
+      "Quality Assurance",
+      "Six Sigma",
+      "Statistical Analysis",
+      "ISO 13485",
+      "Manufacturing",
+      "ISO 9001",
+      "SPC",
+      "PPAP"
+    ],
+    "source_postings": 1118
+  },
+  {
+    "role": "Quality Manager",
+    "domain": "quality_safety",
+    "description": "Quality Manager roles in Quality, Safety & EHS",
+    "skills": [
+      "Quality Management",
+      "ISO 9001",
+      "Root Cause Analysis",
+      "Quality Assurance",
+      "Continuous Improvement",
+      "Quality Control",
+      "Six Sigma",
+      "PPAP",
+      "Corrective Action",
+      "AS9100"
+    ],
+    "source_postings": 998
+  },
+  {
+    "role": "Construction Inspector",
+    "domain": "quality_safety",
+    "description": "Construction Inspector roles in Quality, Safety & EHS",
+    "skills": [
+      "Construction Inspection",
+      "Civil Engineering",
+      "Bridge Construction",
+      "Concrete",
+      "Construction Management",
+      "Specifications",
+      "Inspection",
+      "Construction",
+      "Project Management",
+      "Quality Assurance"
+    ],
+    "source_postings": 652
+  },
+  {
+    "role": "Quality Assurance Manager",
+    "domain": "quality_safety",
+    "description": "Quality Assurance Manager roles in Quality, Safety & EHS",
+    "skills": [
+      "Quality Assurance",
+      "HACCP",
+      "GMP",
+      "Quality Management",
+      "SQF",
+      "Food Science",
+      "Root Cause Analysis",
+      "Food Safety",
+      "Continuous Improvement",
+      "ISO 9001"
+    ],
+    "source_postings": 563
+  },
+  {
+    "role": "Quality Control Inspector",
+    "domain": "quality_safety",
+    "description": "Quality Control Inspector roles in Quality, Safety & EHS",
+    "skills": [
+      "Quality Control",
+      "Inspection",
+      "Calipers",
+      "Micrometers",
+      "Manufacturing",
+      "Quality Inspection",
+      "Visual Inspection",
+      "Attention to detail",
+      "Testing",
+      "Blueprint Reading"
+    ],
+    "source_postings": 525
+  },
+  {
+    "role": "Safety Manager",
+    "domain": "quality_safety",
+    "description": "Safety Manager roles in Quality, Safety & EHS",
+    "skills": [
+      "Safety Management",
+      "Safety Training",
+      "Incident Investigation",
+      "Construction Safety",
+      "Safety Audits",
+      "OSHA",
+      "Risk Assessment",
+      "Accident Investigation",
+      "Safety Inspections",
+      "OSHA regulations"
+    ],
+    "source_postings": 481
+  },
+  {
+    "role": "Ehs Manager",
+    "domain": "quality_safety",
+    "description": "Ehs Manager roles in Quality, Safety & EHS",
+    "skills": [
+      "Incident Investigation",
+      "EHS Management",
+      "Industrial Hygiene",
+      "OSHA",
+      "EPA",
+      "EHS",
+      "Root Cause Analysis",
+      "Safety Training",
+      "Risk Assessment",
+      "Incident Investigations"
+    ],
+    "source_postings": 307
+  },
+  {
+    "role": "Quality Control Manager",
+    "domain": "quality_safety",
+    "description": "Quality Control Manager roles in Quality, Safety & EHS",
+    "skills": [
+      "Quality Control",
+      "Quality Control Management",
+      "Construction Management",
+      "Quality Assurance",
+      "Project Management",
+      "Construction",
+      "Inspection",
+      "Data Analysis",
+      "Testing",
+      "Continuous Improvement"
+    ],
+    "source_postings": 285
+  },
+  {
+    "role": "Inspector",
+    "domain": "quality_safety",
+    "description": "Inspector roles in Quality, Safety & EHS",
+    "skills": [
+      "Inspection",
+      "Construction Inspection",
+      "Quality Control",
+      "Civil Engineering",
+      "Construction Management",
+      "Communication",
+      "Teamwork",
+      "Construction",
+      "Documentation",
+      "Microsoft Office"
+    ],
+    "source_postings": 215
+  },
+  {
+    "role": "Quality Supervisor",
+    "domain": "quality_safety",
+    "description": "Quality Supervisor roles in Quality, Safety & EHS",
+    "skills": [
+      "Quality Assurance",
+      "Quality Control",
+      "Root Cause Analysis",
+      "Food Science",
+      "GMP",
+      "HACCP",
+      "Quality Management",
+      "Leadership",
+      "Microbiology",
+      "Data Analysis"
+    ],
+    "source_postings": 191
+  },
+  {
+    "role": "Quality Assurance Supervisor",
+    "domain": "quality_safety",
+    "description": "Quality Assurance Supervisor roles in Quality, Safety & EHS",
+    "skills": [
+      "Quality Assurance",
+      "HACCP",
+      "GMP",
+      "Food Science",
+      "Food Safety",
+      "Quality Control",
+      "SPC",
+      "SQF",
+      "Root Cause Analysis",
+      "Leadership"
+    ],
+    "source_postings": 186
+  },
+  {
+    "role": "Assistant Property Manager",
+    "domain": "real_estate_property",
+    "description": "Assistant Property Manager roles in Real Estate, Property & Facilities",
+    "skills": [
+      "Property Management",
+      "Leasing",
+      "Property maintenance",
+      "Customer service",
+      "Marketing",
+      "Yardi",
+      "Basic computer skills",
+      "Rent Collection",
+      "Microsoft Office Suite",
+      "Lease Administration"
+    ],
+    "source_postings": 1152
+  },
+  {
+    "role": "Property Manager",
+    "domain": "real_estate_property",
+    "description": "Property Manager roles in Real Estate, Property & Facilities",
+    "skills": [
+      "Property Management",
+      "Leasing",
+      "Rent Collection",
+      "Customer service",
+      "Budgeting",
+      "Maintenance",
+      "Marketing",
+      "Tenant Relations",
+      "Property Inspections",
+      "Yardi"
+    ],
+    "source_postings": 1076
+  },
+  {
+    "role": "Leasing Consultant",
+    "domain": "real_estate_property",
+    "description": "Leasing Consultant roles in Real Estate, Property & Facilities",
+    "skills": [
+      "Leasing",
+      "Property Management",
+      "Customer service",
+      "Sales",
+      "Marketing",
+      "Yardi",
+      "Property Management Software",
+      "Communication",
+      "Resident Retention",
+      "Microsoft Office Suite"
+    ],
+    "source_postings": 874
+  },
+  {
+    "role": "Real Estate Agent",
+    "domain": "real_estate_property",
+    "description": "Real Estate Agent roles in Real Estate, Property & Facilities",
+    "skills": [
+      "Real estate license",
+      "CRM system",
+      "Video editing",
+      "Transaction management",
+      "Contract writing",
+      "Local market knowledge",
+      "SEO",
+      "Online CRM system",
+      "Strong writing and communication skills",
+      "Loan officer"
+    ],
+    "source_postings": 645
+  },
+  {
+    "role": "Community Manager",
+    "domain": "real_estate_property",
+    "description": "Community Manager roles in Real Estate, Property & Facilities",
+    "skills": [
+      "Property Management",
+      "Leasing",
+      "Community Management",
+      "Budgeting",
+      "Marketing",
+      "Resident Relations",
+      "Rent Collection",
+      "Property Inspections",
+      "Lease Enforcement",
+      "Customer service"
+    ],
+    "source_postings": 565
+  },
+  {
+    "role": "Assistant Community Manager",
+    "domain": "real_estate_property",
+    "description": "Assistant Community Manager roles in Real Estate, Property & Facilities",
+    "skills": [
+      "Leasing",
+      "Property Management",
+      "Rent Collection",
+      "Resident Relations",
+      "Marketing",
+      "Bookkeeping",
+      "Property Management Software",
+      "Invoice Processing",
+      "Customer service",
+      "Eviction Procedures"
+    ],
+    "source_postings": 479
+  },
+  {
+    "role": "Facilities Manager",
+    "domain": "real_estate_property",
+    "description": "Facilities Manager roles in Real Estate, Property & Facilities",
+    "skills": [
+      "Facilities Management",
+      "Facility Management",
+      "Plumbing",
+      "Project Management",
+      "Building maintenance",
+      "HVAC",
+      "Vendor Management",
+      "Maintenance",
+      "Budgeting",
+      "Budget Management"
+    ],
+    "source_postings": 471
+  },
+  {
+    "role": "Facility Manager",
+    "domain": "real_estate_property",
+    "description": "Facility Manager roles in Real Estate, Property & Facilities",
+    "skills": [
+      "Facility Management",
+      "Budgeting",
+      "Vendor Management",
+      "Facilities Management",
+      "Leadership",
+      "Microsoft Office Suite",
+      "Budget Management",
+      "OSHA Compliance",
+      "Customer service",
+      "Building maintenance"
+    ],
+    "source_postings": 177
+  },
+  {
+    "role": "Leasing Manager",
+    "domain": "real_estate_property",
+    "description": "Leasing Manager roles in Real Estate, Property & Facilities",
+    "skills": [
+      "Leasing",
+      "Leasing Management",
+      "Marketing",
+      "Property Management",
+      "Entrata",
+      "Sales",
+      "Customer service",
+      "Administrative Management",
+      "Marketing Management",
+      "Yardi"
+    ],
+    "source_postings": 153
+  },
+  {
+    "role": "Associate Real Estate Agent",
+    "domain": "real_estate_property",
+    "description": "Associate Real Estate Agent roles in Real Estate, Property & Facilities",
+    "skills": [
+      "Real Estate",
+      "Real estate license",
+      "Real Estate Licensing",
+      "Negotiation",
+      "Home staging",
+      "Marketing",
+      "Home Purchase",
+      "Home Sale",
+      "Real estate market knowledge",
+      "Open houses"
+    ],
+    "source_postings": 134
+  },
+  {
+    "role": "New Home Sales Consultant",
+    "domain": "real_estate_property",
+    "description": "New Home Sales Consultant roles in Real Estate, Property & Facilities",
+    "skills": [
+      "Prospecting",
+      "Sales",
+      "Commissioned Sales",
+      "Homebuilding",
+      "Real Estate",
+      "Luxury Sales",
+      "Closing Techniques",
+      "Needs Analysis",
+      "Customer service",
+      "Marketing"
+    ],
+    "source_postings": 134
+  },
+  {
+    "role": "Facilities Supervisor",
+    "domain": "real_estate_property",
+    "description": "Facilities Supervisor roles in Real Estate, Property & Facilities",
+    "skills": [
+      "Facilities Management",
+      "Plumbing",
+      "Maintenance",
+      "Facility Management",
+      "Electrical",
+      "Cleaning",
+      "HVAC",
+      "HVAC systems",
+      "Electrical Systems",
+      "Project Management"
+    ],
+    "source_postings": 101
+  },
+  {
+    "role": "Veterinarian",
+    "domain": "veterinary_agriculture",
+    "description": "Veterinarian roles in Veterinary, Agriculture & Environment",
+    "skills": [
+      "Veterinary Medicine",
+      "Surgery",
+      "Ultrasound",
+      "Animal Care",
+      "Preventive Petcare",
+      "Dentistry",
+      "Compassion",
+      "Surgical skills",
+      "Client Communication",
+      "Client Relations"
+    ],
+    "source_postings": 4456
+  },
+  {
+    "role": "Emergency Veterinarian",
+    "domain": "veterinary_agriculture",
+    "description": "Emergency Veterinarian roles in Veterinary, Agriculture & Environment",
+    "skills": [
+      "Veterinary Medicine",
+      "Emergency Medicine",
+      "Surgery",
+      "Emergency Veterinarian",
+      "Ultrasound",
+      "Internal Medicine",
+      "Radiology",
+      "Veterinary State License",
+      "Endoscopy",
+      "Emergency Veterinary Medicine"
+    ],
+    "source_postings": 631
+  },
+  {
+    "role": "Veterinary Receptionist",
+    "domain": "veterinary_agriculture",
+    "description": "Veterinary Receptionist roles in Veterinary, Agriculture & Environment",
+    "skills": [
+      "Veterinary terminology",
+      "Multitasking",
+      "Appointment scheduling",
+      "Animal Care",
+      "Client Service",
+      "Data entry",
+      "Customer service",
+      "Receptionist",
+      "Scheduling",
+      "Veterinary Receptionist"
+    ],
+    "source_postings": 397
+  },
+  {
+    "role": "Environmental Scientist",
+    "domain": "veterinary_agriculture",
+    "description": "Environmental Scientist roles in Veterinary, Agriculture & Environment",
+    "skills": [
+      "Geology",
+      "Biology",
+      "Report Writing",
+      "GIS",
+      "Wetland Delineation",
+      "Project Management",
+      "Data Analysis",
+      "Soil Sampling",
+      "Groundwater Sampling",
+      "Fieldwork"
+    ],
+    "source_postings": 349
+  },
+  {
+    "role": "Small Animal Veterinarian",
+    "domain": "veterinary_agriculture",
+    "description": "Small Animal Veterinarian roles in Veterinary, Agriculture & Environment",
+    "skills": [
+      "Veterinary Medicine",
+      "Surgery",
+      "Ultrasound",
+      "Animal Care",
+      "Dentistry",
+      "Small Animal Practice",
+      "CPD",
+      "Veterinary Surgery",
+      "Digital radiology",
+      "Laser therapy"
+    ],
+    "source_postings": 225
+  },
+  {
+    "role": "Relief Veterinarian",
+    "domain": "veterinary_agriculture",
+    "description": "Relief Veterinarian roles in Veterinary, Agriculture & Environment",
+    "skills": [
+      "IDEXX inhouse lab equipment",
+      "Digital Xray",
+      "Online queue system",
+      "Wound management",
+      "Euthanasia",
+      "Veterinary Medicine",
+      "Cloudbased electronic medical records",
+      "Cloudbased EMR",
+      "Client Communication",
+      "Trust"
+    ],
+    "source_postings": 152
+  },
+  {
+    "role": "Ecologist",
+    "domain": "veterinary_agriculture",
+    "description": "Ecologist roles in Veterinary, Agriculture & Environment",
+    "skills": [
+      "Ecology",
+      "Project Management",
+      "Ecological surveys",
+      "Protected species surveys",
+      "Ecological Impact Assessments",
+      "Report Writing",
+      "Biodiversity Net Gain",
+      "Protected Species Licences",
+      "Ecological Consultancy",
+      "Field Surveys"
+    ],
+    "source_postings": 134
+  },
+  {
+    "role": "Companion Animal Department Manager",
+    "domain": "veterinary_agriculture",
+    "description": "Companion Animal Department Manager roles in Veterinary, Agriculture & Environment",
+    "skills": [
+      "Animal welfare",
+      "Inventory Management",
+      "Animal handling",
+      "Animal Care",
+      "Sales",
+      "Cash handling",
+      "Training",
+      "Operations",
+      "Safety procedures",
+      "Leadership"
+    ],
+    "source_postings": 105
+  },
+  {
+    "role": "Environmental Consultant",
+    "domain": "veterinary_agriculture",
+    "description": "Environmental Consultant roles in Veterinary, Agriculture & Environment",
+    "skills": [
+      "Project Management",
+      "Stakeholder Engagement",
+      "Sustainability",
+      "Permitting",
+      "Air Quality",
+      "Report Writing",
+      "Business Development",
+      "Geology",
+      "Ecology",
+      "Remediation"
+    ],
+    "source_postings": 97
+  },
+  {
+    "role": "Environmental Planner",
+    "domain": "veterinary_agriculture",
+    "description": "Environmental Planner roles in Veterinary, Agriculture & Environment",
+    "skills": [
+      "NEPA",
+      "Technical Writing",
+      "GIS",
+      "Permitting",
+      "CEQA",
+      "Project Management",
+      "WindPro",
+      "Autodesk 3ds Max",
+      "MS Office Suite",
+      "DSLR cameras"
+    ],
+    "source_postings": 89
+  },
+  {
+    "role": "Environmental Specialist",
+    "domain": "veterinary_agriculture",
+    "description": "Environmental Specialist roles in Veterinary, Agriculture & Environment",
+    "skills": [
+      "Pollution Prevention",
+      "Waste Management",
+      "Air Emissions",
+      "Air Quality",
+      "RCRA",
+      "SPCC",
+      "NPDES",
+      "RMP",
+      "Recycling",
+      "CWA"
+    ],
+    "source_postings": 82
+  },
+  {
+    "role": "Veterinary Cardiologist",
+    "domain": "veterinary_agriculture",
+    "description": "Veterinary Cardiologist roles in Veterinary, Agriculture & Environment",
+    "skills": [
+      "Cardiology",
+      "Surgery",
+      "Veterinary Medicine",
+      "Internal Medicine",
+      "Neurology",
+      "Radiology",
+      "Digital Radiography",
+      "Ultrasound",
+      "CT",
+      "Endoscopy"
+    ],
+    "source_postings": 59
+  },
+  {
+    "role": "Production Supervisor",
+    "domain": "manufacturing_production",
+    "description": "Production Supervisor roles in Manufacturing & Production Operations",
+    "skills": [
+      "Production Supervision",
+      "Manufacturing",
+      "Quality Control",
+      "Lean Manufacturing",
+      "Continuous Improvement",
+      "Leadership",
+      "Production Management",
+      "Problem Solving",
+      "Safety",
+      "Production Planning"
+    ],
+    "source_postings": 2482
+  },
+  {
+    "role": "Production Manager",
+    "domain": "manufacturing_production",
+    "description": "Production Manager roles in Manufacturing & Production Operations",
+    "skills": [
+      "Production Management",
+      "Quality Control",
+      "Lean Manufacturing",
+      "Continuous Improvement",
+      "Manufacturing",
+      "Leadership",
+      "Production Planning",
+      "Scheduling",
+      "Team Leadership",
+      "Problem Solving"
+    ],
+    "source_postings": 1160
+  },
+  {
+    "role": "Plant Manager",
+    "domain": "manufacturing_production",
+    "description": "Plant Manager roles in Manufacturing & Production Operations",
+    "skills": [
+      "Plant Management",
+      "Lean Manufacturing",
+      "Continuous Improvement",
+      "Manufacturing",
+      "Leadership",
+      "Production Management",
+      "Quality Control",
+      "Budgeting",
+      "Operations Management",
+      "Safety"
+    ],
+    "source_postings": 793
+  },
+  {
+    "role": "Production Planner",
+    "domain": "manufacturing_production",
+    "description": "Production Planner roles in Manufacturing & Production Operations",
+    "skills": [
+      "Production Planning",
+      "Production Scheduling",
+      "Inventory Management",
+      "Scheduling",
+      "Supply Chain Management",
+      "Manufacturing",
+      "Capacity Planning",
+      "SAP",
+      "MRP",
+      "ERP Systems"
+    ],
+    "source_postings": 423
+  },
+  {
+    "role": "Manufacturing Supervisor",
+    "domain": "manufacturing_production",
+    "description": "Manufacturing Supervisor roles in Manufacturing & Production Operations",
+    "skills": [
+      "Manufacturing",
+      "Manufacturing Supervision",
+      "Lean Manufacturing",
+      "Quality Control",
+      "Continuous Improvement",
+      "Leadership",
+      "Production Planning",
+      "Six Sigma",
+      "Safety",
+      "Problem Solving"
+    ],
+    "source_postings": 351
+  },
+  {
+    "role": "Production Team Member",
+    "domain": "manufacturing_production",
+    "description": "Production Team Member roles in Manufacturing & Production Operations",
+    "skills": [
+      "Manufacturing",
+      "Production",
+      "Machine operation",
+      "Assembly",
+      "Measurements",
+      "Quality Control",
+      "Basic math",
+      "Lifting",
+      "Packaging",
+      "Teamwork"
+    ],
+    "source_postings": 207
+  },
+  {
+    "role": "Manufacturing Manager",
+    "domain": "manufacturing_production",
+    "description": "Manufacturing Manager roles in Manufacturing & Production Operations",
+    "skills": [
+      "Manufacturing Management",
+      "Lean Manufacturing",
+      "Manufacturing",
+      "Continuous Improvement",
+      "Production Management",
+      "Quality Control",
+      "Leadership",
+      "Six Sigma",
+      "Operations Management",
+      "Production Planning"
+    ],
+    "source_postings": 202
+  },
+  {
+    "role": "Cnc Machinist",
+    "domain": "manufacturing_production",
+    "description": "Cnc Machinist roles in Manufacturing & Production Operations",
+    "skills": [
+      "CNC Machining",
+      "CNC Programming",
+      "GD&T",
+      "Blueprints",
+      "Lathes",
+      "CNC Machinist",
+      "Blueprint Reading",
+      "Machining",
+      "Fanuc",
+      "Tooling"
+    ],
+    "source_postings": 188
+  },
+  {
+    "role": "Machinist",
+    "domain": "manufacturing_production",
+    "description": "Machinist roles in Manufacturing & Production Operations",
+    "skills": [
+      "Machining",
+      "Lathes",
+      "Blueprints",
+      "Blueprint Reading",
+      "CNC Machining",
+      "Machinist",
+      "Grinders",
+      "Milling machines",
+      "CNC Programming",
+      "Micrometers"
+    ],
+    "source_postings": 179
+  },
+  {
+    "role": "Production Technician",
+    "domain": "manufacturing_production",
+    "description": "Production Technician roles in Manufacturing & Production Operations",
+    "skills": [
+      "Packaging",
+      "Labeling",
+      "Weighing",
+      "Production",
+      "Production Technician",
+      "Manufacturing",
+      "Batching",
+      "Data recording",
+      "Quality Control",
+      "Loaders"
+    ],
+    "source_postings": 148
+  },
+  {
+    "role": "Assembler",
+    "domain": "manufacturing_production",
+    "description": "Assembler roles in Manufacturing & Production Operations",
+    "skills": [
+      "Assembly",
+      "Hand tools",
+      "Mechanical assembly",
+      "Soldering",
+      "Manufacturing",
+      "Production standards",
+      "Quality Control",
+      "Electromechanical assembly",
+      "Primary Education",
+      "Quality Standards"
+    ],
+    "source_postings": 141
+  },
+  {
+    "role": "Machine Operator",
+    "domain": "manufacturing_production",
+    "description": "Machine Operator roles in Manufacturing & Production Operations",
+    "skills": [
+      "Machine operation",
+      "Quality Control",
+      "Machine Operator",
+      "Manufacturing",
+      "Mechanical aptitude",
+      "Troubleshooting",
+      "Blueprint Reading",
+      "Forklift operation",
+      "Teamwork",
+      "Safety procedures"
+    ],
+    "source_postings": 136
+  }
+]
